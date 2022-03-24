@@ -6,45 +6,119 @@
 	<title>Braap</title>
 	<meta name="description" content="braap">
 	<meta content="" name="keywords">
-
 	<!-- internal files -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/slick-theme.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="responsive.css">
-	<link rel="icon" type="image/png" href="/assets/images/favicon.png"/>
-
+	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
 	<script>
-	    window.sr = ScrollReveal({
-	        distance: '0px',
-	        duration: 1000,
-	        scale: 1,
-	        easing: 'ease',
-	        mobile: false,
-	        reset: false,
-	        viewFactor: 0.2,
-	    });
+		window.sr = ScrollReveal({
+			distance: '0px',
+			duration: 1000,
+			scale: 1,
+			easing: 'ease',
+			mobile: false,
+			reset: false,
+			viewFactor: 0.2,
+		});
 	</script>
 </head>
 <body>
+	<!-- HEADER FOR HOME PAGE -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100 header-home">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+				</ul>
+				<a class="navbar-brand" href="#">
+					<img src="assets/img/logo-white.svg" alt="">
+				</a>
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- HERO SLIDER -->
+	<div class="hero-slider">
+		<div class="hero-slider-slides">
+			<div class="hero-slide"><img src="assets/img/home/slides/slide-1.jpg" alt=""></div>
+			<div class="hero-slide"><img src="assets/img/home/slides/slide-2.jpg" alt=""></div>
+			<div class="hero-slide"><img src="assets/img/home/slides/slide-3.jpg" alt=""></div>
+			<div class="hero-slide"><img src="assets/img/home/slides/slide-4.jpg" alt=""></div>
+			<div class="hero-slide"><img src="assets/img/home/slides/slide-5.jpg" alt=""></div>
+			<div class="hero-slide"><img src="assets/img/home/slides/slide-6.jpg" alt=""></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 position-relative offset-md-2">
+					<div class="hero-content text-center text-white">
+						<h1 class="hero-heading">Braap</h1>
+						<p class="hero-text">
+							Need service, repair, or maintenance delivered by a vast network of service companies and technicians, you’re in the right place.
+						</p>
+						<div class="hero-search">
+							<form action="#">
+								<div class="input-group mb-3">
+									<span class="input-group-text">$</span>
+									<input type="text" class="form-control text-white" aria-label="Amount (to the nearest dollar)">
+									<span class="input-group-text">.00</span>
+								</div>
+							</form>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
 	<h1>Braap</h1>
-	<div id="includedContent"></div>
 
 	<!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
+	<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/home.js"></script>
-    <script> 
-    $(function(){
-      $("#includedContent").load("header.html"); 
-    });
-    </script> 
-
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/slick.js"></script>
+	<!-- <script src="assets/js/main.js"></script> -->
+	<script src="assets/js/home.js"></script>
 </body>
 </html>
