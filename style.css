@@ -1,0 +1,70 @@
+/* Fonts */
+@font-face {
+	font-family: 'axiforma';
+	src: url(assets/fonts/axiforma-regular.otf);
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'axiforma-semibold';
+	src: url(assets/fonts/axiforma-semibold.otf);
+}
+@font-face {
+	font-family: 'axiforma-bold';
+	src: url(assets/fonts/axiforma-bold.otf);
+}
+@font-face {
+	font-family: 'axiforma-black';
+	src: url(assets/fonts/axiforma-black.otf);
+}
+/* reset css */
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, input, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    font: inherit;
+    box-sizing: border-box;
+}
+/* Document */
+:root {
+	--white: #fff;
+	--black: #000;
+	--dark-gray: #696969;
+	--light-gray: #E6E6E6;
+	--orange: #E5A706;
+	--yellow: #F6C91F;
+	--ax-bold: 'axiforma-bold';
+	--ax-semibold: 'axiforma-semibold';
+	--ax-black: 'axiforma-black';
+}
+html {
+	font-family: 'axiforma', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.6rem;
+}
+body {
+	color: var(--dark-gray);
+	background: var(--fff);
+}
+::selection {
+  color: var(--white);
+  background: var(--orange);
+}
+h1 {
+	font-family: 'axiforma-bold';
+	font-size: 150px;
+	line-height: normal;
+}
