@@ -1,10 +1,17 @@
 $(document).ready(function(){
 
+	$( ".hero-search input" ).focus(function() {
+	  	$("#home-search-results").delay(0).fadeIn();
+	});
+	$( ".hero-search input" ).focusout(function() {
+	  	$("#home-search-results").delay(0).fadeOut();
+	});
+
 	$('.hero-slider-slides').slick({
 	  	slidesToShow: 1,
 	  	slidesToScroll: 1,
-		speed:1500,
-		infinite: false,
+		speed:1000,
+		infinite: true,
 	  	dots: false,
 	  	arrows: true,
 	  	autoplay: true,
@@ -39,24 +46,28 @@ $(document).ready(function(){
 	// });
 
 
-	// $('a[data-slide]').click(function(e) {
-	//    	e.preventDefault();
-	//    	var slideno = $(this).data('slide');
-	//    	$('a[data-slide=0]').removeClass('active');
-	//    	$('a[data-slide=1]').removeClass('active');
-	//    	$('a[data-slide=2]').removeClass('active');
-	//    	$('a[data-slide=3]').removeClass('active');
-	//    	$('a[data-slide=' + slideno + ']').addClass('active');
-	//    	$('.story-slider').slick('slickGoTo', slideno);
-	// });
+	$('a[data-slide]').click(function(e) {
+	   	e.preventDefault();
+	   	var slideno = $(this).data('slide');
+	   	$('a[data-slide=0]').removeClass('active');
+	   	$('a[data-slide=1]').removeClass('active');
+	   	$('a[data-slide=2]').removeClass('active');
+	   	$('a[data-slide=3]').removeClass('active');
+	   	$('a[data-slide=4]').removeClass('active');
+	   	$('a[data-slide=5]').removeClass('active');
+	   	$('a[data-slide=' + slideno + ']').addClass('active');
+	   	$('.hero-slider-slides').slick('slickGoTo', slideno);
+	});
 
-	// $(".story-slider").on("afterChange", function (event, slick, currentSlide, nextSlide) {
-	//     $('a[data-slide=0]').removeClass('active');
-	//    	$('a[data-slide=1]').removeClass('active');
-	//    	$('a[data-slide=2]').removeClass('active');
-	//    	$('a[data-slide=3]').removeClass('active');
-	//    	$('a[data-slide=' + currentSlide + ']').addClass('active');
-	// })
+	$(".hero-slider-slides").on("afterChange", function (event, slick, currentSlide, nextSlide) {
+	    $('a[data-slide=0]').removeClass('active');
+	   	$('a[data-slide=1]').removeClass('active');
+	   	$('a[data-slide=2]').removeClass('active');
+	   	$('a[data-slide=3]').removeClass('active');
+	   	$('a[data-slide=4]').removeClass('active');
+	   	$('a[data-slide=5]').removeClass('active');
+	   	$('a[data-slide=' + currentSlide + ']').addClass('active');
+	})
 	
 	// $('.more-slider').slick({
 	//   	slidesToShow: 2,
