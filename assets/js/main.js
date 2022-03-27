@@ -1,5 +1,5 @@
 $(window).on('load',function() {
-  $(".preloader").delay(0).fadeOut("slow");
+  $(".preloaderBg").delay(0).fadeOut("slow");
 });
 
 function openNav() {

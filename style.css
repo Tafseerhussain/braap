@@ -153,6 +153,48 @@ h1 {
 	color: var(--white);
 }
 
+/* PRELOADER */
+.preloaderBg {
+	  position: fixed;
+    z-index: 10; 
+    top: 0;
+	  background: var(--black);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.preloader {
+    margin: auto;
+    background: url(assets/img/logo-white.svg) no-repeat center;
+    background-size: 30px;
+    height: 50px;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+}
+.preloader2 {
+  border: 5px solid var(--light-gray);
+  border-top: 5px solid var(--orange);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s ease-in-out infinite;
+  position: absolute;
+  top: 44.6%;
+  transform: translate(-50%, -50%);
+  left: 47.3%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 @media (min-width: 1650px) {
 	.container {
 		max-width: 1600px !important;
@@ -750,11 +792,93 @@ img {
 .learn-btn {
 	margin-top: 30px;
 }
+
+/* BLOG SECTION */
 .blog {
 	padding: 80px 0;
 	background: rgba(0, 0, 0, 0.03);
 	position: relative;
 }
+.blogs {margin-top: 30px}
+.single-blog .blog-meta {
+	padding: 10px 20px 30px;
+}
+.single-blog .author {
+	font-style: italic;
+	color: #bfbfbf;
+	font-size: 12px;
+}
+.blog-meta .blog-title {
+	font-family: var(--ax-bold);
+	padding: 4px 0 10px;
+	color: var(--black);
+}
+.blog-meta .blog-text {
+	font-size: 16px;
+	line-height: 30px;
+}
+.blog-link a {
+	color: var(--orange);
+}
+.blog .learn-btn {
+	margin-top: 70px;
+}
+
+/* WHY CUSTOMERS LIKE BRAAP SECTION */
 .customer-braap {
 	padding: 80px 0;
+}
+.customer-braap-img {
+	margin-top: 70px;
+	pointer-events: none;
+}
+.customer-braap .section-title:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* FOOTER */
+footer {
+	background: var(--black);
+	padding: 60px 0 0;
+}
+.footer-logo img {
+	height: 50px;
+}
+.footer-col-1 p {
+	margin: 50px 0;
+}
+footer .social-links a {
+	margin-right: 10px;
+}
+footer .social-links a img {
+	height: 50px;
+}
+.footer-head {
+	color: var(--white);
+	font-family: var(--ax-bold);
+	font-size: 24px;
+	position: relative;
+}
+.footer-head:after {
+	content: "";
+	width: 50px;
+	height: 3px;
+	background: var(--orange);
+	left: 0;
+	bottom: -10px;
+	position: absolute;
+}
+.footer-links a {
+	color: var(--dark-gray);
+	display: block;
+	margin-bottom: 20px;
+	transition: 0.1s;
+}
+.footer-links a:hover {
+	color: var(--white);
+}
+.copyright {
+	padding: 20px 0;
+	font-size: 16px;
 }
