@@ -17,17 +17,6 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
-	<script>
-		window.sr = ScrollReveal({
-			distance: '0px',
-			duration: 1000,
-			scale: 1,
-			easing: 'ease',
-			mobile: false,
-			reset: false,
-			viewFactor: 0.2,
-		});
-	</script>
 </head>
 <body>
 
@@ -63,24 +52,20 @@
 				</a>
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
+						<a class="nav-link shop-link" href="#">
+							<span>My Shop</span>
+							<img src="assets/icons/garage-orange.svg" alt="garage">
+						</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Dropdown
+							<img src="assets/icons/user-account.svg" alt="user account">
 						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Login</a></li>
 							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							<li><a class="dropdown-item" href="#">Register</a></li>
 						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 					</li>
 				</ul>
 			</div>

@@ -29,3 +29,20 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+
+window.sr = ScrollReveal({
+    distance: '0px',
+    duration: 1000,
+    scale: 1,
+    easing: 'ease',
+    mobile: false,
+    reset: false,
+    viewFactor: 0.2,
+});
+sr.reveal('.fade-in');
+sr.reveal('.fade-left',{origin: 'left', distance: '100px', duration: 500,});
+sr.reveal('.fade-left-vf40',{origin: 'left', distance: '100px', duration: 500, viewFactor: 0.4,});
+sr.reveal('.fade-right',{origin: 'right', distance: '100px', duration: 500,});
+sr.reveal('.fade-bottom',{origin: 'bottom', distance: '100px', duration: 500,});
+sr.reveal('.fade-bottom-vf40',{origin: 'bottom', distance: '100px', duration: 500, viewFactor: 0.4,});
+sr.reveal('.fade-top',{origin: 'top', distance: '100px', duration: 500,});

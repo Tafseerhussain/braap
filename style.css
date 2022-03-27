@@ -124,6 +124,7 @@ h1 {
   color: var(--white)!important;
   opacity: 0.5 !important;
 }
+.dropdown-toggle::after {display: none}
 .btn {
 	border-radius: 10px;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
@@ -239,6 +240,12 @@ img {
   image-rendering: pixelated;
 	image-rendering: -webkit-optimize-contrast;
 }
+.dropdown-menu {
+    box-shadow: var(--theme-shadow);
+    border: 0;
+    font-size: 14px;
+    margin-top: 6px !important;
+}
 
 /* HEADER HOME */
 .navbar {z-index: 2}
@@ -246,6 +253,27 @@ img {
 .header-home .nav-link {
 	color: var(--white) !important;
 	margin: 0 20px;
+}
+.shop-link {
+	background: rgba(0,0,0,0.8);
+  padding: 10px 30px !important;
+  border-radius: 10px;
+  border: 2px solid var(--orange);
+  position: relative;
+  top: 4px;
+  margin-right: 0 !important;
+}
+.shop-link span {
+	color: var(--orange);
+	position: relative;
+	top: 2px;
+	margin-right: 3px;
+}
+.shop-link:hover {
+	background: var(--orange);
+}
+.shop-link:hover > * {
+	filter: saturate(0%)  brightness(500%) ;
 }
 
 /* HERO SLIDER */
