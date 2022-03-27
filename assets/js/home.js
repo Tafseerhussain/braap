@@ -20,32 +20,6 @@ $(document).ready(function(){
 	  	draggable: false
 	});
 
-	// $('.story-slider').slick({
-	//   	slidesToShow: 1,
-	//   	slidesToScroll: 1,
-	// 	speed:500,
-	// 	infinite: true,
-	//   	dots: true,
-	//   	autoplay: false,
-	//   	arrows: true,
-	//     // swipe: false,
-	//   // 	responsive: [
-	// 	 //    {
-	// 		//     breakpoint: 1585,
-	// 		//     settings: {
-	// 		//         centerPadding: '30%',
-	// 		//     }
-	// 	 //    },
-	// 	 //    {
-	// 		//     breakpoint: 768,
-	// 		//     settings: {
-	// 		//         centerMode: false,
-	// 		//     }
-	// 	 //    },
-	// 		// ]
-	// });
-
-
 	$('a[data-slide]').click(function(e) {
 	   	e.preventDefault();
 	   	var slideno = $(this).data('slide');
@@ -68,37 +42,61 @@ $(document).ready(function(){
 	   	$('a[data-slide=5]').removeClass('active');
 	   	$('a[data-slide=' + currentSlide + ']').addClass('active');
 	})
-	
-	// $('.more-slider').slick({
-	//   	slidesToShow: 2,
-	//   	slidesToScroll: 1,
-	// 	speed:500,
-	// 	infinite: true,
-	//   	dots: false,
-	//   	autoplay: false,
-	//   	arrows: false,
-	//   	responsive: [
-	// 	    {
-	// 		    breakpoint: 768,
-	// 		    settings: {
-	// 		    	slidesToShow: 1,
-	//   				slidesToScroll: 1,
-	// 		        centerMode: true,
- //  					centerPadding: '60px',
- //  					infinite: false
-	// 		    }
-	// 	    },
-	// 	    {
-	// 		    breakpoint: 576,
-	// 		    settings: {
-	// 		    	slidesToShow: 1,
-	//   				slidesToScroll: 1,
-	// 		        centerMode: true,
- //  					centerPadding: '30px',
- //  					infinite: false
-	// 		    }
-	// 	    },
-	// 	]
-	// });
+
+	const words = [
+		"I hear a high pitched clicking sound.", 
+		"My Engine does not start", 
+		"Brakes are old and grinding"
+	];
+	let i = 0;
+	let timer;
+
+	function typingEffect() {
+		let word = words[i].split("");
+		var loopTyping = function() {
+			if (word.length > 0) {
+				document.getElementById('typing-effect').value += word.shift();
+			} else {
+				deletingEffect();
+				return false;
+			};
+			timer = setTimeout(loopTyping, 100);
+		};
+		loopTyping();
+	};
+
+	function deletingEffect() {
+		let word = words[i].split("");
+		var loopDeleting = function() {
+			if (word.length > 0) {
+				word.pop();
+				document.getElementById('typing-effect').value = word.join("");
+			} else {
+				if (words.length > (i + 1)) {
+					i++;
+				} else {
+					i = 0;
+				};
+				typingEffect();
+				return false;
+			};
+			timer = setTimeout(loopDeleting, 30);
+		};
+		loopDeleting();
+	};
+
+	typingEffect();
+
+	$('.testimonial-slider').slick({
+	  	slidesToShow: 1,
+	  	slidesToScroll: 1,
+		speed: 500,
+		infinite: true,
+	  	dots: false,
+	  	arrows: true,
+	  	autoplay: true,
+	  	autoplaySpeed: 5000,
+	  	fade: true,
+	});
 
 });

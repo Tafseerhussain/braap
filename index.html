@@ -6,7 +6,9 @@
 	<title>Braap | Home</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
-	<!-- internal files -->
+	<!-- External Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Internal files -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/slick-theme.css">
@@ -145,7 +147,7 @@
 					</div>
 						
 					<div class="hero-buttons d-flex justify-content-center mt-5">
-						<a href="#" class="btn me-4">
+						<a href="#trending-fixes" class="btn me-4">
 							<span>Feed</span>
 							<img src="assets/icons/arrow-down.svg" alt="">
 						</a>
@@ -171,28 +173,42 @@
 	</div>
 	
 	<!-- TRENDING FIXES -->
-	<div class="trending-fixes">
+	<div class="trending-fixes" id="trending-fixes">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
 					<h1 class="section-title"><span class="text-orange">Trending</span> Fixes</h1>
 				</div>
 				<div class="col-md-5 text-end">
-					<button class="btn how-brap-works-btn">
+					<button class="btn how-brap-works-btn" onclick="openNav()">
 						<span>How Braap Works</span>
 						<img src="assets/icons/eye.svg" alt="eye">
 					</button>
 				</div>
 			</div>
-			<div class="row trending-cards">
+			<div class="row trending-cards g-4">
 
 				<div class="col-md-3">
 					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
 						<div class="ribbon">TT</div>
 						<div class="card-hamburger">
-							<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
 						</div>
-						<div class="card-title">
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
 							FAULTY OR BROKEN OXYGEN SENSOR
 						</div>
 						<div class="card-img">
@@ -201,16 +217,16 @@
 						<div class="card-meta">
 							<div class="row">
 								<div class="col-6 text-center">
-									<div class="card-meta-content">
+									<div class="card-meta-content liked">
 										<a href="#">
 											<img src="assets/icons/like.svg" alt="thumbs up">
-											<span>Like</span>
+											<div>3 Likes</div>
 										</a>
 									</div>
 								</div>
 								<div class="col-6 text-center">
 									<div class="card-meta-content">
-										<a href="#">
+										<a href="#" class="tag">
 											Engine
 										</a>
 									</div>
@@ -226,6 +242,846 @@
 					</div>
 				</div>
 
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
+						<div class="ribbon">TT</div>
+						<div class="card-hamburger">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="ENGINE BLEW OIL EVERYWHERE">
+							ENGINE BLEW OIL EVERYWHERE
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img-2.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/like.svg" alt="thumbs up">
+											<div>Like</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#" class="tag">
+											Engine
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-name">
+							2019 Husqvarna Dirt Bike FC 250
+						</div>
+						<div class="card-help">
+							<a href="#">Ask Technician for Help</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
+						<div class="ribbon">TT</div>
+						<div class="card-hamburger">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="MANUFACTURER RECOMMENDED MAINTENANCE PACKAGE">
+							MANUFACTURER RECOMMENDED MAINTENANCE PACKAGE
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img-3.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-6 text-center">
+									<div class="card-meta-content liked">
+										<a href="#">
+											<img src="assets/icons/like.svg" alt="thumbs up">
+											<div>4 Likes</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#" class="tag">
+											Engine
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-name">
+							2019 Husqvarna Dirt Bike FC 250
+						</div>
+						<div class="card-help">
+							<a href="#">Ask Technician for Help</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
+						<div class="ribbon">TT</div>
+						<div class="card-hamburger">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="NEGLECTING OIL AND FILTER CHANGES">
+							NEGLECTING OIL AND FILTER CHANGES
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img-4.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/like.svg" alt="thumbs up">
+											<div>Like</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#" class="tag">
+											Engine
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-name">
+							2019 Husqvarna Dirt Bike FC 250
+						</div>
+						<div class="card-help">
+							<a href="#">Ask Technician for Help</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
+						<div class="ribbon">TT</div>
+						<div class="card-hamburger">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/like.svg" alt="thumbs up">
+											<div>Like</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#" class="tag">
+											Engine
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-name">
+							2019 Husqvarna Dirt Bike FC 250
+						</div>
+						<div class="card-help">
+							<a href="#">Ask Technician for Help</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
+						<div class="ribbon">TT</div>
+						<div class="card-hamburger">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="ENGINE BLEW OIL EVERYWHERE">
+							ENGINE BLEW OIL EVERYWHERE
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img-2.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/like.svg" alt="thumbs up">
+											<div>Like</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#" class="tag">
+											Engine
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-name">
+							2019 Husqvarna Dirt Bike FC 250
+						</div>
+						<div class="card-help">
+							<a href="#">Ask Technician for Help</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
+						<div class="ribbon">TT</div>
+						<div class="card-hamburger">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="MANUFACTURER RECOMMENDED MAINTENANCE PACKAGE">
+							MANUFACTURER RECOMMENDED MAINTENANCE PACKAGE
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img-3.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/like.svg" alt="thumbs up">
+											<div>Like</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#" class="tag">
+											Engine
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-name">
+							2019 Husqvarna Dirt Bike FC 250
+						</div>
+						<div class="card-help">
+							<a href="#">Ask Technician for Help</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<a class="card-overlay" href="#">Tap to see Parts</a>
+						<div class="ribbon">TT</div>
+						<div class="card-hamburger">
+							<span type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/card-hamburger.svg" alt="card menu">
+							</span>
+							<ul class="dropdown-menu dropdown-menu-end">
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/save-work.svg" alt="save">Save to workspace</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/share.svg" alt="share">Share with someone</button>
+							    </li>
+							    <li>
+							    	<button class="dropdown-item" type="button"><img src="assets/icons/close.svg" alt="cross">Inappropriate report</button>
+							    </li>
+							</ul>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="NEGLECTING OIL AND FILTER CHANGES">
+							NEGLECTING OIL AND FILTER CHANGES
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img-4.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/like.svg" alt="thumbs up">
+											<div>Like</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-6 text-center">
+									<div class="card-meta-content">
+										<a href="#" class="tag">
+											Engine
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-name">
+							2019 Husqvarna Dirt Bike FC 250
+						</div>
+						<div class="card-help">
+							<a href="#">Ask Technician for Help</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- How Braap Works -->
+	<div class="body-overlay"></div>
+	<div id="how-braap-works" class="how-braap-works">
+		<div class="how-braap-works-content">
+		<span class="closeNav btn btn-dark" onclick="closeNav()"><img src="assets/icons/arrow-left-white.svg" class="me-2" alt="arrow left">Back</span>
+			<div class="work-content">
+				
+				<div class="work-content-section">
+					<h2 class="sub-head">
+						How <span class="text-orange">Braap</span> Works
+					</h2>
+					<p>
+						Mechanical parts break, when things go wrong they need fixed. Long before you need a diagnosis for your problem Braap is connecting the millions of parts, maintenance requirements, and service professionals so you can easily get what you need.
+					</p>
+					<div class="row">
+						<div class="col-md-8 offset-md-2">
+							<div class="input-group">
+								<span class="input-group-text">
+									<img src="assets/icons/search-dark.svg" alt="magnifier">
+								</span>
+								<input type="text" id="typing-effect" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+								<div class="input-group-divider"></div>
+								<span class="input-group-text">
+									<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike"></a>
+									<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera"></a>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="divider"></div>
+				
+				<div class="work-content-section">
+					<div class="row">
+						<div class="col-md-8">
+							<h2 class="sub-head">
+								Organizing <span class="text-orange">and</span> Connecting
+							</h2>
+							<p>
+								Braap connects diagnostics, know-how, parts, and service technicians together on one platform to solve problems. Our AI engine helps keep track of maintenance needs, fixes, and everything else to make your mechanical device run its best.
+							</p>
+						</div>
+						<div class="col-md-4 position-relative">
+							<div class="moving-utv">
+								<svg class="utv-color animate" xmlns="http://www.w3.org/2000/svg" width="236" height="124.459" viewBox="0 0 236 124.459">
+                                    <g id="Сгруппировать_13" data-name="Сгруппировать 13" transform="translate(-711 -344)">
+                                        <path id="Контур_15" data-name="Контур 15" d="M832.341,342.14h-18.8L803.2,323.362l1.357-13.277,31.9,5.07,38.384,5.33,7.284,7.922v7.051H842.036Z" transform="translate(-88 36)" fill="#fff"></path>
+                                        <path id="Контур_12" data-name="Контур 12" d="M904.218,384.667l4.391-19.682,28.789,4.88,8.772,13.051-5.689,3.739Z" transform="translate(-88 36)" fill="#fff"></path>
+                                        <path id="Контур_11" data-name="Контур 11" d="M906.959,364.949l-31.294-5.769,5.731,9.056,10.781,13.356,4.3,19.375h61.534l7.448-36.017,14.88-10.084h33.719V344.148l-41.5-2.008-18.951,17.04-6.688,25.159H906.959Z" transform="translate(-88 36)" fill="#fff"></path>
+                                        <path id="Контур_10" data-name="Контур 10" d="M909.284,362.066c2.078-1.763,30.452-32.139,30.452-32.139l16.748-17.184,16.957,29.7-20.507,16.747-4.989,25.216-8.21-12.4S907.206,363.828,909.284,362.066Z" transform="translate(-88 36)" fill="#fff"></path>
+                                        <path id="Контур_13" data-name="Контур 13" d="M969.992,333.834l2.753,8.422h39.019l-1.736-6.25-19.193-4.346Z" transform="translate(-88 36)" fill="#fff"></path>
+                                        <path id="Контур_9" data-name="Контур 9" d="M834.957,348.72l-1.106-2.941,4.192-7.317,47.7-1.8,16.2,4.839,24.541-3.038L928.7,341.5l-21.75,21.127-23.277-2.8-32.412-8.486H838.043Z" transform="translate(-88 36)" fill="#fff"></path>
+                                        <path id="Контур_1" data-name="Контур 1" d="M217.96,118.72a31.771,31.771,0,0,1,5.15,3.17,2.932,2.932,0,0,1-2.48,1.34,2.982,2.982,0,0,1-.92-.14,3.013,3.013,0,0,1-1.94-3.77Z" transform="translate(711 288.229)"></path>
+                                        <path fill="#000" id="Контур_2" data-name="Контур 2" d="M229.2,103.33l-5.01,15.62a34.941,34.941,0,0,0-5.3-3.12l4.36-13.61-1.97-10.59a3,3,0,1,1,5.9-1.09l2.11,11.33A3.007,3.007,0,0,1,229.2,103.33Z" transform="translate(711 288.229)"></path>
+                                        <path id="Контур_5" data-name="Контур 5" d="M30.01,87.19H15.99L6.66,71.68a4.594,4.594,0,0,1-.6-3.09c.53-3.41.9-5.49,1.15-6.76,7.06.65,30.44,3.37,63.75,7.41a9.586,9.586,0,0,1,7.26,4.95l1.9,3.52h6.82L83.5,71.34a15.553,15.553,0,0,0-11.82-8.05c-8.62-1.05-25.25-3.06-39.7-4.75C4.12,55.29,4.13,55.29,2.83,56.56c-.8.78-1.13,1.1-2.7,11.09a10.606,10.606,0,0,0,1.39,7.13l10.2,16.95a3,3,0,0,0,2.57,1.46h14.2A16.073,16.073,0,0,1,30.01,87.19Z" transform="translate(711 288.229)"></path>
+                                        <g id="whileF">
+                                            <circle id="Эллипс_2" data-name="Эллипс 2" cx="27" cy="27" r="27" transform="translate(888 409)" fill="#fff"></circle>
+                                            <path fill="#000" id="Контур_3" data-name="Контур 3" d="M203.56,134.79a13,13,0,1,0,13,13A13.025,13.025,0,0,0,203.56,134.79Zm0,20.01a7,7,0,1,1,7-7.01A7.01,7.01,0,0,1,203.56,154.8Z" transform="translate(711 288.229)"></path>
+                                            <path id="Контур_6" data-name="Контур 6" d="M223.11,121.89a31.772,31.772,0,0,0-5.15-3.17,30.26,30.26,0,0,0-3.09-1.33c-.39-.15-.78-.28-1.17-.41a30.713,30.713,0,0,0-4.63-1.15,32.46,32.46,0,0,0-36.1,21.13,31.586,31.586,0,0,0-1.46,5.82,31.948,31.948,0,0,0-.39,5.01,32.44,32.44,0,1,0,51.99-25.9Zm-6.69,48.99-1.29-2.45-5.31,2.79,1.04,1.98a26.383,26.383,0,0,1-14.53.02l.83-2.66-5.73-1.77-.66,2.13a26.589,26.589,0,0,1-10.3-10.26l2.46-1.3-2.79-5.31-1.99,1.05a26.349,26.349,0,0,1-1.03-7.31,26.685,26.685,0,0,1,1-7.23l2.68.83,1.77-5.73-2.15-.67a26.177,26.177,0,0,1,10.28-10.3l1.3,2.47,5.31-2.79-1.05-1.99a26.671,26.671,0,0,1,14.54-.02l-.83,2.67,5.73,1.77.66-2.14a26.115,26.115,0,0,1,10.31,10.27l-2.48,1.3,2.8,5.31,1.99-1.05a26.544,26.544,0,0,1,.01,14.54l-2.66-.83-1.78,5.73,2.14.66A26.589,26.589,0,0,1,216.42,170.88Z" transform="translate(711 288.229)"></path>
+                                        </g>
+                                        <g id="whileB">
+                                            <circle id="Эллипс_1" data-name="Эллипс 1" cx="27" cy="27" r="27" transform="translate(738 409)" fill="#fff"></circle>
+                                            <path fill="#000" id="Контур_4" data-name="Контур 4" d="M53.61,134.79a13,13,0,1,0,13,13A13.019,13.019,0,0,0,53.61,134.79Zm0,20.01a7,7,0,1,1,7-7.01A7.01,7.01,0,0,1,53.61,154.8Z" transform="translate(711 288.229)"></path>
+                                            <path id="Контур_7" data-name="Контур 7" d="M84.22,137.06A32.222,32.222,0,0,0,65.6,117.65c-.61-.24-1.22-.47-1.85-.67a29.173,29.173,0,0,0-3.91-1.02,32.438,32.438,0,1,0,26.2,31.83,32.573,32.573,0,0,0-1.82-10.73ZM66.47,170.88l-1.29-2.45-5.31,2.79,1.04,1.98a26.419,26.419,0,0,1-14.54.02l.83-2.66-5.73-1.77-.66,2.13a26.5,26.5,0,0,1-10.28-10.27l2.45-1.29-2.8-5.31-1.98,1.04a26.278,26.278,0,0,1-1.03-7.3,26.685,26.685,0,0,1,1-7.23l2.67.83,1.78-5.73-2.15-.67a26.216,26.216,0,0,1,10.27-10.3l1.3,2.47,5.31-2.79-1.05-1.99a26.707,26.707,0,0,1,14.55-.02l-.83,2.67,5.73,1.77.66-2.14a26.285,26.285,0,0,1,10.31,10.26l-2.48,1.31,2.8,5.31,1.98-1.04a26.472,26.472,0,0,1,.01,14.52l-2.65-.82-1.78,5.73,2.13.66A26.564,26.564,0,0,1,66.47,170.88Z" transform="translate(711 288.229)"></path>
+                                        </g>
+                                        <path id="Контур_8" data-name="Контур 8" d="M169.07,115.45l13.53-10.93h30.09l-2.7,8.42a33.86,33.86,0,0,1,4.66,1.19c.38.13.76.26,1.14.4l3.88-12.09a.037.037,0,0,1,.01-.03,2.978,2.978,0,0,0,.09-.43,2.316,2.316,0,0,0,.04-.46,3.361,3.361,0,0,0-.06-.63l-2.1-11.25a2.97,2.97,0,0,0-.37-.98h.01l-1.37-2.32a18.021,18.021,0,0,0-15.43-8.78h-29.1L160.85,58.15a3,3,0,0,0-4.86-.57l-5.779,6.409-6.63-4.485a3.01,3.01,0,0,0-2.044-.493l-10.885,1.327a3,3,0,0,0,.727,5.956L141.15,65.1l5,3.385,0,0-2.59,2.87-3.21,3.56c-2.9,1.87-28.84,17.74-51.39,6.52-.27-.12-.53-.25-.79-.39a3.078,3.078,0,0,0-1.4-.34H47.25C46.9,80.7,38.44,80.65,34,86.4c-.2.26-.39.52-.56.79a12.393,12.393,0,0,0-1.97,6,20.906,20.906,0,0,0,.81,7.05h.01a3,3,0,0,0,2.89,2.2h9.55a49.422,49.422,0,0,1,17.82,3.31l-1.94,7.3a35.486,35.486,0,0,1,4.08,1.08q.855.285,1.68.6l1.72-6.45a49.293,49.293,0,0,1,23.46,27.26l-4.36.91a34.8,34.8,0,0,1,1.42,5.84l4.61-.96c1.02,4.13,1.45,6.89,1.46,6.92a3,3,0,0,0,2.96,2.54h61.32a3,3,0,0,0,2.93-2.36l1.67-7.66,5.03,1.27a34.553,34.553,0,0,1,1.46-5.81l-5.22-1.32Zm39.98-28.26H176.032l-1.7-3.63H200.49A11.99,11.99,0,0,1,209.05,87.19ZM157.6,64.75l9.29,17.08h0l3.538,7.541L152.64,104.29a2.893,2.893,0,0,0-.99,1.62l-4.57,19.64-5.21-8.73a3.03,3.03,0,0,0-2-1.41l-22.74-4.47-3.53-.69,30.83-30.9c.03-.04.07-.07.1-.11l.1-.12,3.38-3.74,4.93-5.47Zm-45.66,51.39.09-.09,25.37,4.99,5.63,9.44H108.99C110.75,126.75,112.61,121.36,111.94,116.14ZM44.73,96.44H37.59c-.41-2.7-.03-4.83,1.14-6.36,2.59-3.37,8.41-3.39,8.48-3.37H86.04c14.77,7.46,30.32,4.93,41.6.97l-21.13,21.17-2.83-.55-36.71-7.22A55.464,55.464,0,0,0,44.73,96.44Zm111.82,48.35h-56.4c-.37-1.82-.96-4.5-1.84-7.7a55.045,55.045,0,0,0-17.18-27.11l24.33,4.78c2.34,6.02-2.54,14.93-3.81,16.73a3.045,3.045,0,0,0-.75,2.24l2.13,2.63.86-.28v.4h44.43a2.987,2.987,0,0,0,2.92-2.32l6.02-25.92,17.96-15.05h36.99l.99,5.33H181.54a2.971,2.971,0,0,0-1.89.67l-15.17,12.26a2.977,2.977,0,0,0-1.04,1.7Z" transform="translate(711 288.229)"></path>
+                                        <path id="Контур_14" data-name="Контур 14" d="M835.078,344.068l-22.006-2.313" transform="matrix(0.995, -0.105, 0.105, 0.995, -119.33, 123.486)" fill="none" stroke="#000" stroke-width="6"></path>
+                                        <path id="Контур_16" data-name="Контур 16" d="M880.728,326.6l5.175,9.239" transform="translate(-88 36)" fill="none" stroke="#000" stroke-width="6"></path>
+                                    </g>
+                                </svg>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+				
+				<div class="work-content-section">
+					<div class="row">
+						<div class="col-md-8">
+							<h2 class="sub-head">
+								Instant <span class="text-orange">Results</span>
+							</h2>
+							<p>
+								In a fraction of seconds, Braap uses its algorithms and ranking system to sort through millions of potential diagnostics and parts to find the most relevant result for what you are looking for.
+							</p>
+							<a href="#" class="btn">
+								<span>Ask Technician for Help</span>
+								<img src="assets/icons/arrow-right-white.svg" alt="arrow right">
+							</a>
+						</div>
+						<div class="col-md-4 text-center">
+							<img src="assets/img/home/instant-results.jpg" alt="Instant Results" class="instant-results w-100">
+						</div>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="work-content-section">
+					<h2 class="sub-head">
+						Get help <span class="text-orange">or just</span>  get what you need
+					</h2>
+					<p>
+						Braap's innovative technology is a game-changer for the service industry. Tools that let you visually and acoustically diagnose a problem without time-consuming guesswork, simplifying the job.
+					</p>
+					<div class="row">
+						<div class="col-md-8 offset-md-2">
+							<div class="row get-help-diagram">
+								<div class="col-6">
+									<img src="assets/img/home/camera-left.svg" class="camera-left" alt="camera">
+								</div>
+								<div class="col-6 text-end position-relative">
+									<img src="assets/img/home/sound.gif" class="sound-gif" alt="mike">
+									<img src="assets/img/home/mike-right.svg" class="mike-right" alt="mike">
+								</div>
+								<div class="col-12 mt-3">
+									<img src="assets/img/home/search-bottom.svg" class="search-bottom w-100" alt="mike">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- FEATURES SECTION -->
+	<div class="features-home">
+		<img src="assets/img/section-top-left.png" alt="diamond" class="section-top-left">
+		<img src="assets/img/section-top-right.png" alt="diamonds" class="section-top-right">
+		<img src="assets/img/section-bottom-left.png" alt="sprinkles" class="section-top-right">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="section-title"><span class="text-orange">Braap</span> Features</h1>
+				</div>
+			</div>
+			<div class="row g-3">
+
+				<div class="col-md-4">
+					<div class="feature-card card text-center">
+						<div class="feature-img w-100">
+							<img src="assets/img/features/automated-job.jpg" alt="Automated job quoting and estimating">
+						</div>
+						<h3 class="feature-head">
+							Automated job quoting and estimating
+						</h3>
+						<div class="feature-points">
+							<p>100% job automation from quote to service</p>
+							<p>Self-learning rate tracking</p>
+							<p>Automated work scheduler</p>
+						</div>
+						<div class="feature-learn-more">
+							<a href="#">
+								<span>Learn More</span>
+								<img src="assets/icons/arrow-right-orange.svg" alt="arrow right">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="feature-card card text-center">
+						<div class="feature-img w-100">
+							<img src="assets/img/features/consolidated.jpg" alt="Consolidated direct parts sourcing">
+						</div>
+						<h3 class="feature-head">
+							Consolidated direct parts sourcing
+						</h3>
+						<div class="feature-points">
+							<p>OEM, AFT, used manufactures and sellers</p>
+							<p>Price comparison</p>
+							<p>Best option selection</p>
+						</div>
+						<div class="feature-learn-more">
+							<a href="#">
+								<span>Learn More</span>
+								<img src="assets/icons/arrow-right-orange.svg" alt="arrow right">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="feature-card card text-center">
+						<div class="feature-img w-100">
+							<img src="assets/img/features/curated-machine.jpg" alt="Curated machine learning search engine">
+						</div>
+						<h3 class="feature-head">
+							Curated machine learning search engine
+						</h3>
+						<div class="feature-points">
+							<p>Self-learning</p>
+							<p>Diagnostic to part</p>
+							<p>Professional sourced repair packages</p>
+						</div>
+						<div class="feature-learn-more">
+							<a href="#">
+								<span>Learn More</span>
+								<img src="assets/icons/arrow-right-orange.svg" alt="arrow right">
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row view-all-btn text-center">
+				<div class="col-12">
+					<a href="#" class="btn">
+						<span>View All Features</span>
+						<img src="assets/icons/arrow-right-white.svg" alt="arrow-right">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- TESTIMONIALS -->
+	<div class="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h1 class="section-title d-inline-block">What <span class="text-orange">Clients say</span> about Braap</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+
+					<div class="testimonial-slider">
+						<!-- SLIDE 1 -->
+						<div class="testimonial-slide">
+							<div class="testimonial-img">
+								<img src="assets/img/home/testimonials/testimonial-1.png" alt="avatar">
+							</div>
+							<div class="testimonial-head">
+								Tom R. <br>
+								<span>
+									(Field Technician)
+								</span>
+							</div>
+							<div class="testimonial-text">
+								<img src="assets/icons/quote.svg" alt="quote">
+								A service platform that gives technicians flexibility while streamlining the job for the customer and back office.
+							</div>
+							<div class="testimonial-rating">
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+							</div>
+						</div>
+						<!-- SLIDE 2 -->
+						<div class="testimonial-slide">
+							<div class="testimonial-img">
+								<img src="assets/img/home/testimonials/testimonial-2.png" alt="avatar">
+							</div>
+							<div class="testimonial-head">
+								Robin A. <br>
+								<span>
+									(Analyst)
+								</span>
+							</div>
+							<div class="testimonial-text">
+								<img src="assets/icons/quote.svg" alt="quote">
+								Braap is ready to go from the moment you signup. There is no setup to get started!
+							</div>
+							<div class="testimonial-rating">
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+							</div>
+						</div>
+						<!-- SLIDE 3 -->
+						<div class="testimonial-slide">
+							<div class="testimonial-img">
+								<img src="assets/img/home/testimonials/testimonial-3.png" alt="avatar">
+							</div>
+							<div class="testimonial-head">
+								Samuel M. <br>
+								<span>
+									(Technician)
+								</span>
+							</div>
+							<div class="testimonial-text">
+								<img src="assets/icons/quote.svg" alt="quote">
+								    I have used other service
+									platforms and nothing compares
+									to Braap. I love the interactive
+									shop, timeline, and mobile
+									functionality. It does all the
+									administrative work for me so I
+									can do my job better.
+							</div>
+							<div class="testimonial-rating">
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+							</div>
+						</div>
+						<!-- SLIDE 4 -->
+						<div class="testimonial-slide">
+							<div class="testimonial-img">
+								<img src="assets/img/home/testimonials/testimonial-4.png" alt="avatar">
+							</div>
+							<div class="testimonial-head">
+								Jenny Q. <br>
+								<span>
+									(VP of Customer Relationships)
+								</span>
+							</div>
+							<div class="testimonial-text">
+								<img src="assets/icons/quote.svg" alt="quote">
+								    Braap raised our customer
+									response satisfaction rating and
+									reduced our costs.
+							</div>
+							<div class="testimonial-rating">
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+							</div>
+						</div>
+						<!-- SLIDE 5 -->
+						<div class="testimonial-slide">
+							<div class="testimonial-img">
+								<img src="assets/img/home/testimonials/testimonial-5.png" alt="avatar">
+							</div>
+							<div class="testimonial-head">
+								Zulu D. <br>
+								<span>
+									(Operations manager)
+								</span>
+							</div>
+							<div class="testimonial-text">
+								<img src="assets/icons/quote.svg" alt="quote">
+								    My job used to be scheduling,
+									ordering, customer follow up,
+									and reporting. With Braap
+									automation, now I can focus on
+									delivering better service to my
+									customers.
+							</div>
+							<div class="testimonial-rating">
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+							</div>
+						</div>
+						<!-- SLIDE 6 -->
+						<div class="testimonial-slide">
+							<div class="testimonial-img">
+								<img src="assets/img/home/testimonials/testimonial-6.png" alt="avatar">
+							</div>
+							<div class="testimonial-head">
+								Henry P.<br>
+								<span>
+									(CTO/CIO)
+								</span>
+							</div>
+							<div class="testimonial-text">
+								<img src="assets/icons/quote.svg" alt="quote">
+								    We integrated Braap to our ERP
+									system. We get all the Braap
+									functionality, and our users did
+									not need to learn a new system.
+							</div>
+							<div class="testimonial-rating">
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+							</div>
+						</div>
+						<!-- SLIDE 7 -->
+						<div class="testimonial-slide">
+							<div class="testimonial-img">
+								<img src="assets/img/home/testimonials/testimonial-7.png" alt="avatar">
+							</div>
+							<div class="testimonial-head">
+								Jackson T. <br>
+								<span>
+									(Owner)
+								</span>
+							</div>
+							<div class="testimonial-text">
+								<img src="assets/icons/quote.svg" alt="quote">
+								    I wanted to grow our business.
+									Braap’s augmented our team
+									with logistics and technicians.
+									Exciting way for us to grow one-step at a time.
+							</div>
+							<div class="testimonial-rating">
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+								<i class="fa-solid fa-star checked"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row learn-btn text-center">
+				<div class="col-12">
+					<a href="#" class="btn">
+						<span>Learn More</span>
+						<img src="assets/icons/arrow-right-white.svg" alt="arrow-right">
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- BLOG SECTION -->
+	<div class="blog">
+		<img src="assets/img/section-top-left.png" alt="diamond" class="section-top-left">
+		<img src="assets/img/section-top-right.png" alt="diamonds" class="section-top-right">
+		<img src="assets/img/section-bottom-left.png" alt="sprinkles" class="section-bottom-left">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="section-title">Blogs By <span class="text-orange">Braap</span></h1>
+					<p class="mt-4">
+						Learn about why customers and technicians love Braap. In our blogs we talk about our technology, give technician tips, provide customer stories, answer questions, and a lot more.
+					</p>
+				</div>
+			</div>
+			<div class="row g-3">
+			</div>
+		</div>
+	</div>
+
+	<!-- WHY CUSTOMERS LIKE BRAAP -->
+	<div class="customer-braap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h1 class="section-title d-inline-block">Reasons <span class="text-orange">Why Customers</span> like Braap</h1>
+				</div>
 			</div>
 		</div>
 	</div>
