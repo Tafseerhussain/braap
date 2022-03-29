@@ -41,8 +41,18 @@ window.sr = ScrollReveal({
 });
 sr.reveal('.fade-in');
 sr.reveal('.fade-left',{origin: 'left', distance: '100px', duration: 500,});
+sr.reveal('.fade-left-delay',{origin: 'left', distance: '100px', duration: 500, delay: 300});
+sr.reveal('.fade-left-delay-600',{origin: 'left', distance: '100px', duration: 500, delay: 600});
 sr.reveal('.fade-left-vf40',{origin: 'left', distance: '100px', duration: 500, viewFactor: 0.4,});
 sr.reveal('.fade-right',{origin: 'right', distance: '100px', duration: 500,});
+sr.reveal('.fade-right-delay',{origin: 'right', distance: '100px', duration: 500, delay: 300});
 sr.reveal('.fade-bottom',{origin: 'bottom', distance: '100px', duration: 500,});
 sr.reveal('.fade-bottom-vf40',{origin: 'bottom', distance: '100px', duration: 500, viewFactor: 0.4,});
 sr.reveal('.fade-top',{origin: 'top', distance: '100px', duration: 500,});
+
+$( ".header-search input" ).focus(function() {
+    $(".search-results-static").delay(0).fadeIn();
+});
+$( ".header-search input" ).focusout(function() {
+    $(".search-results-static").delay(0).fadeOut();
+});
