@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="responsive.css">
 	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
 	<!-- scroll reveal -->
-	<script src="https://unpkg.com/scrollreveal@4"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
@@ -24,6 +24,68 @@
 	<div class="preloaderBg" id="preloader">
 	    <div class="preloader"></div>
 	    <div class="preloader2"></div>
+	</div>
+
+	<!-- STICKY SEARCH BAR -->
+	<div class="sticky-search-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<a href="#"><img src="assets/img/logo-white.svg" class="braap-logo" alt="braao logo"></a>
+				</div>
+				<div class="col-md-8">
+					<div class="sticky-search">
+						<div class="hero-search position-relative">
+							<form action="#">
+								<div class="input-group mb-3">
+									<span class="input-group-text">
+										<img src="assets/icons/search.svg" alt="magnifier">
+									</span>
+									<input type="text" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+									<span class="input-group-text">
+										<a href="#"><img src="assets/icons/mike.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming Soon"></a>
+										<a href="#"><img src="assets/icons/camera.svg" alt="camera"data-bs-toggle="tooltip" data-bs-placement="top" title="Coming Soon"></a>
+									</span>
+								</div>
+							</form>
+
+							<!-- Search Results (Enable When Required) -->
+							<ul class="search-results list-group home-search-results">
+							  <li class="list-group-item">
+							  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Noises</span></a>
+							  </li>
+							  <li class="list-group-item">
+							  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Neglecting oil and filter changes</span></a>
+							  </li>
+							  <li class="list-group-item">
+							  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Poor compression</span></a>
+							  </li>
+							  <li class="list-group-item">
+							  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Spark knock</span></a>
+							  </li>
+							  <li class="list-group-item">
+							  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Oil deposits and debris</span></a>
+							  </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 text-end">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle pt-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/user-account.svg" alt="user account">
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">Login</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="#">Register</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- HEADER FOR HOME PAGE -->
@@ -178,7 +240,7 @@
 					</button>
 				</div>
 			</div>
-			<div class="row trending-cards g-4">
+			<div class="row trending-cards g-xl-4 g-lg-3 g-md-2 fade-in">
 
 				<div class="col-md-3">
 					<div class="trending-card card">
@@ -757,7 +819,7 @@
 					<h1 class="section-title"><span class="text-orange">Braap</span> Features</h1>
 				</div>
 			</div>
-			<div class="row g-3">
+			<div class="row g-3 fade-in">
 
 				<div class="col-md-4">
 					<div class="feature-card card text-center">
@@ -849,7 +911,7 @@
 			<div class="row">
 				<div class="col-md-8 offset-md-2">
 
-					<div class="testimonial-slider">
+					<div class="testimonial-slider fade-in">
 						<!-- SLIDE 1 -->
 						<div class="testimonial-slide">
 							<div class="testimonial-img">
@@ -1190,11 +1252,56 @@
 					<h1 class="section-title d-inline-block">Reasons <span class="text-orange">Why Customers</span> like Braap</h1>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row mt-5 pt-5">
+				<div class="col-md-3">
+					<div class="point-card card" id="p1">
+						<p class="process-text">
+							No Setup Required
+						</p>
+					</div>
+					<div class="point-card card point-card-left"  id="p2">
+						<p class="process-text">
+							Structures customer and technician diagnostic collaboration.
+						</p>
+					</div>
+					<div class="point-card card" id="p3">
+						<p class="process-text">
+							Automates the back office with flexible workflows.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 text-center position-relative">
+					<img src="assets/img/points/all-points.svg" class="process-center pc1" alt="">
+					<img src="assets/img/points/top-left.svg" class="process-center hover1" id="h-1" alt="">
+					<img src="assets/img/points/left.svg" class="process-center hover1" id="h-2" alt="">
+					<img src="assets/img/points/bottom-left.svg" class="process-center hover1" id="h-3" alt="">
+					<img src="assets/img/points/top-right.svg" class="process-center hover1" id="h-4" alt="">
+					<img src="assets/img/points/right.svg" class="process-center hover1" id="h-5" alt="">
+					<img src="assets/img/points/bottom-right.svg" class="process-center hover1" id="h-6" alt="">
+				</div>
+				<div class="col-md-3">
+					<div class="point-card card" id="p4">
+						<p class="process-text">
+							Comprehensive, yet simple to use.
+						</p>
+					</div>
+					<div class="point-card card point-card-right" id="p5">
+						<p class="process-text">
+							Features built for service teams and technicians
+						</p>
+					</div>
+					<div class="point-card card" id="p6">
+						<p class="process-text">
+							Seamlessly integrates to ERP systems and vendor parts systems.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="row">
 				<div class="customer-braap-img">
 					<img src="assets/img/home/customer-braap.svg" class="w-100" alt="Why Customer Like Braap">
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
