@@ -1508,6 +1508,7 @@ FEATURES PAGE
 	right: 0;
 	bottom: 0;
 	width: 55%;
+	pointer-events: none;
 }
 .feature-detail-row {
 	padding-top: 120px;
