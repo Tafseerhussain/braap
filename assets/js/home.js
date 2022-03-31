@@ -102,6 +102,26 @@ $(document).ready(function(){
 });
 
 $(function() {
+  $('#pt-1').hover(function() {
+    $('#t-1').css('display', 'block');
+    $('.pc1').css('display', 'none');
+  }, function() {
+    $('.pc1').css('display', 'block');
+    $('#t-1').css('display', 'none');
+  });
+});
+
+$(function() {
+  $('#pb-1').hover(function() {
+    $('#b-1').css('display', 'block');
+    $('.pc1').css('display', 'none');
+  }, function() {
+    $('.pc1').css('display', 'block');
+    $('#b-1').css('display', 'none');
+  });
+});
+
+$(function() {
   $('#p1').hover(function() {
     $('#h-1').css('display', 'block');
     $('.pc1').css('display', 'none');
@@ -159,4 +179,10 @@ $(function() {
     $('.pc1').css('display', 'block');
     $('#h-6').css('display', 'none');
   });
+});
+
+var textAreas = document.getElementsByTagName('input');
+
+Array.prototype.forEach.call(textAreas, function(elem) {
+    elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
 });

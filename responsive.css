@@ -1,3 +1,15 @@
+@media (min-width: 2000px) {
+	.container {
+		max-width: 1800px !important;
+	}
+	.bottom-point-card {
+		margin-top: 0.5rem;
+	}
+	.process-center {
+		width: 84%;
+		top: 4%;
+	}
+}
 @media (max-width: 1649px){
 	.nav-link {font-size: 16px}
 	.nav-link.dropdown-toggle img {height: 50px}
