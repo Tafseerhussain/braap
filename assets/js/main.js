@@ -70,18 +70,23 @@ window.sr = ScrollReveal({
     viewFactor: 0.2,
 });
 ScrollReveal.debug = true;
+
 sr.reveal('.fade-in');
-sr.reveal('.fade-left',{origin: 'left', distance: '100px', duration: 800, delay: 200});
+
+sr.reveal('.fade-left',{origin: 'left', distance: '100px', duration: 800});
 sr.reveal('.fade-left-delay',{origin: 'left', distance: '100px', duration: 800, delay: 300});
 sr.reveal('.fade-left-delay-600',{origin: 'left', distance: '100px', duration: 500, delay: 600});
 sr.reveal('.fade-left-vf40',{origin: 'left', distance: '100px', duration: 800, viewFactor: 0.4});
-sr.reveal('.fade-right',{origin: 'right', distance: '100px', duration: 800,});
+
+sr.reveal('.fade-right',{origin: 'right', distance: '100px', duration: 800});
 sr.reveal('.fade-right-delay',{origin: 'right', distance: '100px', duration: 800, delay: 300});
 sr.reveal('.fade-right-delay-600',{origin: 'right', distance: '100px', duration: 800, delay: 600});
-sr.reveal('.fade-bottom',{origin: 'bottom', distance: '100px', duration: 800,});
+
+sr.reveal('.fade-bottom',{origin: 'bottom', distance: '100px', duration: 800});
 sr.reveal('.fade-bottom-delay',{origin: 'bottom', distance: '100px', duration: 800, delay: 300});
 sr.reveal('.fade-bottom-delay-600',{origin: 'bottom', distance: '100px', duration: 800, delay: 600});
 sr.reveal('.fade-bottom-vf40',{origin: 'bottom', distance: '100px', duration: 800, viewFactor: 0.4});
+
 sr.reveal('.fade-top',{origin: 'top', distance: '100px', duration: 800});
 sr.reveal('.fade-top-delay',{origin: 'top', distance: '100px', duration: 800, delay: 300});
 sr.reveal('.fade-top-delay-600',{origin: 'top', distance: '100px', duration: 800, delay: 600});
