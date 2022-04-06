@@ -1729,6 +1729,10 @@ DATAHUB PAGE
 	background: var(--white);
 	padding: 50px 0;
 }
+.datahub-parts .btn {
+    padding: 10px 24px;
+    font-size: 16px;
+}
 .datahub-parts .add-parts .input-group-text img {
 	filter: brightness(0);
 }
