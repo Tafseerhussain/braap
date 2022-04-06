@@ -27,7 +27,10 @@ function closeNav() {
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
+  // return new bootstrap.Tooltip(tooltipTriggerEl)
+  return new bootstrap.Tooltip(tooltipTriggerEl, {
+    boundary: document.body // or document.querySelector('#boundary')
+  })
 })
 
 $( ".header-search input" ).focus(function() {
@@ -90,3 +93,79 @@ sr.reveal('.fade-bottom-vf40',{origin: 'bottom', distance: '100px', duration: 80
 sr.reveal('.fade-top',{origin: 'top', distance: '100px', duration: 800});
 sr.reveal('.fade-top-delay',{origin: 'top', distance: '100px', duration: 800, delay: 300});
 sr.reveal('.fade-top-delay-600',{origin: 'top', distance: '100px', duration: 800, delay: 600});
+
+$(function(){
+    $(".ac-btn-border").click(function() {
+        $(".parts-rows .accordion-button").closest(".accordion-item").css("border-color", "transparent");
+        $(".parts-rows .accordion-item:odd").css("background", "var(--bg-gray)");
+
+        if ($(this).hasClass('collapsed')) {
+            $(this).closest(".accordion-item").css("border-color", "transparent")
+        } else {
+            $(this).closest(".accordion-item").css("border-color", "orange")
+            $(this).closest(".accordion-item").css("background", "#fff")
+        }
+        $(".parts-section-row .accordion-item").css("border-color", "transparent");
+        $(".mul-select").select2({
+          matcher: matchCustom
+        });
+        $('.part-images-slider').slick({
+            slidesToShow: 15,
+            slidesToScroll: 1,
+            speed: 500,
+            infinite: true,
+            dots: false,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+        });
+        $('.related-parts-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 500,
+            infinite: true,
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 4000,
+        });
+    })
+})
+
+function matchCustom(params, data) {
+// If there are no search terms, return all of the data
+if ($.trim(params.term) === '') {
+  return data;
+}
+
+// Do not display the item if there is no 'text' property
+if (typeof data.text === 'undefined') {
+  return null;
+}
+
+// `params.term` should be the term that is used for searching
+// `data.text` is the text that is displayed for the data object
+if (data.text.indexOf(params.term) > -1) {
+  var modifiedData = $.extend({}, data, true);
+  modifiedData.text += ' (matched)';
+
+  // You can return modified objects from here
+  // This includes matching the `children` how you want in nested data sets
+  return modifiedData;
+}
+
+// Return `null` if the term should not be displayed
+return null;
+}
+$(".mul-select").select2({
+  matcher: matchCustom
+});
+
+// parseFloat($(".decimal-input").val()).toFixed(2)
+$('.date-input').datepicker({
+    format: 'MM dd, yyyy',
+    leftArrow: '<i class="fa-solid fa-chevron-left"></i>',
+    rightArrow: '<i class="fa-solid fa-chevron-right"></i>',
+    todayBtn: true,
+    todayHighlight: true
+});

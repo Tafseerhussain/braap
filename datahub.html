@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Braap | Data Hub</title>
+	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
+	<meta content="" name="keywords">
+	<!-- External Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Internal files -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
+
+	<!-- Multiple Selection and Datepicker CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+	<!--  -->
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
+	<!-- scroll reveal -->
+	<script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body>
+
+	<!-- WEBSITE PRELOADER -->
+	<div class="preloaderBg" id="preloader">
+		<div class="preloader-cover">
+		    <div class="preloader"></div>
+		    <div class="preloader2"></div>
+	    </div>
+	</div>
+
+	<!-- HEADER FOR USER PAGES -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100 header-static">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="assets/img/logo-black.svg" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="header-search">
+				<form action="#">
+					<div class="input-group">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" id="typing-effect" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+						<div class="input-group-divider"></div>
+						<span class="input-group-text">
+							<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="left" title="Coming Soon"></a>
+							<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera" data-bs-toggle="tooltip" data-bs-placement="right" title="Coming Soon"></a>
+						</span>
+					</div>
+				</form>
+				<!-- Search Results (Enable When Required) -->
+				<ul class="search-results-static list-group" id="home-search-results">
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> dirt bike</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> hesitating<span> engine</span></a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine </span>overheats</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>whining </span>engine</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> overheating - the  <span>engine</span> oil is part of what keeps the <span>engine</span> cool</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#">My Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Data Hub</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Reports</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Cart</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Account</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/user-account-empty.svg" alt="user account">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/account.svg" alt="account">Account</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/trending.svg" alt="trendline">Trending</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/cart.svg" alt="cart">Shopping Cart</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/logout.svg" alt="logout">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- NAVBAR SPACE FOR OTHER PAGES -->
+	<div class="navbar-spacer"></div>
+
+	<!-- DATAHUB HEADER -->
+	<div class="datahub-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md">
+					<h1 class="section-title">
+						Datahub
+					</h1>
+				</div>
+				<div class="col-md text-end">
+					<div class="datahub-tabs d-flex justify-content-end">
+						<a href="#" class="active">Parts</a>
+						<a href="#">Classification</a>
+						<a href="#">Diagnostics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- DATAHUB PARTS -->
+	<div class="datahub-parts">
+		<div class="container">
+			<div class="row add-parts">
+				<div class="col-md-3">
+					<a href="#" class="btn">
+						+ Add Parts
+					</a>
+				</div>
+				<div class="col-md-9 text-end">
+					<div class="d-flex justify-content-end">
+					<!-- <a href="#!" class="excel-download" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Excel">
+						<img src="assets/icons/excel-btn.svg" alt="ms-excel">
+					</a> -->
+					<a href="#!" class="upload-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload">
+						<img src="assets/icons/upload-btn.svg" alt="upload">
+					</a>
+					<div class="input-group w-50">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" class="form-control" placeholder="Search Parts...">
+						<button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/sort.svg" alt="sort">
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Separated link</a></li>
+						</ul>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="number-of-results">
+						Viewing 7 of 7 Results
+					</div>
+				</div>
+			</div>
+			<div class="parts-rows">
+				<div class="accordion" id="accordionExample">
+
+					<!-- FIRST ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-2">
+								<div class="part-number">
+									<img src="assets/icons/hash.svg" alt="hash">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="4S3BMHB68B3286050">4S3BMHB68B3286050</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="part-name">
+									<img src="assets/img/datahub/part.png" alt="part">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Brake Pads">Brake Pads</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Superior Part Supplier">Superior Part Supplier</span>
+								</div>
+							</div>
+							<div class="col-md-1">
+								<div class="price" data-bs-toggle="tooltip" data-bs-placement="left" title="Sale Price">$ 20.00</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Complete"><img src="assets/icons/tick-circle.svg" class="default selected" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- SECOND ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-2">
+								<div class="part-number">
+									<img src="assets/icons/hash.svg" alt="hash">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="4S3BMHB68B3286050">4S3BMHB68B3286050</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="part-name">
+									<img src="assets/img/datahub/part.png" alt="part">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Brake Pads">Brake Pads</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Superior Part Supplier">Superior Part Supplier</span>
+								</div>
+							</div>
+							<div class="col-md-1">
+								<div class="price" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sale Price">$ 20.00</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Complete"><img src="assets/icons/tick-circle.svg" class="default selected" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>	
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"></button>
+						</h2>
+						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- THIRD ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-2">
+								<div class="part-number">
+									<img src="assets/icons/hash.svg" alt="hash">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="4S3BMHB68B3286050">4S3BMHB68B3286050</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="part-name">
+									<img src="assets/img/datahub/part.png" alt="part">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Brake Pads">Brake Pads</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Superior Part Supplier">Superior Part Supplier</span>
+								</div>
+							</div>
+							<div class="col-md-1">
+								<div class="price" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sale Price">$ 20.00</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Favorite"><img src="assets/icons/star-white.svg" class="default" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Complete"><img src="assets/icons/tick-circle.svg" class="default selected" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"></button>
+						</h2>
+						<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- FOURTH ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-2">
+								<div class="part-number">
+									<img src="assets/icons/hash.svg" alt="hash">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="4S3BMHB68B3286050">4S3BMHB68B3286050</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="part-name">
+									<img src="assets/img/datahub/part.png" alt="part">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Brake Pads">Brake Pads</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Superior Part Supplier">Superior Part Supplier</span>
+								</div>
+							</div>
+							<div class="col-md-1">
+								<div class="price" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sale Price">$ 20.00</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Complete"><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"></button>
+						</h2>
+						<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- FIFTH ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-2">
+								<div class="part-number">
+									<img src="assets/icons/hash.svg" alt="hash">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="4S3BMHB68B3286050">4S3BMHB68B3286050</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="part-name">
+									<img src="assets/img/datahub/part.png" alt="part">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Brake Pads">Brake Pads</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Superior Part Supplier">Superior Part Supplier</span>
+								</div>
+							</div>
+							<div class="col-md-1">
+								<div class="price" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sale Price">$ 20.00</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Favorite"><img src="assets/icons/star-white.svg" class="default" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Complete"><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"></button>
+						</h2>
+						<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							
+							<div class="accordion-body">
+
+								<!-- Question and Edit Row -->
+								<div class="row questions">
+									<div class="col">
+										<a href="#!" class="question border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+											<img src="assets/icons/question-circle-black.svg" alt="question">
+											<span>Click Here To View Field Definitions</span>
+										</a>
+										<!-- Field Definitions Modal -->
+										<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+										  <div class="modal-dialog modal-xl">
+										    <div class="modal-content">
+										      <div class="modal-header">
+										        <h5 class="modal-title" id="staticBackdropLabel">Field Definitions</h5>
+										        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										      </div>
+										      <div class="modal-body">
+														<div class="table-responsive"> 
+															<table class="table table-bordered border table-hover table-striped">
+															  <thead class="thead-dark">
+															    <tr>
+															      <th scope="col">Field Name</th>
+															      <th scope="col">Description</th>
+															    </tr>
+															  </thead>
+															  <tbody>
+															    <tr>
+															      <td>Braap Internal Part ID</td>
+															      <td>Internal tracking identifier.</td>
+															    </tr>
+															    <tr>
+															      <td>Part Name</td>
+															      <td>Manufacturer part name.</td>
+															    </tr>
+															    <tr>
+															      <td>Description</td>
+															      <td>Manufacturer long part description.</td>
+															    </tr>
+															    <tr>
+															      <td>Manufacturer Part Number</td>
+															      <td>Part number provided by the manufacturer.</td>
+															    </tr>
+															    <tr>
+															      <td>Size</td>
+															      <td>Defines the assorted sizes of a part. If the size changes the price of the part, create another part. Braap’s AI engine shows the customer one part with multiple options when searching.</td>
+															    </tr>
+															    <tr>
+															    	<td>Color</td>
+															    	<td>Defines the assorted colors of the part. If the color changes the price of the part, create another part .Braap’s AI engine shows the customer one part with multiple options when searching.</td>
+															    </tr>
+															    <tr>
+															    	<td>Part Condition</td>
+															    	<td>Defines the state of the part: New or Used - Not new, pre-owned.</td>
+															    </tr>
+															    <tr>
+															    	<td>Braap Master System</td>
+															    	<td>The AI classification set by Braap for search and results management.</td>
+															    </tr>
+															    <tr>
+															    	<td>Braap Subsystem</td>
+															    	<td>The AI classification set by Braap for search and results management.</td>
+															    </tr>
+															    <tr>
+															    	<td>Part Origin</td>
+															    	<td>Defines the source of the part: OEM-Original part from the manufacturer | AFT-Aftermarket part | Universal – Fits a wide range of machines or assets.</td>
+															    </tr>
+															    <tr>
+															    	<td>Supplier System</td>
+															    	<td>Each supplier classifies parts into systems so they can be found. Every supplier uses a different method of classifying parts. For example, a brake pad for a vehicle is part of the brake system, so the supplier will classify it as "Brake System". The supplier system is provided by the supplier of the part</td>
+															    </tr>
+															    <tr>
+															    	<td>Sale Price</td>
+															    	<td>The part price that is displayed to customers and technicians. It is the supplier price plus a markup. The price can be shown in any currency.</td>
+															    </tr>
+															    <tr>
+															    	<td>Display Currency</td>
+															    	<td>Represents the currency of the price of the part.</td>
+															    </tr>
+															    <tr>
+															    	<td>Supplier Name</td>
+															    	<td>Legal name of the supplier. Do not include LLC, Inc, or Corp.</td>
+															    </tr>
+															    <tr>
+															    	<td>Order Placement Email Address</td>
+															    	<td>The email address used to place orders if electronic order placement is not available.</td>
+															    </tr>
+															    <tr>
+															    	<td>Supplier Price</td>
+															    	<td>The price your company buys the part for from the supplier.</td>
+															    </tr>
+															    <tr>
+															    	<td>Sale Price Markup or Discount Percentage</td>
+															    	<td>The percentage your company increases the supplier price to the customer. When this field the Sale Price field is automatically calculated</td>
+															    </tr>
+															    <tr>
+															    	<td>Show as Discount from Sales Price</td>
+															    	<td>Sometimes suppliers provide a discount from the Sale Price. The discount can be provided as a factor or a percentage. If it is provided as a factor convert it to as percentage. When this field is used Supplier Price is automatically calculated.</td>
+															    </tr>
+															    <tr>
+															    	<td>Street Address</td>
+															    	<td>Address where the part order is fulfilled. If there is a warehouse associated with the supplier, then the Supplier address is their head office location.</td>
+															    </tr>
+															    <tr>
+															    	<td>Address Line 2</td>
+															    	<td>Use this field to define a building name, floor, suite, or additional address details.</td>
+															    </tr>
+															    <tr>
+															    	<td>City, State, Zip / Postal Code</td>
+															    	<td>Supplier address details.</td>
+															    </tr>
+															    <tr>
+															    	<td>API Connection no Download of Parts</td>
+															    	<td>Some suppliers require integration through their API and do not provide an initial load of their parts. In this case, we setup a part template and add the parts to the database as they are needed.</td>
+															    </tr>
+															    <tr>
+															    	<td>Provide Supplier Box for Shipping</td>
+															    	<td>Some suppliers require the customer facing company to send them a box and pre-paid label for shipping.</td>
+															    </tr>
+															    <tr>
+															    	<td>Send Returns to Supplier</td>
+															    	<td>If this box is selected part returns will be sent to the supplier location.</td>
+															    </tr>
+															    <tr>
+															    	<td>Measuring Units</td>
+															    	<td>Defines the units used in part weight and size. Imperial measurement is inches and pounds. Metric is kilograms and centimeters.</td>
+															    </tr>
+															    <tr>
+															    	<th colspan="2">WareHouse</th>
+															    </tr>
+															    <tr>
+															    	<td>Email Address</td>
+															    	<td>The email address used to place orders if electronic fulfillment notification is not available.</td>
+															    </tr>
+															    <tr>
+															    	<td>Warehouse Address</td>
+															    	<td>The address where supplier fulfillment takes place.</td>
+															    </tr>
+															    <tr>
+															    	<td>Address Line 2</td>
+															    	<td>Use this field to define a building name, floor, suite, or additional address details.</td>
+															    </tr>
+															    <tr>
+															    	<td>City, State, Zip / Postal Code</td>
+															    	<td>Supplier address details.</td>
+															    </tr>
+															    <tr>
+															    	<td>Status</td>
+															    	<td>A part can have several statuses that are set by a change in the supplier inventory levels. Note, a part is In Stock if the inventory level is more than 1.</td>
+															    </tr>
+															    <tr>
+															    	<td>Inventory Level</td>
+															    	<td>The number of parts at the warehouse. If the value is blank, then Braap does not automatically set the Status field. If the inventory level is greater than 1 and the last part is sold, Braap updates the Status to Out of Stock.</td>
+															    </tr>
+															    <tr>
+															    	<td>Expected Ship Time</td>
+															    	<td>Defines the time from order placement to supplier shipment creation.</td>
+															    </tr>
+															    <tr>
+															    	<td>Delivery Mode</td>
+															    	<td>Suppliers that ship on your behalf to the customer are set to Customer Direct. Suppliers that ship to you and then you ship to the customer are set as Dropship.</td>
+															    </tr>
+															    <tr>
+															    	<td>Weight</td>
+															    	<td>The weight of the part in imperial or metric value. This field is controlled by the Measuring Units field.</td>
+															    </tr>
+															    <tr>
+															    	<td>Length</td>
+															    	<td>The length of the part in imperial or metric value. This field is controlled by the Measuring Units field.</td>
+															    </tr>
+															    <tr>
+															    	<td>Width</td>
+															    	<td>The width of the part in imperial or metric value. This field is controlled by the Measuring Units field.</td>
+															    </tr>
+															    <tr>
+															    	<td>Height</td>
+															    	<td>The height of the part in imperial or metric value. This field is controlled by the Measuring Units field.</td>
+															    </tr>
+															    <tr>
+															    	<td>Contains Battery</td>
+															    	<td>Shipping companies need to know if the part contains a battery. Set to yes if the part contains a battery.</td>
+															    </tr>
+															    <tr>
+															    	<td>Fluids</td>
+															    	<td>Shipping companies need to know if the part contains fluids or is a fluid. Set to Yes if the part contains fluids or is a fluid.</td>
+															    </tr>
+															    <tr>
+															    	<td>Rating</td>
+															    	<td>Rating from 1-5 for user feedback about the part.</td>
+															    </tr>
+															    <tr>
+															    	<td>Fitments</td>
+															    	<td>Defines the actual machine or asset the part is known to fit. It is critical to include all fitment possibilities, so technicians and customers are not confused or misled when evaluating and ordering parts.</td>
+															    </tr>
+															    <tr>
+															    	<td>Industry</td>
+															    	<td>The market segment that the part relates to. For example, Powersport or Heating & Cooling.</td>
+															    </tr>
+															    <tr>
+															    	<td>Type</td>
+															    	<td>The main grouping of machines or assets in that industry. For example, ATV or Furnace.</td>
+															    </tr>
+															    <tr>
+															    	<td>Make</td>
+															    	<td>The brand of a machine or asset. For example, ATV brand is Polaris or for a Furnace Trane.</td>
+															    </tr>
+															    <tr>
+															    	<td>Model</td>
+															    	<td>The brand’s product of a machine or asset. For example, Polaris ATV the model is Sportsman 570 or for a Trane furnace the model is S9V2.</td>
+															    </tr>
+															    <tr>
+															    	<td>Horsepower</td>
+															    	<td>Used for machines or assets with fitments that require defined horsepower. An example are boats.</td>
+															    </tr>
+															    <tr>
+															    	<td>Related Parts</td>
+															    	<td>Recommendations that complement or enhance the item a customer is currently viewing.</td>
+															    </tr>
+															    <tr>
+															    	<td>Warranty Period (Number of Days from Purchase or Commission Date)</td>
+															    	<td>The number of days the supplier either on their own or through the manufacturer provide a warranty on the part. Depending on the supplier or manufacturer policy, the warranty can be from date of purchase or part commission.</td>
+															    </tr>
+															    <tr>
+															    	<td>Track Warranty from Commission Date</td>
+															    	<td>When this field is used the warranty period is calculated from the date the part is commissioned.</td>
+															    </tr>
+															    <tr>
+															    	<td>Warnings or Notices</td>
+															    	<td>Products that are regulated or sold in specific areas sometimes are required to provide disclosures for customer protection.</td>
+															    </tr>
+															    <tr>
+															    	<td>Recall Date</td>
+															    	<td>The date of the recall.</td>
+															    </tr>
+															    <tr>
+															    	<td>Recall Number</td>
+															    	<td>The number provided by the recall agency or company.</td>
+															    </tr>
+															    <tr>
+															    	<td>Link to Recall Notice</td>
+															    	<td>Provide hyperlinks to recall notices.</td>
+															    </tr>
+															    <tr>
+															    	<td>Box Size</td>
+															    	<td>The Braap AI engine creates the best box size based on shipping company typical box sizes.</td>
+															    </tr>
+															    <tr>
+															    	<td>Container Name</td>
+															    	<td>The name assigned to the shipping package or box by the carrier.</td>
+															    </tr>
+															  </tbody>
+															</table>
+														</div>
+										      </div>
+										    </div>
+										  </div>
+										</div>
+									</div>
+									<div class="col text-end">
+										<a href="#!" class="edit">
+											<span>Click To Edit Any Field</span>
+											<img src="assets/icons/pencil-circle-black.svg" alt="question">
+										</a>
+									</div>
+								</div>
+
+								<!-- FORM START -->
+								<form action="#" class="mt-4">
+
+									<!-- Part Details -->
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-floating">
+											  <input type="text" class="form-control" name="part_id" placeholder="braap interal id">
+											  <label for="part_id">Braap Internal Part ID</label>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-floating error">
+									        <input type="text" class="form-control" name="part_name" placeholder="part name">
+									        <label for="part_name">Part Name</label>
+									    </div>
+										</div>
+										<div class="col-12">
+											<div class="form-floating">
+											  <textarea name="description" rows="2" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+											  <label for="description">Description</label>
+											</div>
+										</div>
+									</div>
+
+									<!-- Images Upload -->
+									<div class="row image-upload">
+										<div class="col-md-2">
+											<div class="form-group">
+    											<input id="files" type="file" class="custom-file-input w-100">
+									    </div>
+										</div>
+										<div class="col-md-10">
+											<!-- Images Slider -->
+											<div class="part-images-slider">
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+												<!-- Slide -->
+												<div class="part-img-slide">
+													<img src="assets/img/datahub/part-img.png" class="img-thumbnail" alt="part">
+													<a href="#!" class="close"><img src="assets/img/datahub/close.svg" alt="close"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Manufacturer Fields -->
+									<div class="row manufacturer_row">
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <input type="text" class="form-control" name="man_part_number" placeholder="Manufacturers Part Number">
+									        <label for="man_part_number">Manufacturers Part Number</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+													<select class="form-select form-control" name="size_variation" placeholder="Size Variations">
+												    <option value="Large" selected>Large</option>
+												    <option value="Medium">Medium</option>
+												    <option value="Small">Small</option>
+												  </select>
+									        <label for="size_variation">Size Variations</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <select class="form-select form-control" name="color_variation" placeholder="Color Variations">
+												    <option value="Red" selected>Red</option>
+												    <option value="Blue">Blue</option>
+												    <option value="Green">Green</option>
+												  </select>
+									        <label for="color_variation">Color Variations</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+												    <option value="new" selected>New</option>
+												    <option value="old">Old</option>
+												  </select>
+									        <label for="part_condition">Part Condition</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+												<select data-placeholder="Choose System ..." multiple="true" class="mul-select form-select form-control" name="braap_system[]"  placeholder="Braap Master System">
+                          <option value="braap">braap</option>
+                          <option value="system">system</option>
+                          <option value="option">option</option>
+                        </select>
+                        <label for="color_variation">Braap Master System</label>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+												<select data-placeholder="Choose Subsystem ..." multiple="true" class="mul-select form-select form-control" name="braap_subsystem[]"  placeholder="Braap Subsystem">
+                          <option value="braap">braap</option>
+                          <option value="sub-system">sub-system</option>
+                          <option value="option">option</option>
+                        </select>
+                        <label for="color_variation">Braap Subsystem</label>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <select class="form-select form-control" name="part_origin" placeholder="Part Origin">
+												    <option value="OEM" selected>OEM</option>
+												    <option value="Option2">Option2</option>
+												    <option value="Option3">Option3</option>
+												  </select>
+									        <label for="part_origin">Part Origin</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_system" placeholder="Supplier System">
+									        <label for="supplier_system">Supplier System</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <input type="text" class="form-control" name="sale_price" placeholder="Sale Price ($)">
+									        <label for="sale_price">Sale Price ($)</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <select class="form-select form-control" name="display_currency" placeholder="Display Currency">
+												    <option value="dollar" selected>Dollar ($)</option>
+												    <option value="pound">Pound £</option>
+												    <option value="rupee">Rupees (Rs)</option>
+												  </select>
+									        <label for="display_currency">Display Currency</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <select class="form-select form-control" name="delivery_mode" placeholder="Delivery Mode">
+												    <option value="customer_direct" selected>Customer Direct</option>
+												    <option value="mode2">mode2</option>
+												    <option value="mode3">mode3</option>
+												  </select>
+									        <label for="delivery_mode">Delivery Mode</label>
+									    </div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-floating">
+									        <select class="form-select form-control" name="measuring_units" placeholder="Measuring Units">
+												    <option value="customer_direct" selected>Imperial</option>
+												    <option value="unit2">unit2</option>
+												    <option value="unit3">unit3</option>
+												  </select>
+									        <label for="measuring_units">Measuring Units</label>
+									    </div>
+										</div>
+									</div>
+									<!-- API Connection -->
+									<div class="row api-connection">
+										<div class="col-12">
+											<div class="form-check form-switch">
+											  <input class="form-check-input" type="checkbox" name="api_connection">
+											  <label class="form-check-label" for="api_connection">API Connection no Download of Parts</label>
+											</div>
+										</div>
+									</div>
+									<!-- Supplier Box -->
+									<div class="supplier-box">
+										<div class="row"><div class="col-12"><h2 class="section-head">Supplier</h2></div></div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_name" placeholder="Supplier Name">
+									        <label for="supplier_name">Supplier Name</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="order_placement_email" placeholder="Order placement Email Address">
+									        <label for="order_placement_email">Order placement Email Address</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_price" placeholder="Supplier Price">
+									        <label for="supplier_price">Supplier Price</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating form-check form-switch">
+												  <input class="form-check-input form-control" type="checkbox" name="discount_from_sale_price">
+												  <label class="form-check-label" for="discount_from_sale_price">Show as discount from sale price</label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="sale_price_markeup" placeholder="Sale Price Markup or Discount Percentage">
+									        <label for="sale_price_markeup">Sale Price Markup or Discount Percentage</label>
+									    	</div>
+											</div>
+											<div class="col-md">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_street_address" placeholder="Street Address">
+									        <label for="supplier_street_address">Street Address</label>
+									    	</div>
+											</div>
+											<div class="col-md">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_address_line_2" placeholder="Address Line 2">
+									        <label for="supplier_address_line_2">Address Line 2</label>
+									    	</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_city" placeholder="City">
+									        <label for="supplier_city">City</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_state" placeholder="State">
+									        <label for="supplier_state">State</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="supplier_zip_postal_code" placeholder="Zip/Postal Code">
+									        <label for="supplier_zip_postal_code">Zip/Postal Code</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <select class="form-select form-control" name="supplier_country" placeholder="Country">
+												    <option value="usa" selected>USA</option>
+												    <option value="uk">United Kindgdom</option>
+												    <option value="australia">Australia</option>
+												  </select>
+									        <label for="supplier_country">Country</label>
+									    	</div>
+											</div>
+											<div class="row supplier-checkboxes">
+												<div class="col-md-6">
+													<div class="form-check">
+													  <input class="form-check-input box-checkbox" name="provide_supplier_box" type="checkbox" value="">
+													  <label class="form-check-label" for="provide_supplier_box">
+													    Provide Supplier Box for Shipping
+													  </label>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-check">
+													  <input class="form-check-input box-checkbox" name="send_returns_to_supploer" type="checkbox" value="">
+													  <label class="form-check-label" for="send_returns_to_supploer">
+													    Send Returns to Supplier
+													  </label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Warehouse Box -->
+									<div class="accordion parts-section-row" id="accordionWarehouse">
+									  <div class="accordion-item">
+									    <h2 class="accordion-header" id="headingOne">
+									      <button class="accordion-button section-head" type="button" data-bs-toggle="collapse" data-bs-target="#warehouseOne" aria-expanded="true" aria-controls="warehouseOne">
+									        Warehouse
+									      </button>
+									    </h2>
+									    <div id="warehouseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionWarehouse">
+									      <div class="accordion-body">
+									        <div class="row">
+														<div class="col-md-3">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_email" placeholder="Email Address">
+												        <label for="warehouse_email">Email Address</label>
+												    	</div>
+														</div>
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_street_address"placeholder="Street Address">
+												        <label for="warehouse_street_address">Street Address</label>
+												    	</div>
+														</div>
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_address_line_2"placeholder="Address Line 2">
+												        <label for="warehouse_address_line_2">Address Line 2</label>
+												    	</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-3">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_city"placeholder="City">
+												        <label for="warehouse_city">City</label>
+												    	</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_state"placeholder="State">
+												        <label for="warehouse_state">State</label>
+												    	</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_zip_postal_code"placeholder="Zip/Postal Code">
+												        <label for="warehouse_zip_postal_code">Zip/Postal Code</label>
+												    	</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-floating">
+												        <select class="form-select form-control" name="supplier_country" placeholder="Country">
+															    <option value="usa" selected>USA</option>
+															    <option value="uk">United Kindgdom</option>
+															    <option value="australia">Australia</option>
+															  </select>
+												        <label for="supplier_country">Country</label>
+												    	</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md">
+															<div class="form-floating">
+												        <select class="form-select form-control" name="warehouse_status" placeholder="Status">
+															    <option value="In Stock" selected>In Stock</option>
+															    <option value="Out Of Stock">Out Of Stock</option>
+															  </select>
+												        <label for="warehouse_status">Status</label>
+												    	</div>
+														</div>
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_invetory_level"placeholder="Inventory Level">
+												        <label for="warehouse_invetory_level">Inventory Level</label>
+												    	</div>
+														</div>
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="warehouse_ship_time"placeholder="Expected Ship Time">
+												        <label for="warehouse_ship_time">Expected Ship Time</label>
+												    	</div>
+														</div>
+														<div class="col-md-1 position-relative">
+															<a href="#!" class="parts-subsection-btn"><img src="assets/icons/plus.svg" alt="plus"></a>
+														</div>
+													</div>
+													<!-- Warehouse Table -->
+												  <div class="parts-section-table">
+													  <table class="table table-bordered mb-0">
+															<thead>
+																<tr>
+																	<th>Warehouse Contact Email</th>
+																	<th>Address</th>
+																	<th>Address Line 2</th>
+																	<th>City</th>
+																	<th>State</th>
+																	<th>Zip/Postal Code</th>
+																	<th>Country</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>warehouse@example.com</td>
+																	<td>123-A, Bakers Street, XYZ</td>
+																	<td>123-A, Bakers Street, XYZ</td>
+																	<td>New York</td>
+																	<td>Califronia</td>
+																	<td>12345</td>
+																	<td>USA</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+																<tr>
+																	<td>warehouse@example.com</td>
+																	<td>123-A, Bakers Street, XYZ</td>
+																	<td>123-A, Bakers Street, XYZ</td>
+																	<td>New York</td>
+																	<td>Califronia</td>
+																	<td>12345</td>
+																	<td>USA</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+									<!-- After Warehouse Fields -->
+									<div class="row after-warehouse">
+										<div class="col-md-4">
+											<div class="d-flex justify-content-around">
+												<div class="form-floating w-100">
+									        <input type="text" class="form-control decimal-input" name="part_weight" placeholder="Weight">
+									        <label for="part_weight">
+									        	Weight
+									        </label>
+									    	</div>
+									    	<select class="unit-select" name="weight_unit" placeholder="Weight">
+											    <option value="lbs" selected>lbs</option>
+											    <option value="kg">kg</option>
+											    <option value="gm">gm</option>
+											  </select>
+										  </div>
+										</div>
+										<div class="col-md-4">
+											<div class="d-flex justify-content-around">
+												<div class="form-floating w-100">
+									        <input type="text" class="form-control decimal-input" name="part_length" placeholder="Length">
+									        <label for="part_length">
+									        	Length
+									        </label>
+									    	</div>
+									    	<select class="unit-select" name="length_unit" placeholder="Length">
+											    <option value="lbs" selected>cm</option>
+											    <option value="kg">inch</option>
+											    <option value="gm">meter</option>
+											    <option value="gm">mm</option>
+											  </select>
+										  </div>
+										</div>
+										<div class="col-md-4">
+											<div class="d-flex justify-content-around">
+												<div class="form-floating w-100">
+									        <input type="text" class="form-control decimal-input" name="part_width" placeholder="Width">
+									        <label for="part_length">
+									        	Width
+									        </label>
+									    	</div>
+									    	<select class="unit-select" name="width_unit" placeholder="Width">
+											    <option value="lbs" selected>cm</option>
+											    <option value="kg">inch</option>
+											    <option value="gm">meter</option>
+											    <option value="gm">mm</option>
+											  </select>
+										  </div>
+										</div>
+										<div class="col-md-4">
+											<div class="d-flex justify-content-around">
+												<div class="form-floating w-100">
+									        <input type="text" class="form-control decimal-input" name="part_height" placeholder="Height">
+									        <label for="part_height">
+									        	Height
+									        </label>
+									    	</div>
+									    	<select class="unit-select" name="height_unit" placeholder="Height">
+											    <option value="lbs" selected>cm</option>
+											    <option value="kg">inch</option>
+											    <option value="gm">meter</option>
+											    <option value="gm">mm</option>
+											  </select>
+										  </div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-floating">
+								        <select class="form-select form-control" name="contains_battery" placeholder="Contains Battery">
+											    <option value="yes" selected>Yes</option>
+											    <option value="no">No</option>
+											  </select>
+								        <label for="contains_battery">Contains Battery</label>
+								    	</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-floating">
+								        <input type="text" class="form-control decimal-input" name="part_fluids" placeholder="Fluids">
+								        <label for="part_fluids">
+								        	Fluids
+								        </label>
+								    	</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-floating">
+								        <input type="text" class="form-control decimal-input" name="part_warranty_period" placeholder="Warranty Period (Number of days from Purchase or Commission Date)">
+								        <label for="part_warranty_period">
+								        	Warranty Period (Number of days from Purchase or Commission Date)
+								        </label>
+								    	</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-floating form-check form-switch">
+											  <input class="form-check-input form-control" type="checkbox" name="warranty_track" placeholder="Track Warranty from Commission Date">
+											  <label class="form-check-label" for="warranty_track">Track Warranty from Commission Date</label>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-floating">
+											  <textarea name="warning_notice" rows="2" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+											  <label for="warning_notice">Warnings or Notices</label>
+											</div>
+										</div>
+									</div>
+									<!-- Review Box -->
+									<div class="accordion parts-section-row" id="accordionReviews">
+									  <div class="accordion-item">
+									    <h2 class="accordion-header" id="headingOne">
+									      <button class="accordion-button section-head" type="button" data-bs-toggle="collapse" data-bs-target="#reviewOne" aria-expanded="true" aria-controls="reviewOne">
+									        Reviews
+									      </button>
+									    </h2>
+									    <div id="reviewOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionWarehouse">
+									      <div class="accordion-body">
+													<div class="row">
+														<div class="col-md-2">
+															<div class="form-floating">
+												        <select class="form-select form-control" name="part_rating" placeholder="Rating">
+															    <option value="5" selected>5</option>
+															    <option value="4">4</option>
+															    <option value="3">3</option>
+															    <option value="2">2</option>
+															    <option value="1">1</option>
+															  </select>
+												        <label for="part_rating">Rating</label>
+												    	</div>
+														</div>
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="part_review"placeholder="Review">
+												        <label for="part_review">Review</label>
+												    	</div>
+														</div>
+														<div class="col-md-1 position-relative">
+															<a href="#!" class="parts-subsection-btn"><img src="assets/icons/plus.svg" alt="plus"></a>
+														</div>
+													</div>
+													<!-- Review Table -->
+												  <div class="parts-section-table">
+													  <table class="table table-bordered mb-0">
+															<thead>
+																<tr>
+																	<th>Rating</th>
+																	<th>Review</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>5</td>
+																	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alua.</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+																<tr>
+																	<td>5</td>
+																	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alua.</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+									<!-- Fitments Box -->
+									<div class="accordion parts-section-row" id="accordionFitments">
+									  <div class="accordion-item">
+									    <h2 class="accordion-header" id="headingOne">
+									      <button class="accordion-button section-head" type="button" data-bs-toggle="collapse" data-bs-target="#fitmentOne" aria-expanded="true" aria-controls="fitmentOne">
+									        Fitments
+									      </button>
+									    </h2>
+									    <div id="fitmentOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionWarehouse">
+									      <div class="accordion-body">
+													<div class="row">
+														<div class="col-md-4">
+															<div class="form-floating">
+												        <select class="form-select form-control" name="fitment_industry" placeholder="Industry">
+															    <option value="powersport" selected>Powersport</option>
+															    <option value="second">second</option>
+															    <option value="third">third</option>
+															  </select>
+												        <label for="fitment_industry">Industry</label>
+												    	</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-floating">
+												        <select class="form-select form-control" name="fitment_Type" placeholder="Type">
+															    <option value="powersport" selected>Dirt Bike</option>
+															    <option value="ATV">ATV</option>
+															    <option value="Boat">Boat</option>
+															    <option value="Jet Ski">Jet Ski</option>
+															    <option value="Snowmobile">Snowmobile</option>
+															    <option value="UTV">UTV</option>
+															  </select>
+												        <label for="fitment_Type">Type</label>
+												    	</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="fitment_horsepower" placeholder="Horsepower">
+												        <label for="fitment_horsepower">Horsepower</label>
+												    	</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="fitment_make" placeholder="Make">
+												        <label for="fitment_make">Make</label>
+												    	</div>
+														</div>
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="fitment_year" placeholder="Fitment Year">
+												        <label for="fitment_year">Fitment Year</label>
+												    	</div>
+														</div>
+														<div class="col-md">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="fitment_model" placeholder="Fitment Model">
+												        <label for="fitment_model">Fitment Model</label>
+												    	</div>
+														</div>
+														<div class="col-md-1 position-relative">
+															<a href="#!" class="parts-subsection-btn"><img src="assets/icons/plus.svg" alt="plus"></a>
+														</div>
+													</div>
+													<!-- Fitments Table -->
+												  <div class="parts-section-table fitments-table">
+													  <table class="table table-bordered mb-0">
+															<thead>
+																<tr>
+																	<th>Industry</th>
+																	<th>Type</th>
+																	<th>Horsepower</th>
+																	<th>Make</th>
+																	<th>
+													          <a class="dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+													            Fitment Year <img src="assets/icons/chevron-down.svg" alt="">
+													          </a>
+													          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+													            <li>
+													            	<div class="input-group">
+																				  <span class="input-group-text" id="basic-addon1"><img src="assets/icons/search.svg" alt=""></span>
+																				  <input type="text" class="form-control" placeholder="Search...">
+																				</div>
+													            </li>
+													          </ul>
+																	</th>
+																	<th>Fitment Model</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<select class="unit-select">
+																	    <option value="Powersport" selected>Powersport</option>
+																	    <option value="second">second</option>
+																	    <option value="third">third</option>
+																	  </select>
+																	</td>
+																	<td>Dirt Bike</td>
+																	<td>Honda</td>
+																	<td>200</td>
+																	<td>
+																		<select class="unit-select">
+																	    <option value="2021" selected>2021</option>
+																	    <option value="2022">2022</option>
+																	    <option value="2020">2020</option>
+																	  </select>
+																	</td>
+																	<td>Foreman 4X4 TRX520FM1</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<select class="unit-select">
+																	    <option value="Powersport" selected>Powersport</option>
+																	    <option value="second">second</option>
+																	    <option value="third">third</option>
+																	  </select>
+																	</td>
+																	<td>Dirt Bike</td>
+																	<td>Honda</td>
+																	<td>200</td>
+																	<td>
+																		<select class="unit-select">
+																	    <option value="2021" selected>2021</option>
+																	    <option value="2022">2022</option>
+																	    <option value="2020">2020</option>
+																	  </select>
+																	</td>
+																	<td>Foreman 4X4 TRX520FM1</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+									<!-- Related Parts Box -->
+									<div class="accordion parts-section-row" id="accordionRelatedParts">
+									  <div class="accordion-item">
+									    <h2 class="accordion-header" id="headingOne">
+									      <button class="accordion-button section-head" type="button" data-bs-toggle="collapse" data-bs-target="#relatedOne" aria-expanded="true" aria-controls="relatedOne">
+									        Related Parts
+									      </button>
+									    </h2>
+									    <div id="relatedOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionWarehouse">
+									      <div class="accordion-body">
+													<div class="row">
+														<div class="col-md-6 offset-md-3">
+															<div class="search-box w-100 position-relative">
+																<img src="assets/icons/search-dark.svg" alt="search">
+																<input type="text" class="form-control" placeholder="Search by Part Name, Part number, Braap Internal ID">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-12">
+															<!-- Related Parts Slider -->
+															<div class="related-parts-slider">
+																<!-- Slide -->
+																<div class="related-part-slide card border">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<h2>Manufacturer Recommended Maintenance</h2>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="d-flex justify-content-center">
+																				<a href="#!" class="view-part" data-bs-toggle="tooltip" data-bs-placement="left" title="View Part"><img src="assets/icons/eye.svg" alt="eye"></a>
+																				<a href="#!" class="trash-bin"><img src="assets/icons/trash.svg" alt="trash bin"></a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-meta">
+																		<div class="row">
+																			<div class="col-6">
+																				<div class="part-id">
+																					<span>Part SKU/ID</span>
+																					12345
+																				</div>
+																			</div>
+																			<div class="col-6">
+																				<div class="sale-price">
+																					<span>Sale Price</span>
+																					50.00
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-desc">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alua.  
+																	</div>
+																</div>
+																<!-- Slide -->
+																<div class="related-part-slide card border">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<h2>Manufacturer Recommended Maintenance</h2>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="d-flex justify-content-center">
+																				<a href="#!" class="view-part" data-bs-toggle="tooltip" data-bs-placement="left" title="View Part"><img src="assets/icons/eye.svg" alt="eye"></a>
+																				<a href="#!" class="trash-bin"><img src="assets/icons/trash.svg" alt="trash bin"></a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-meta">
+																		<div class="row">
+																			<div class="col-6">
+																				<div class="part-id">
+																					<span>Part SKU/ID</span>
+																					12345
+																				</div>
+																			</div>
+																			<div class="col-6">
+																				<div class="sale-price">
+																					<span>Sale Price</span>
+																					50.00
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-desc">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alua.  
+																	</div>
+																</div>
+																<!-- Slide -->
+																<div class="related-part-slide card border">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<h2>Manufacturer Recommended Maintenance</h2>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="d-flex justify-content-center">
+																				<a href="#!" class="view-part" data-bs-toggle="tooltip" data-bs-placement="left" title="View Part"><img src="assets/icons/eye.svg" alt="eye"></a>
+																				<a href="#!" class="trash-bin"><img src="assets/icons/trash.svg" alt="trash bin"></a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-meta">
+																		<div class="row">
+																			<div class="col-6">
+																				<div class="part-id">
+																					<span>Part SKU/ID</span>
+																					12345
+																				</div>
+																			</div>
+																			<div class="col-6">
+																				<div class="sale-price">
+																					<span>Sale Price</span>
+																					50.00
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-desc">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alua.  
+																	</div>
+																</div>
+																<!-- Slide -->
+																<div class="related-part-slide card border"  data-bs-toggle="tooltip" data-bs-placement="Manufacturer Recommended Maintenance" title="View Part">
+																	<div class="row">
+																		<div class="col-md-9">
+																			<h2>Manufacturer Recommended Maintenance</h2>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="d-flex justify-content-center">
+																				<a href="#!" class="view-part" data-bs-toggle="tooltip" data-bs-placement="left" title="View Part"><img src="assets/icons/eye.svg" alt="eye"></a>
+																				<a href="#!" class="trash-bin"><img src="assets/icons/trash.svg" alt="trash bin"></a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-meta">
+																		<div class="row">
+																			<div class="col-6">
+																				<div class="part-id">
+																					<span>Part SKU/ID</span>
+																					12345
+																				</div>
+																			</div>
+																			<div class="col-6">
+																				<div class="sale-price">
+																					<span>Sale Price</span>
+																					50.00
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="related-part-desc">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alua.  
+																	</div>
+																</div>
+																<!-- Slides End -->
+															</div>
+														</div>
+													</div>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+									<!-- Recalls Box -->
+									<div class="accordion parts-section-row" id="accordionRecalls">
+									  <div class="accordion-item">
+									    <h2 class="accordion-header" id="headingOne">
+									      <button class="accordion-button section-head" type="button" data-bs-toggle="collapse" data-bs-target="#recallOne" aria-expanded="true" aria-controls="recallOne">
+									        Recalls
+									      </button>
+									    </h2>
+									    <div id="recallOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionWarehouse">
+									      <div class="accordion-body">
+													<div class="row">
+														<div class="col-md-4">
+															<div class="form-floating date-input-group">
+												        <input type="text" class="form-control date-input" name="recall_date" placeholder="Date">
+												        <label for="recall_date">Date</label>
+								        				<span><img src="assets/icons/calender.svg" alt="calender"></span>
+												    	</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="recall_number" placeholder="Recall Number">
+												        <label for="recall_number">Recall Number</label>
+												    	</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-floating">
+												        <input type="text" class="form-control" name="recall_notice_link" placeholder="Link To Recall  Notice">
+												        <label for="recall_notice_link">Link To Recall  Notice</label>
+												    	</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md">
+															<div class="form-floating">
+															  <textarea name="recall_description" rows="2" class="form-control" placeholder="Start typing here..." style="height: 100px"></textarea>
+															  <label for="recall_description">Description</label>
+															</div>
+														</div>
+														<div class="col-md-1 position-relative">
+															<a href="#!" class="parts-subsection-btn"><img src="assets/icons/plus.svg" alt="plus"></a>
+														</div>
+													</div>
+													<!-- Fitments Table -->
+												  <div class="parts-section-table fitments-table">
+													  <table class="table table-bordered mb-0">
+															<thead>
+																<tr>
+																	<th>Date</th>
+																	<th>Recall Number</th>
+																	<th>Link To Recall Notice</th>
+																	<th>Description</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>March 20, 2022</td>
+																	<td>1234567890</td>
+																	<td>Notice Link</td>
+																	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+																<tr>
+																	<td>March 20, 2022</td>
+																	<td>1234567890</td>
+																	<td>Notice Link</td>
+																	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.</td>
+																	<td>
+																		<a href="#!"><img src="assets/icons/edit-blue.svg" alt=""></a>
+																		<a href="#!"><img src="assets/icons/red-cross.svg" alt=""></a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+									<!-- Box Size Box -->
+									<div class="supplier-box">
+										<div class="row"><div class="col-12"><h2 class="section-head">Box Size</h2></div></div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="box_length" placeholder="Length">
+									        <label for="box_length">Length</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="box_width" placeholder="Width">
+									        <label for="box_width">Width</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="box_height" placeholder="Height">
+									        <label for="box_height">Height</label>
+									    	</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-floating">
+									        <input type="text" class="form-control" name="container_name" placeholder="Container Name">
+									        <label for="container_name">Container Name</label>
+									    	</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-floating date-input-group">
+								        <input type="text" class="form-control date-input" name="create_date" placeholder="Created Date">
+								        <label for="create_date">Created Date</label>
+								        <span><img src="assets/icons/calender.svg" alt="calender"></span>
+								    	</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-floating date-input-group"> 
+								        <input type="text" class="form-control date-input" name="last_modified_at" placeholder="Last Modified Date">
+								        <label for="last_modified_at">Last Modified Date</label>
+								        <span><img src="assets/icons/calender.svg" alt="calender"></span>
+								    	</div>
+										</div>
+									</div>
+									<!-- Submit Button -->
+									<div class="row parts-form-submission">
+										<div class="col-12">
+											<button type="submit" class="btn d-inline-block">Save All</button>
+										</div>
+									</div>
+
+								</form>
+
+							</div>
+						
+						</div>
+					</div>
+					<!-- Accordion Elements End -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-md-3">
+					<div class="footer-col-1">
+						<a href="#" class="footer-logo">
+							<img src="assets/img/logo-white.svg" alt="braap logo">
+						</a>
+						<p>
+							A comprehensive, simple-to-use turnkey platform for service and repair businesses that
+							offers unique features that enhance customer
+							and technician collaboration.
+						</p>
+						<div class="social-links">
+							<a href="#"><img src="assets/icons/twitter-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/linkedin-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/facebook-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/instagram-footer.svg" alt="twitter icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="footer-col-2">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="footer-head">
+									Services
+								</h4>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Automated job quoting and estimating</a>
+									<a href="#">Consolidated direct parts sourcing</a>
+									<a href="#">Curated machine learning search engine</a>
+									<a href="#">Custom part kits</a>
+									<a href="#">End-to-end full-service workflow</a>
+									<a href="#">Fleet management shop</a>
+									<a href="#">Global technician workforce</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Intelligence auto pilot workflow engine</a>
+									<a href="#">Interactive visual workspace</a>
+									<a href="#">Point-to-point pickup and delivery</a>
+									<a href="#">Predictive maintenance</a>
+									<a href="#">Price comparison engine</a>
+									<a href="#">Sound diagnostics</a>
+									<a href="#">Visual search</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-col-3">
+						<h4 class="footer-head">
+							Braap
+						</h4>
+						<div class="footer-links mt-5">
+							<a href="#">About</a>
+							<a href="#">Contact</a>
+							<a href="https://jobs.braap.io/jobs/Careers" target="_blank">Careers</a>
+							<a href="#">Supplier partners</a>
+							<a href="#">Terms and Conditions</a>
+							<a href="#">Privacy Policy</a>
+							<a href="#">Return Policy</a>
+							<a href="#">Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row copyright text-center">
+				<div class="col-12">
+					Copyright © All Rights Reserved by Braap - Trademark Pending 97313870
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/slick.js"></script>
+	
+	<!-- Only Required Script Where Multiple Selection and Date Picker Fields are -->
+	<script src="assets/js/select2.min.js"></script>
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<!--  -->
+
+	<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
