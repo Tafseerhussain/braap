@@ -2377,3 +2377,6 @@ API TEMPLATE PAGE
 .api-template .warehouse-row .btn {
 	margin-top: 30px;
 }
+.api-template .form-select {
+	background-position: 99% 80%;
+}
