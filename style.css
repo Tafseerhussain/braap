@@ -1288,6 +1288,7 @@ SUPPLIER PAGE
 .supplier-text {
 	padding: 40px 0 100px;
 	position: relative;
+	background: var(--white);
 }
 .supplier-text p {
 	margin: 24px 0;
@@ -2199,6 +2200,16 @@ DATAHUB PAGE
     top: 12px;
     height: 15px;
 }
+.related-parts-slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+}
+.related-parts-slider.slick-initialized {
+    visibility: visible;
+    opacity: 1;    
+}
 .related-parts-slider {margin-top: 20px}
 .related-part-slide h2 {
 	white-space: nowrap;
@@ -2274,4 +2285,61 @@ DATAHUB PAGE
 	position: absolute;
 	right: 4px;
 	top: 50%;
+}
+.form-tag-input .form-control {
+	font-size: 12px !important;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+  padding-left: 6px;
+}
+.form-tag-input .tagsInput::data-placeholder {
+	font-size: 14px;
+	position: relative;
+	top: 6px;
+}
+.form-tag-input .tagify__input {
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 4px;
+  padding-bottom: 2px;
+}
+.form-tag-input .tagify__tag {
+    margin-left: 0;
+    margin-right: 5px;
+    background: var(--black);
+    border-radius: 4px;
+    margin-bottom: 0;
+}
+.form-tag-input .tagify__input::before {
+	top: 8px;
+}
+.form-tag-input .tagify__tag div {
+	color: var(--white);
+}
+.form-tag-input .tagify__tag x {
+	color: var(--white);
+}
+.tagify__tag>div::before,
+.tagify__tag:focus div::before, .tagify__tag:hover:not([readonly]) div::before,
+.tagify__tag__removeBtn:hover+div::before {
+	box-shadow: 0 0 0 var(--tag-inset-shadow-size,1.1em) #000000 inset !important;
+}
+.tagify__tag__removeBtn:hover {
+	background: var(--danger);
+}
+.tagify__tag__removeBtn {
+	font-family: var(--ax);
+}
+.manufacturer_row .form-tag-input label {
+	font-size: 13px;
+	opacity: 0.65;
+	transform: scale(.85) translateY(8px) translateX(-10px);
+}
+.manufacturer_row .form-tag-input input {
+	border-radius: 0;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
 }

@@ -13,9 +13,10 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/slick-theme.css">
 
-	<!-- Multiple Selection and Datepicker CSS -->
+	<!-- Multiple Selection, Datepicker, Tags Input CSS -->
 	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="assets/css/tagify.css">
 	<!--  -->
 
 	<link rel="stylesheet" href="style.css">
@@ -800,23 +801,15 @@
 									    </div>
 										</div>
 										<div class="col-sm-4">
-											<div class="form-floating">
-													<select class="form-select form-control" name="size_variation" placeholder="Size Variations">
-												    <option value="Large" selected>Large</option>
-												    <option value="Medium">Medium</option>
-												    <option value="Small">Small</option>
-												  </select>
-									        <label for="size_variation">Size Variations</label>
+											<div class="form-tag-input">
+									      <label for="size_variation">Size Variations</label>
+												<input type="text" class="form-control size-tags" name="size_variation" placeholder="Add Variations">
 									    </div>
 										</div>
 										<div class="col-sm-4">
-											<div class="form-floating">
-									        <select class="form-select form-control" name="color_variation" placeholder="Color Variations">
-												    <option value="Red" selected>Red</option>
-												    <option value="Blue">Blue</option>
-												    <option value="Green">Green</option>
-												  </select>
-									        <label for="color_variation">Color Variations</label>
+											<div class="form-tag-input">
+												<label for="color_variation">Color Variations</label>
+												<input type="text" class="form-control color-tags" name="color_variation" placeholder="Add Variations">
 									    </div>
 										</div>
 										<div class="col-sm-4">
@@ -829,24 +822,16 @@
 									    </div>
 										</div>
 										<div class="col-sm-4">
-											<div class="form-floating">
-												<select data-placeholder="Choose System ..." multiple="true" class="mul-select form-select form-control" name="braap_system[]"  placeholder="Braap Master System">
-                          <option value="braap">braap</option>
-                          <option value="system">system</option>
-                          <option value="option">option</option>
-                        </select>
-                        <label for="color_variation">Braap Master System</label>
-											</div>
+											<div class="form-tag-input">
+												<label for="braap_system">Braap Master System</label>
+												<input type="text" class="form-control braap-master-tags" name="braap_system" placeholder="Add Tags">
+									    </div>
 										</div>
 										<div class="col-sm-4">
-											<div class="form-floating">
-												<select data-placeholder="Choose Subsystem ..." multiple="true" class="mul-select form-select form-control" name="braap_subsystem[]"  placeholder="Braap Subsystem">
-                          <option value="braap">braap</option>
-                          <option value="sub-system">sub-system</option>
-                          <option value="option">option</option>
-                        </select>
-                        <label for="color_variation">Braap Subsystem</label>
-											</div>
+											<div class="form-tag-input">
+												<label for="braap_subsystem">Braap Subsystem</label>
+												<input type="text" class="form-control braap-subsystem-tags" name="braap_subsystem" placeholder="Add Tags">
+									    </div>
 										</div>
 										<div class="col-sm-4">
 											<div class="form-floating">
@@ -960,25 +945,25 @@
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-md-3">
+											<div class="col-md-4">
 												<div class="form-floating">
 									        <input type="text" class="form-control" name="supplier_city" placeholder="City">
 									        <label for="supplier_city">City</label>
 									    	</div>
 											</div>
-											<div class="col-md-3">
+											<div class="col-md-4">
 												<div class="form-floating">
 									        <input type="text" class="form-control" name="supplier_state" placeholder="State">
 									        <label for="supplier_state">State</label>
 									    	</div>
 											</div>
-											<div class="col-md-3">
+											<div class="col-md-4">
 												<div class="form-floating">
 									        <input type="text" class="form-control" name="supplier_zip_postal_code" placeholder="Zip/Postal Code">
 									        <label for="supplier_zip_postal_code">Zip/Postal Code</label>
 									    	</div>
 											</div>
-											<div class="col-md-3">
+											<div class="col-md-6">
 												<div class="form-floating">
 									        <select class="form-select form-control" name="supplier_country" placeholder="Country">
 												    <option value="usa" selected>USA</option>
@@ -986,6 +971,15 @@
 												    <option value="australia">Australia</option>
 												  </select>
 									        <label for="supplier_country">Country</label>
+									    	</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-floating">
+									        <select class="form-select form-control" name="order_placement_method" placeholder="Order Placement Method">
+												    <option value="Electronic API" selected>Electronic API</option>
+												    <option value="Manual">Manual</option>
+												  </select>
+									        <label for="order_placement_method">Order Placement Method</label>
 									    	</div>
 											</div>
 											<div class="row supplier-checkboxes">
@@ -1086,8 +1080,8 @@
 														</div>
 														<div class="col-md">
 															<div class="form-floating">
-												        <input type="text" class="form-control" name="warehouse_ship_time"placeholder="Expected Ship Time">
-												        <label for="warehouse_ship_time">Expected Ship Time</label>
+												        <input type="text" class="form-control" name="warehouse_ship_time"placeholder="Expected Ship Time Days">
+												        <label for="warehouse_ship_time">Expected Ship Time Days</label>
 												    	</div>
 														</div>
 														<div class="col-md-1 position-relative">
@@ -1857,9 +1851,11 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
 	
-	<!-- Only Required Script Where Multiple Selection and Date Picker Fields are -->
+	<!-- Only Required Script Where Multiple Selection, Date Picker and Tags Input Fields are -->
 	<script src="assets/js/select2.min.js"></script>
 	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<script src="assets/js/tagify.min.js"></script>
+	<script src="assets/js/tagify.polyfills.min.js"></script>
 	<!--  -->
 
 	<script src="assets/js/main.js"></script>

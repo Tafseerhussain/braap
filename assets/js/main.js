@@ -94,8 +94,31 @@ sr.reveal('.fade-top',{origin: 'top', distance: '100px', duration: 800});
 sr.reveal('.fade-top-delay',{origin: 'top', distance: '100px', duration: 800, delay: 300});
 sr.reveal('.fade-top-delay-600',{origin: 'top', distance: '100px', duration: 800, delay: 600});
 
+$('.part-images-slider').slick({
+    slidesToShow: 15,
+    slidesToScroll: 1,
+    speed: 500,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+});
+$('.related-parts-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 500,
+    infinite: true,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000
+});
+
 $(function(){
     $(".ac-btn-border").click(function() {
+        $(".part-images-slider").slick("refresh");
+        $(".related-parts-slider").slick("refresh");
         $(".parts-rows .accordion-button").closest(".accordion-item").css("border-color", "transparent");
         $(".parts-rows .accordion-item:odd").css("background", "var(--bg-gray)");
 
@@ -109,56 +132,30 @@ $(function(){
         $(".mul-select").select2({
           matcher: matchCustom
         });
-        $('.part-images-slider').slick({
-            slidesToShow: 15,
-            slidesToScroll: 1,
-            speed: 500,
-            infinite: true,
-            dots: false,
-            arrows: true,
-            autoplay: true,
-            autoplaySpeed: 4000,
-        });
-        $('.related-parts-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            speed: 500,
-            infinite: true,
-            dots: false,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 4000,
-        });
+    })
+})
+$(function(){
+    $("#accordionRelatedParts .accordion-button").click(function() {
+        $(".related-parts-slider").slick("refresh");
     })
 })
 
 function matchCustom(params, data) {
-// If there are no search terms, return all of the data
-if ($.trim(params.term) === '') {
-  return data;
-}
-
-// Do not display the item if there is no 'text' property
-if (typeof data.text === 'undefined') {
-  return null;
-}
-
-// `params.term` should be the term that is used for searching
-// `data.text` is the text that is displayed for the data object
-if (data.text.indexOf(params.term) > -1) {
-  var modifiedData = $.extend({}, data, true);
-  modifiedData.text += ' (matched)';
-
-  // You can return modified objects from here
-  // This includes matching the `children` how you want in nested data sets
-  return modifiedData;
-}
-
-// Return `null` if the term should not be displayed
-return null;
+    if ($.trim(params.term) === '') {
+        return data;
+    }
+    if (typeof data.text === 'undefined') {
+        return null;
+    }
+    if (data.text.indexOf(params.term) > -1) {
+        var modifiedData = $.extend({}, data, true);
+        modifiedData.text += ' (matched)';
+        return modifiedData;
+    }
+    return null;
 }
 $(".mul-select").select2({
-  matcher: matchCustom
+    matcher: matchCustom
 });
 
 // parseFloat($(".decimal-input").val()).toFixed(2)
@@ -169,3 +166,13 @@ $('.date-input').datepicker({
     todayBtn: true,
     todayHighlight: true
 });
+
+var sizeTags = document.querySelector('.size-tags');
+var colorTags = document.querySelector('.color-tags');
+var braapMasterTags = document.querySelector('.braap-master-tags');
+var braapSubTags = document.querySelector('.braap-subsystem-tags');
+
+new Tagify(sizeTags)
+new Tagify(colorTags)
+new Tagify(braapMasterTags)
+new Tagify(braapSubTags)
