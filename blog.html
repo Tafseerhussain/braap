@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Braap | Blog</title>
+	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
+	<meta content="" name="keywords">
+	<!-- External Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Internal files -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
+	<!-- scroll reveal -->
+	<script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body>
+
+	<!-- WEBSITE PRELOADER -->
+	<div class="preloaderBg" id="preloader">
+	    <div class="preloader"></div>
+	    <div class="preloader2"></div>
+	</div>
+
+	<!-- HEADER FOR OTHER PAGES -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100 header-static">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="assets/img/logo-black.svg" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="header-search">
+				<form action="#">
+					<div class="input-group">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" id="typing-effect" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+						<div class="input-group-divider"></div>
+						<span class="input-group-text">
+							<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="left" title="Coming Soon"></a>
+							<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera" data-bs-toggle="tooltip" data-bs-placement="right" title="Coming Soon"></a>
+						</span>
+					</div>
+				</form>
+				<!-- Search Results (Enable When Required) -->
+				<ul class="search-results-static list-group" id="home-search-results">
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> dirt bike</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> hesitating<span> engine</span></a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine </span>overheats</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>whining </span>engine</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> overheating - the  <span>engine</span> oil is part of what keeps the <span>engine</span> cool</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link shop-link" href="#">
+							<span>My Shop</span>
+							<img src="assets/icons/garage-orange.svg" alt="garage">
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/user-account-empty.svg" alt="user account">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Login</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Register</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- NAVBAR SPACE FOR OTHER PAGES -->
+	<div class="navbar-spacer"></div>
+
+	<!-- BLOG TITLE -->
+	<div class="blog-head">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h1 class="page-title d-inline-block text-white">
+						<img src="assets/icons/blog.svg" alt="blog">
+						Blogs By <span class="text-orange">Braap</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ALL BLOGS -->
+	<div class="all-blogs">
+		<div class="container">
+			<div class="row add-parts">
+				<div class="col-md-5">
+					<div class="result-numbers">
+						Showing 8 out of 20 Results
+					</div>
+				</div>
+				<div class="col-md-7 text-end">
+					<div class="d-flex justify-content-end">
+						<div class="input-group w-50">
+							<span class="input-group-text">
+								<img src="assets/icons/search-dark.svg" alt="magnifier">
+							</span>
+							<input type="text" class="form-control" placeholder="Search A blog or Sort...">
+							<button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/icons/sort.svg" alt="sort">
+							</button>
+							<ul class="dropdown-menu dropdown-menu-end">
+								<li>
+									<div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									  <label class="form-check-label" for="flexCheckDefault">
+									    Recently Added
+									  </label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									  <label class="form-check-label" for="flexCheckDefault">
+									    A - Z
+									  </label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									  <label class="form-check-label" for="flexCheckDefault">
+									    Z - A
+									  </label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									  <label class="form-check-label" for="flexCheckDefault">
+									    Random
+									  </label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									  <label class="form-check-label" for="flexCheckDefault">
+									    Oldest
+									  </label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row blogs g-3">
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/1.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/2.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/3.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/4.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/1.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/2.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/3.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-blog card">
+						<div class="blog-img">
+							<img src="assets/img/blog/4.jpg" class="w-100" alt="">
+						</div>
+						<div class="blog-meta">
+							<div class="author">
+								Mechanic.
+								<span class="date">1 Month Ago</span>
+							</div>
+							<div class="blog-title">
+								Lorem Ipsum
+							</div>
+							<div class="blog-text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maiores. Incidunt corrupti qui culpa impedit...
+							</div>
+							<div class="blog-link text-end mt-3">
+								<a href="#">
+									<span>Read Full</span>
+									<img src="assets/icons/arrow-right-orange.svg" alt="arrow-right">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="load-more row text-center">
+				<div class="col-12">
+					<a href="#" class="btn">Load More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-md-3">
+					<div class="footer-col-1">
+						<a href="#" class="footer-logo">
+							<img src="assets/img/logo-white.svg" alt="braap logo">
+						</a>
+						<p>
+							A comprehensive, simple-to-use turnkey platform for service and repair businesses that
+							offers unique features that enhance customer
+							and technician collaboration.
+						</p>
+						<div class="social-links">
+							<a href="#"><img src="assets/icons/twitter-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/linkedin-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/facebook-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/instagram-footer.svg" alt="twitter icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="footer-col-2">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="footer-head">
+									Services
+								</h4>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Automated job quoting and estimating</a>
+									<a href="#">Consolidated direct parts sourcing</a>
+									<a href="#">Curated machine learning search engine</a>
+									<a href="#">Custom part kits</a>
+									<a href="#">End-to-end full-service workflow</a>
+									<a href="#">Fleet management shop</a>
+									<a href="#">Global technician workforce</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Intelligence auto pilot workflow engine</a>
+									<a href="#">Interactive visual workspace</a>
+									<a href="#">Point-to-point pickup and delivery</a>
+									<a href="#">Predictive maintenance</a>
+									<a href="#">Price comparison engine</a>
+									<a href="#">Sound diagnostics</a>
+									<a href="#">Visual search</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-col-3">
+						<h4 class="footer-head">
+							Braap
+						</h4>
+						<div class="footer-links mt-5">
+							<a href="#">About</a>
+							<a href="#">Contact</a>
+							<a href="https://jobs.braap.io/jobs/Careers" target="_blank">Careers</a>
+							<a href="#">Supplier partners</a>
+							<a href="#">Terms and Conditions</a>
+							<a href="#">Privacy Policy</a>
+							<a href="#">Return Policy</a>
+							<a href="#">Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row copyright text-center">
+				<div class="col-12">
+					Copyright © All Rights Reserved by Braap - Trademark Pending 97313870
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/slick.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
