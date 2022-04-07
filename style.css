@@ -2343,3 +2343,37 @@ DATAHUB PAGE
 	border-left: 0;
 	border-right: 0;
 }
+
+/*================================================================
+API TEMPLATE PAGE
+================================================================*/
+.api-template {
+	padding: 0 0 120px;
+	background: var(--white);
+	border-radius: 0;
+	margin: 0;
+	border: 0;
+}
+.api-template h1 {
+	color: var(--black);
+	font-size: 32px;
+	font-family: var(--ax-semibold);
+}
+.api-template label {
+	font-size: 14px;
+}
+.api-template .form-switch label {
+	left: -10px;
+}
+.api-template .form-control {
+	font-size: 16px;
+}
+.api-template .form-floating {
+	margin-bottom: 20px;
+}
+.api-template .warehouse-row {
+	margin-top: 40px;
+}
+.api-template .warehouse-row .btn {
+	margin-top: 30px;
+}
