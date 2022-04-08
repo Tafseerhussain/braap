@@ -2526,3 +2526,102 @@ SINGLE BLOG
 	margin: 50px 0;
 }
 .more-blogs-btn img {margin-right: 5px}
+
+/*================================================================
+BRAAP USER
+================================================================*/
+.braap-user {
+	padding: 50px 0 100px;
+	background: var(--white);
+	position: relative;
+}
+.braap-user .user-text {
+	margin: 40px 0 30px;
+}
+.user-subhead {
+	font-size: 32px;
+	color: var(--dark-gray);
+	font-family: var(--ax-semibold);
+}
+.section-diamond {
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+.braap-user .section-waves {
+  right: 6%;
+}
+.braap-user .section-left {
+	top: 20%;
+}
+.who-uses-braap {
+	background: var(--white);
+	padding: 100px 0;
+	position: relative;
+	background: var(--bg-gray);
+}
+.braap-use {
+	margin-top: 70px;
+}
+.braap-use .accordion-button:not(.collapsed)::after {
+  background-image: url(assets/icons/chevron-down.svg);
+  background-size: 16px;
+  filter: none;
+  width: 16px;
+  margin: 0;
+  height: 13px;
+  margin-left: auto;
+  margin-top: -70px;
+}
+.braap-use .accordion-button.collapsed::after {
+  background-image: url(assets/icons/chevron-down.svg);
+  background-size: 16px;
+  filter: none;
+  width: 16px;
+  margin: 0;
+  margin-top: -70px;
+  height: 13px;
+  margin-left: auto;
+}
+.braap-use .accordion-item {
+	box-shadow: var(--theme-shadow);
+	border-radius: 10px;
+	overflow: hidden;
+	border: 0;
+	margin-bottom: 20px;
+}
+.braap-use .accordion-button,
+.braap-use .accordion-button:not(.collapsed) {
+	box-shadow: none;
+	color: var(--black);
+	font-size: 24px;
+	font-family: var(--ax-semibold);
+	background: #fff;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.braap-use .accordion-header span:last-child {
+	color: var(--dark-gray);
+	font-size: 16px;
+	margin-top: 10px;
+	font-family: var(--ax);
+	width: 100%;
+}
+.braap-use .accordion-body {
+	padding-top: 0;
+	font-size: 14px;
+}
+.braap-use .accordion-body hr {
+  margin-top: 0;
+  opacity: 1;
+  color: var(--light-gray);
+  height: 1px;
+}
+.braap-use .accordion-body .list span {
+	color: var(--black);
+	margin-left: 10px;
+}
+.braap-use .accordion-body p.text {
+	line-height: 30px;
+	margin-top: 20px;
+}
