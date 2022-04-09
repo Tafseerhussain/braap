@@ -209,9 +209,11 @@ $(function(){
             $(this).closest(".accordion-item").css("background", "#fff")
         }
         $(".parts-section-row .accordion-item").css("border-color", "transparent");
-        $(".mul-select").select2({
-          matcher: matchCustom
-        });
+        if ($(".mul-select")[0]) {
+            $(".mul-select").select2({
+              matcher: matchCustom
+            });
+        }
     })
 })
 $(function(){
@@ -234,25 +236,40 @@ function matchCustom(params, data) {
     }
     return null;
 }
-$(".mul-select").select2({
-    matcher: matchCustom
-});
+if ($(".mul-select")[0]) {
+    $(".mul-select").select2({
+        matcher: matchCustom
+    });
+}
 
 // parseFloat($(".decimal-input").val()).toFixed(2)
-$('.date-input').datepicker({
-    format: 'MM dd, yyyy',
-    leftArrow: '<i class="fa-solid fa-chevron-left"></i>',
-    rightArrow: '<i class="fa-solid fa-chevron-right"></i>',
-    todayBtn: true,
-    todayHighlight: true
-});
+if ($(".date-input")[0]) {
+    $('.date-input').datepicker({
+        format: 'MM dd, yyyy',
+        leftArrow: '<i class="fa-solid fa-chevron-left"></i>',
+        rightArrow: '<i class="fa-solid fa-chevron-right"></i>',
+        todayBtn: true,
+        todayHighlight: true
+    });
+}
 
-var sizeTags = document.querySelector('.size-tags');
-var colorTags = document.querySelector('.color-tags');
-var braapMasterTags = document.querySelector('.braap-master-tags');
-var braapSubTags = document.querySelector('.braap-subsystem-tags');
+if ($(".size-tags")[0]) {
+    var sizeTags = document.querySelector('.size-tags');
+    new Tagify(sizeTags)
+}
+if ($(".size-tags")[0]) {
+    var colorTags = document.querySelector('.color-tags');
+    new Tagify(colorTags)
+}
+if ($(".size-tags")[0]) {
+    var braapMasterTags = document.querySelector('.braap-master-tags');
+    new Tagify(braapMasterTags)
+}
+if ($(".size-tags")[0]) {
+    var braapSubTags = document.querySelector('.braap-subsystem-tags');
+    new Tagify(braapSubTags)
+}
 
-new Tagify(sizeTags)
-new Tagify(colorTags)
-new Tagify(braapMasterTags)
-new Tagify(braapSubTags)
+
+
+
