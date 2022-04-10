@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
 	$( ".hero-search input" ).focus(function() {
 	  	$("#home-search-results").delay(0).fadeIn();
