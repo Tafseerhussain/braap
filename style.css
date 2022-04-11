@@ -3046,3 +3046,51 @@ RESULTS PAGE
 	height: 300px;
 	margin-bottom: 20px;
 }
+.search-video-card {
+	border-radius: 10px;
+	overflow: hidden;
+	border: 2px solid transparent;
+	transition: 0.3s;
+}
+.search-video-card:hover {
+	border-color: var(--orange);
+}
+.search-video-card .upper-half {
+	padding: 15px 15px 0;
+}
+.search-video-card .search-video-img img {
+	border-radius: 10px;
+}
+.search-video-card .search-video-title {
+	margin: 20px 0 10px;
+	color: var(--black);
+	font-size: 16px;
+	line-height: 24px;
+}
+.search-video-card .btn {
+	font-size: 14px;
+	margin-top: 10px;
+	display: block;
+}
+.search-video-card .btn img {
+	height: 20px;
+	margin-left: 6px;
+}
+.search-video-card .lower .btn {
+	border-radius: 0;
+}
+.video-page-modal {
+	backdrop-filter: blur(6px);
+}
+.video-page-modal .btn-close {
+	position: absolute;
+  right: 6px;
+  z-index: 1;
+  background-color: var(--white);
+  top: 6px;
+}
+.video-page-modal .modal-content,
+.video-page-modal .modal-body {
+	border: 1px solid var(--orange);
+	border-radius: 10px;
+}
