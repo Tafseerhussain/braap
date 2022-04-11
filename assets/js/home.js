@@ -100,7 +100,7 @@ $(document).ready(function() {
 	});
 
 	$('.market-place-slider').slick({
-	  	slidesToShow: 9,
+	  	slidesToShow: 6,
 	  	slidesToScroll: 1,
 		speed: 500,
 		infinite: true,
@@ -108,9 +108,6 @@ $(document).ready(function() {
 	  	arrows: true,
 	  	autoplay: true,
 	  	autoplaySpeed: 3000,
-	  	centerMode: true,
-	  	variableWidth: true,
-	  	rows: 2
 	});
 
 });
