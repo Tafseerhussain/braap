@@ -18,6 +18,9 @@
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
 
+	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<link rel="stylesheet" href="assets/css/jquery-ui.css">
+	<!-- --- -->
 </head>
 <body>
 
@@ -27,7 +30,7 @@
 	    <div class="preloader2"></div>
 	</div>
 
-	<!-- HEADER FOR OTHER PAGES -->
+	<!-- HEADER FOR USER PAGES -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100 header-static">
 		<div class="container">
 			<a class="navbar-brand" href="#">
@@ -72,28 +75,34 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link active" href="#">About Us</a>
+						<a class="nav-link" href="#">My Shop</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Features</a>
+						<a class="nav-link active" href="#">Data Hub</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Pricing</a>
+						<a class="nav-link" href="#">Reports</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link shop-link" href="#">
-							<span>My Shop</span>
-							<img src="assets/icons/garage-orange.svg" alt="garage">
-						</a>
+						<a class="nav-link" href="#">Cart</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Account</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/icons/user-account-empty.svg" alt="user account">
+							<img src="assets/img/account/thumbnail.png" alt="user account">
 						</a>
-						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">Login</a></li>
+						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
 							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="#">Register</a></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/account.svg" alt="account">Account</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/trending.svg" alt="trendline">Trending</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/cart.svg" alt="cart">Shopping Cart</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/logout.svg" alt="logout">Logout</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -109,7 +118,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<h1 class="parts-title text-white">Add A Part</h1>
+					<h1 class="parts-title text-white">Map Your File</h1>
 				</div>
 				<div class="col-md-7">
 					<ul class="nav nav-pills justify-content-end">
@@ -137,6 +146,20 @@
 			<div class="row">
 				<div class="col-12">
 					<h1 class="parts-title"><span class="text-orange">Drag</span> And <span class="text-orange">Drop</span> Items to Braap Fields</h1>
+				</div>
+			</div>
+			<div class="row drag-drop-fields">
+				<div class="col-md-6">
+					<div id="sortable1" class="droptrue">
+					  <span class="ui-state-default">Can be dropped..</span>
+					  <span class="ui-state-default">..on an empty list</span>
+					  <span class="ui-state-default">Item 3</span>
+					  <span class="ui-state-default">Item 4</span>
+					  <span class="ui-state-default">Item 5</span>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div id="sortable3" class="droptrue">asd</div>
 				</div>
 			</div>
 		</div>
@@ -230,5 +253,25 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<script src="assets/js/jquery-ui.js"></script>
+	<script>
+	  $(function() {
+
+	    $( "div.droptrue" ).sortable({
+	      connectWith: "div"
+	    });
+	 
+	    $( "div.dropfalse" ).sortable({
+	      connectWith: "div",
+	      dropOnEmpty: false
+	    });
+	 
+	    $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+
+	  });
+	</script>
+	<!-- --- -->
 </body>
 </html>
