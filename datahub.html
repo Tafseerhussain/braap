@@ -423,6 +423,10 @@
 															      <td>Manufacturer part name.</td>
 															    </tr>
 															    <tr>
+															    	<td>SKU</td>
+															    	<td>The internal part number assigned by a supplier.</td>
+															    </tr>
+															    <tr>
 															      <td>Description</td>
 															      <td>Manufacturer long part description.</td>
 															    </tr>
@@ -802,19 +806,25 @@
 
 									<!-- Manufacturer Fields -->
 									<div class="row manufacturer_row">
-										<div class="col-sm-4">
+										<div class="col-sm-3">
+											<div class="form-floating">
+									        <input type="text" class="form-control" name="parts_sku" placeholder="SKU">
+									        <label for="parts_sku">SKU</label>
+									    </div>
+										</div>
+										<div class="col-sm-3">
 											<div class="form-floating">
 									        <input type="text" class="form-control" name="man_part_number" placeholder="Manufacturers Part Number">
 									        <label for="man_part_number">Manufacturers Part Number</label>
 									    </div>
 										</div>
-										<div class="col-sm-4">
+										<div class="col-sm-3">
 											<div class="form-tag-input">
 									      <label for="size_variation">Size Variations</label>
 												<input type="text" class="form-control size-tags" name="size_variation" placeholder="Add Variations">
 									    </div>
 										</div>
-										<div class="col-sm-4">
+										<div class="col-sm-3">
 											<div class="form-tag-input">
 												<label for="color_variation">Color Variations</label>
 												<input type="text" class="form-control color-tags" name="color_variation" placeholder="Add Variations">

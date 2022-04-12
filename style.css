@@ -2849,6 +2849,16 @@ PARTS UPLOAD PAGE
   transform: rotate(-90deg) translateY(-50%);
   z-index: 1;
 }
+.parts-header .nav-pills .nav-link.complete {
+	background: var(--orange);
+	color: var(--white) !important;
+}
+.parts-header .nav-pills .nav-link.complete img {
+	filter: brightness(400%);
+}
+.parts-header .nav-pills .nav-link.active {
+	border-right: 0;
+}
 .parts-header .nav-pills .nav-item:last-child .nav-link:after {display: none}
 .parts-upload {
 	padding: 100px 0;
@@ -3093,4 +3103,9 @@ RESULTS PAGE
 .video-page-modal .modal-body {
 	border: 1px solid var(--orange);
 	border-radius: 10px;
+}
+.drag-drop-header {
+	padding: 50px 0;
+	background: var(--white);
+	text-align: center;
 }

@@ -143,11 +143,14 @@ jQuery(window).scroll(function () {
         jQuery('.sticky-search-bar').fadeOut()
         jQuery('.sticky-search-bar').removeClass('top-0')
     }
-    if (jQuery(this).scrollTop() > resultsHeader) {
-        jQuery('.navbar .header-search').fadeIn();
-    } else {
-        jQuery('.navbar .header-search').fadeOut();
+    if ($(".results-header")[0]) {
+        if (jQuery(this).scrollTop() > resultsHeader) {
+            jQuery('.navbar .header-search').fadeIn();
+        } else {
+            jQuery('.navbar .header-search').fadeOut();
+        }
     }
+    
 });
 
 window.sr = ScrollReveal({
