@@ -3127,11 +3127,6 @@ RESULTS PAGE
 	display: inline-block;
 	transition: 0.1s;
 }
-#sortable1 {
-	border-radius: 0;
-	border: 0;
-	border-bottom: 1px solid var(--light-gray);
-}
 #sortable2 {
 	background-color: var(--light-gray);
 }
