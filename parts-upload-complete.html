@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braap | Parts Upload</title>
+	<title>Braap | Parts Upload Completion</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
 	<!-- External Link -->
@@ -18,9 +18,8 @@
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
 
-	<!-- DROPZONE required when Drag and Drop functionality needed -->
-	<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<link rel="stylesheet" href="assets/css/jquery-ui.css">
 	<!-- --- -->
 </head>
 <body>
@@ -92,7 +91,7 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/icons/user-account-empty.svg" alt="user account">
+							<img src="assets/img/account/thumbnail.png" alt="user account">
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
@@ -119,21 +118,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<h1 class="parts-title text-white">Add A Part</h1>
+					<h1 class="parts-title text-white">Results</h1>
 				</div>
 				<div class="col-md-7">
 					<ul class="nav nav-pills justify-content-end">
 					  <li class="nav-item">
-					    <a class="nav-link active"><img src="assets/icons/upload.svg" alt="upload"><span>Upload</span></a>
+					    <a class="nav-link complete"><img src="assets/icons/upload.svg" alt="upload"><span>Upload</span></a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#"><img src="assets/icons/map.svg" alt="map"><span>Map</span></a>
+					    <a class="nav-link complete" href="#"><img src="assets/icons/map.svg" alt="map"><span>Map</span></a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#"><img src="assets/icons/review.svg" alt="review"><span>Review</span></a>
+					    <a class="nav-link complete" href="#"><img src="assets/icons/review.svg" alt="review"><span>Review</span></a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#"><img src="assets/icons/tick-round.svg" alt="tick"><span>Complete</span></a>
+					    <a class="nav-link active" href="#"><img src="assets/icons/tick-round.svg" alt="tick"><span>Complete</span></a>
 					  </li>
 					</ul>
 				</div>
@@ -141,36 +140,36 @@
 		</div>
 	</div>
 
-	<div class="parts-upload">
+	<!-- RESULTS -->
+	<div class="completion-results">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 text-center">
-					<div class="left">
-						<h1 class="parts-title">Start By Uploading your file.</h1>
-						<h1 class="parts-title or">Or</h1>
-						<a href="#" class="btn btn-dark">Get Parts Template</a>
-						<hr>
-						<a href="#" class="btn"><span>Next Step</span> <img src="assets/icons/arrow-right-white.svg" alt="arrow right"></a>
-						<hr>
-						<a href="#">My Parts Come from an API</a>
+				<div class="col-md-6">
+					<h1 class="parts-title">Success</h1>
+					<div class="mt-3 alert alert-success py-4 px-3">
+						Imported 2,000 rows of part data. <br>
+						All the parts were successfully imported.
+					</div>		
+				</div>
+				<div class="col-md-6">
+					<h1 class="parts-title">Failed</h1>
+					<div class="mt-3 alert alert-danger  py-4 px-3">
+						Imported 2,000 rows of part data. <br>
+						200 of the parts were not imported.
 					</div>
 				</div>
-				<div class="col-md-7 offset-md-1">
-					<div class="parts-upload-area">
-						<h1 class="parts-title">Upload Your Parts List</h1>
-						<p>CSV files are allowed</p>
-						<form class="dropzone" enctype="multipart/form-data" id="part-upload">
-						  <div class="fallback">
-						    <input name="file" type="file" />
-						  </div>
-						</form>
-						
-					</div>
-					
+			</div>
+			<div class="row mt-3">
+				<div class="col-6">
+					<a href="#!" class="btn btn-dark"><img src="assets/icons/arrow-left-white.svg" alt="left arrow"> Upload Another</a>
+				</div>
+				<div class="col-6 text-end">
+					<a href="#!" class="btn">Complete <img src="assets/icons/arrow-right-white.svg" alt="right arrow"></a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<!-- FOOTER -->
 	<footer>
@@ -260,28 +259,5 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
 	<script src="assets/js/main.js"></script>
-
-	<!-- Only Needed for this Page (Drag and Drop Functionality) -->
-	<script>
-		Dropzone.options.partUpload = {
-			// This is the URL you can use to accept file to be uploaded. Replace it with your backend route.
-			url: "https://braap-test.free.beeceptor.com",
-			acceptedFiles: ".csv",
-			addRemoveLinks: true,
-			maxFiles: 1,
-			uploadMultiple: false,
-			createImageThumbnails: true,
-			init: function() {
-			    this.on("addedfile", file => {
-			      console.log("A file has been added");
-			    });
-			}
-		}
-		$(document).ready(function() {
-			$(".dz-message").html('<img src="assets/icons/upload-part.svg" alt=""><br><button class="dz-button mt-3" type="button">Drag and drop or browse to choose a file</button>');
-		});
-	</script>
-	<!-- --- -->
-
 </body>
 </html>
