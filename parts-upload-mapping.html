@@ -150,16 +150,31 @@
 			</div>
 			<div class="row drag-drop-fields">
 				<div class="col-md-6">
-					<div id="sortable1" class="droptrue">
-					  <span class="ui-state-default">Can be dropped..</span>
-					  <span class="ui-state-default">..on an empty list</span>
-					  <span class="ui-state-default">Item 3</span>
-					  <span class="ui-state-default">Item 4</span>
-					  <span class="ui-state-default">Item 5</span>
+					<h1 class="parts-title text-start mb-3">Uploaded Column Headers</h1>
+					<div id="sortable1" class="droptrue text-start px-0">
+					  <span class="ui-state-default btn">Can be dropped..</span>
+					  <span class="ui-state-default btn">..on an empty list</span>
+					  <span class="ui-state-default btn">Item 3</span>
+					  <span class="ui-state-default btn">Item 4</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 5</span>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div id="sortable3" class="droptrue">asd</div>
+				<div class="col-md-6 text-start">
+					<h1 class="parts-title text-start mb-3">Braap Fields</h1>
+					<div id="sortable2" class="droptrue w-100 h-75 border text-start p-3 mt-3"></div>
+					<div class="w-100 text-end">
+						<a href="#!"class="btn d-inline-block mt-3 mx-auto">Next Step <img src="assets/icons/arrow-right-white.svg" class="ms-1" alt="right arrow"></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -260,15 +275,15 @@
 	  $(function() {
 
 	    $( "div.droptrue" ).sortable({
-	      connectWith: "div"
+	      	connectWith: "div"
 	    });
 	 
 	    $( "div.dropfalse" ).sortable({
-	      connectWith: "div",
-	      dropOnEmpty: false
+	      	connectWith: "div",
+	      	dropOnEmpty: false
 	    });
 	 
-	    $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+	    $( "#sortable1, #sortable2" ).disableSelection();
 
 	  });
 	</script>
