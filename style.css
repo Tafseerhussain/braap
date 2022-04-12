@@ -3106,6 +3106,12 @@ PARTS UPLOAD PAGE
 .dropzone .dz-preview .dz-remove {
 	color: var(--danger);
 }
+.parts-upload .contact-assistance {
+	color: var(--black);
+}
+.parts-upload .parts-upload-btn img {
+	height: 20px;
+}
 
 /* PARTS HEADERS DRAG N DROP */
 .drag-drop-header {
