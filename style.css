@@ -56,6 +56,7 @@ section, summary, time, mark, audio, video {
 	--white: #fff;
 	--black: #000;
 	--dark-gray: #696969;
+	--med-gray: #c4c4c4;
 	--light-gray: #E6E6E6;
 	--bg-gray: #F7F7F7;
 	--orange: #E58A00;
@@ -72,7 +73,11 @@ section, summary, time, mark, audio, video {
 }
 a {text-decoration: none}
 .text-orange {color: var(--orange)}
-.dropdown-item.active, .dropdown-item:active {background: var(--light-gray); color: var(--dark-gray);}
+.dropdown-item.active, .dropdown-item:active {background: var(--light-gray); color: var(--dark-gray)}
+hr {
+	color: var(--light-gray);
+	opacity: 1;
+}
 html {
 	font-family: 'axiforma';
 	font-size: 18px;
@@ -245,7 +250,7 @@ p {line-height: 36px}
 }*/
 .divider {border-top: 1px solid var(--light-gray)}
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
   margin-right: 6px;
 }
 ::-webkit-scrollbar-track {
@@ -551,14 +556,14 @@ footer .social-links a img {
 }
 .hero-search input {
 	background: rgba(255,255,255, 1);
-	color: var(--black);
+	color: var(--black) !important;
 	-webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  padding: 10px 0;
-  border: 1px solid var(--white);
-  border-radius: 8px !important;
-  padding: 10px 130px 10px 60px;
-  font-family: 'axiforma-thin';
+	backdrop-filter: blur(4px);
+	padding: 10px 0;
+	border: 1px solid var(--white);
+	border-radius: 8px !important;
+	padding: 10px 130px 10px 60px;
+	font-family: 'axiforma-thin';
 	font-weight: 600;
 	letter-spacing: 0.5px;
 }
@@ -875,7 +880,7 @@ footer .social-links a img {
   top: 0;
   left: 0;
   backdrop-filter: blur(6px);
-  z-index: 8;
+  z-index: 10;
   display: none;
 }
 .closeNav img {
@@ -2861,9 +2866,11 @@ RESULTS PAGE
 	background: var(--white);
 }
 .search-parts .showing-results {
-	color: var(--orange);
-	text-align: right;
-	padding-top: 10px;
+    color: var(--orange);
+    text-align: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .search-parts .showing-results span {
 	font-family: var(--ax-bold);
@@ -2998,6 +3005,350 @@ RESULTS PAGE
 	border: 1px solid var(--orange);
 	border-radius: 10px;
 }
+.search-parts .parts-tabs {
+	margin-top: 40px;
+}
+.search-parts .parts-tabs .nav-pills .nav-link {
+	border: 2px solid var(--orange);
+	color: var(--orange);
+	padding: 10px 30px;
+	margin-right: 20px;
+	transition: 0.3s;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+.search-parts .parts-tabs .nav-pills .nav-link.active {
+	border-color: var(--black) !important;
+	background-color: var(--black) !important;
+	color: var(--white) !important;
+}
+.search-parts .parts-tabs .nav-pills .nav-link:hover {
+	background-color: var(--orange);
+	color: var(--white);
+}
+.search-parts .parts-tabs .clear-filters a {
+	color: var(--black);
+	text-decoration: underline;
+	display: inline-block;
+}
+.search-parts .parts-tabs .clear-filters {
+	text-align: right;
+}
+.search-parts-page .search-part-card .searched-times {
+	font-size: 12px;
+}
+.search-parts-cards .price-ribbon {
+	position: absolute;
+	left: 0;
+	top: 15px;
+	font-size: 14px;
+	color: var(--white);
+	background: var(--black);
+	padding: 4px 10px 3px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.search-parts-cards .search-part-img {
+	padding: 20px 30px;
+}
+.search-part-card .search-part-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--black);
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0 6px;
+}
+.search-part-card .stock {
+	text-align: right;
+	font-size: 10px;
+}
+.search-part-card .stock img {height: 10px}
+.search-part-card .stock.in-stock {color: var(--success)}
+.search-part-card .stock.in-stock img {filter: invert(35%) sepia(87%) saturate(501%) hue-rotate(72deg) brightness(104%) contrast(89%)}
+.search-part-card .stock.end-stock {color: var(--danger)}
+.search-part-card .stock.end-stock img {filter: invert(15%) sepia(87%) saturate(4139%) hue-rotate(353deg) brightness(114%) contrast(114%)}
+.search-part-card .search-part-details {
+	font-size: 12px;
+	line-height: 20px;
+	color: var(--dark-gray);
+	margin: 6px 0 10px;
+	padding: 10px 0;
+	border-top: 1px solid var(--light-gray);
+	border-bottom: 1px solid var(--light-gray);
+	transition: 0.3s;
+	display: block;
+}
+.search-part-card .search-part-details:hover {
+	border-color: var(--dark-gray);
+}
+.search-part-card .btn {
+	font-size: 14px;
+}
+.search-parts-page .search-part-card {padding: 0; overflow: hidden;}
+.search-parts-page .search-part-card .upper-half {
+	padding: 20px;
+	padding-bottom: 10px;
+}
+.search-parts-page .search-part-card .lower .btn {
+	width: 100%;
+	border-radius: 0;
+}
+.search-part-card .part-selected {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.3);
+	/*backdrop-filter: blur(2px);*/
+	z-index: 1;
+	border: 2px solid var(--success);
+	transition: 0.3s;
+}
+.search-part-card .part-selected img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.part-sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: 0;
+  background: var(--white);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.part-sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.part-sidebar-content {
+  display: none;
+  padding: 30px;
+}
+.part-sidebar .menu-links .active {
+	color: var(--orange);
+}
+.part-sidebar .close img {
+	filter: brightness(0);
+}
+.part-sidebar-content .close {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+.part-sidebar-content .cart-btn img {
+	height: 24px;
+	margin-right: 6px;
+}
+.part-sidebar .part-sidebar-content .part-name {
+	color: var(--black);
+	font-size: 24px;
+	margin: 50px 0 10px;
+}
+.part-sidebar .part-sidebar-content .input-group input {
+	font-size: 14px;
+	border-left: 0;
+	padding-left: 0;
+	border-radius: 10px;
+}
+.part-sidebar .part-sidebar-content .input-group input:focus {
+	border-color: #ced4da;
+}
+.part-sidebar .part-sidebar-content .input-group input::placeholder {
+	position: relative;
+	top: 1px;
+}
+.part-sidebar .part-sidebar-content .input-group-text {
+	background: var(--white);
+	border-right: 0;
+	padding: 12px 10px;
+	border-radius: 10px;
+}
+.part-sidebar .part-sidebar-content .input-group-text img {
+	height: 20px;
+}
+.part-sidebar .part-sidebar-content .messages {
+	margin-top: 60px;
+}
+.part-sidebar .part-sidebar-content .messages .grouped-message {
+	border-radius: 10px;
+	border: 1px solid var(--light-gray);
+	background-color: var(--bg-gray);
+	padding: 20px;
+	margin-bottom: 30px;
+}
+.part-sidebar .part-sidebar-content .messages .icon {
+    font-size: 27px;
+    color: var(--white);
+    border-radius: 50%;
+    padding: 20px 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.part-sidebar .part-sidebar-content .messages .grouped-message .icon {padding: 16px 10px}
+.part-sidebar .part-sidebar-content .messages .icon-r {background-color: var(--success)}
+.part-sidebar .part-sidebar-content .messages .icon-m {background-color: var(--danger)}
+.part-sidebar .messages .text {font-size: 14px}
+.part-sidebar .part-sidebar-content .message {
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid var(--light-gray);
+	background-color: var(--white);
+	position: relative;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+.part-sidebar .part-sidebar-content .message .cross {
+	position: absolute;
+	right: -10px;
+	top: -10px;
+}
+.part-sidebar .part-sidebar-content .dark-message {
+	background: var(--med-gray);
+	color: var(--white);
+}
+.part-sidebar .part-sidebar-content .grouped-message .message:last-child {
+	margin-bottom: 0;
+}
+.part-sidebar .message-head {
+	font-family: var(--ax-semibold);
+	margin-top: 10px;
+	display: block;
+}
+.popup {
+  	width: 100%;
+  	height: 100%;
+  	display: none;
+  	position: fixed;
+  	top: 0px;
+  	left: 0px;
+  	background: rgba(0, 0, 0, 0.75);
+  	z-index: 10;
+  	backdrop-filter: blur(3px);
+  	text-align: center;
+  	overflow-y: auto;
+}
+.popup:before {
+  	content: '';
+  	display: inline-block;
+  	height: 100%;
+  	margin-right: -4px;
+  	vertical-align: middle;
+}
+.popup-inner {
+  	display: inline-block;
+  	text-align: left;
+  	position: relative;
+  	vertical-align: middle;
+  	max-width: 90%;
+  	width: 1000px;
+  	padding: 30px 40px;
+  	border-radius: 10px;
+  	background: var(--white);
+  	text-align: left;
+  	margin: 0 auto;
+}
+.popup-inner h1.popup-title {
+	font-family: var(--ax-bold);
+  	font-weight: 600;
+  	font-size: 27px;
+  	color: var(--black);
+  	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.popup-inner p {
+  	font-size: 24px;
+  	font-weight: 400;
+}
+.popup-close {
+	position: absolute;
+    right: 3px;
+    top: 2px;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+.popup-close:hover {
+	opacity: 1;
+}
+.part-details-popup .popup-head .price {
+	color: var(--orange);
+	font-size: 32px;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: var(--ax-black);
+	overflow-wrap: break-word;
+}
+.part-details-popup .nav-pills .nav-link {
+	font-size: 16px;
+	padding: 12px 15px;
+	border-radius: 6px;
+	background-color: var(--light-gray);
+	margin-right: 10px;
+	color: var(--dark-gray);
+}
+.part-details-popup .nav-pills .nav-link.active {
+	background-color: var(--orange);
+	color: var(--white) !important;
+}
+.popup-body {
+	padding: 10px 0;
+}
+.part-details-popup .description {font-size: 16px}
+.part-details-popup .description .img-box {
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid var(--light-gray);
+}
+.part-details-popup .description p {
+	font-size: 16px;
+	line-height: 27px;
+}
+.part-details-popup .description p img {
+	height: 12px;
+	filter: invert(35%) sepia(87%) saturate(501%) hue-rotate(72deg) brightness(104%) contrast(89%);
+}
+.part-details-popup .description p.shipping span {
+	color: var(--success);
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.part-details-popup .tab-pane {
+	padding-top: 30px;
+}
+.part-details-popup .description .img-boxes {margin: 20px 0}
+.part-details-popup .description .img-boxes a {
+	width: 70px;
+	height: 70px;
+	margin-right: 10px;
+	display: inline-block;
+}
+.part-details-popup .description .img-boxes a img {
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
 
 /*=============================================================
 PARTS UPLOAD PAGE

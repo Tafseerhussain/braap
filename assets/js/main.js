@@ -25,6 +25,8 @@ function closeNav() {
     
 }
 
+
+
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   // return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -308,3 +310,66 @@ $(document).ready(function() {
         })
     })
 })
+
+
+// SEARCH RESULTS PARTS PAGE JS
+
+function openPartNav() {
+    if ($(window).width() < 1025 && $(window).width() > 767) {
+        document.getElementById("part-sidebar").style.width = "80%";
+    } else if ($(window).width() < 768) {
+        document.getElementById("part-sidebar").style.width = "90%";
+    } else {
+        document.getElementById("part-sidebar").style.width = "650px";
+    }
+    $('html').css('overflow-y', 'hidden');
+    $(".part-sidebar-content").delay(300).fadeIn("slow");
+    $(".body-overlay").delay(0).fadeIn();
+}
+
+function closePartNav() {
+    $(".part-sidebar-content").delay(0).fadeOut("slow");
+    setTimeout( function()  {
+        document.getElementById("part-sidebar").style.width = "0";
+        $('html').css('overflow-y', 'scroll');
+    }, 500);
+    $(".body-overlay").delay(500).fadeOut();
+    
+}
+
+$(function() {
+    //----- OPEN
+    $('[pd-popup-open]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('pd-popup-open');
+        $('[pd-popup="' + targeted_popup_class + '"]').fadeIn(300);
+ 
+        e.preventDefault();
+    });
+ 
+    //----- CLOSE
+    $('[pd-popup-close]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('pd-popup-close');
+        $('[pd-popup="' + targeted_popup_class + '"]').fadeOut(300);
+ 
+        e.preventDefault();
+    });
+});
+
+$('.part-details-popup .description .img-boxes a img').click(function() {
+    $('.part-details-popup .description .img-box img').attr('src', $(this).attr("src"));
+})
+
+$('#pills-related-tab').click(function() {
+    $('.related-parts-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 500,
+        infinite: true,
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000
+    });
+})
+
+// ENDING OF SEARCH RESULTS PARTS PAGE JS

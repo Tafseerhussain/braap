@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Braap | Search Results</title>
+	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
+	<meta content="" name="keywords">
+	<!-- External Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Internal files -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
+	<!-- scroll reveal -->
+	<script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body>
+
+	<!-- WEBSITE PRELOADER -->
+	<div class="preloaderBg" id="preloader">
+	    <div class="preloader"></div>
+	    <div class="preloader2"></div>
+	</div>
+
+	<!-- HEADER FOR OTHER PAGES -->
+	<!-- Need to add 'results-page' Class to this navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100 header-static results-page">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="assets/img/logo-black.svg" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="header-search">
+				<form action="#">
+					<div class="input-group">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" id="typing-effect" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+						<div class="input-group-divider"></div>
+						<span class="input-group-text">
+							<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="left" title="Coming Soon"></a>
+							<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera" data-bs-toggle="tooltip" data-bs-placement="right" title="Coming Soon"></a>
+						</span>
+					</div>
+				</form>
+				<!-- Search Results (Enable When Required) -->
+				<ul class="search-results-static list-group" id="home-search-results">
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> dirt bike</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> hesitating<span> engine</span></a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine </span>overheats</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>whining </span>engine</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> overheating - the  <span>engine</span> oil is part of what keeps the <span>engine</span> cool</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link shop-link" href="#">
+							<span>My Shop</span>
+							<img src="assets/icons/garage-orange.svg" alt="garage">
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/user-account-empty.svg" alt="user account">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Login</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Register</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- NAVBAR SPACE FOR OTHER PAGES -->
+	<div class="navbar-spacer"></div>
+
+	<!-- RESULTS PAGE HEADER -->
+	<div class="results-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="header-search w-100">
+						<form action="#">
+							<div class="input-group">
+								<span class="input-group-text">
+									<img src="assets/icons/search-dark.svg" alt="magnifier">
+								</span>
+								<input type="text" id="typing-effect" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+								<div class="input-group-divider"></div>
+								<span class="input-group-text">
+									<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="left" title="Coming Soon"></a>
+									<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera" data-bs-toggle="tooltip" data-bs-placement="right" title="Coming Soon"></a>
+								</span>
+							</div>
+						</form>
+						<!-- Search Results (Enable When Required) -->
+						<ul class="search-results-static list-group" id="home-search-results">
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> dirt bike</a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> hesitating<span> engine</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine </span>overheats</a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>whining </span>engine</a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> overheating - the  <span>engine</span> oil is part of what keeps the <span>engine</span> cool</a>
+						  </li>
+						</ul>
+						<!-- Trending Searches -->
+						<div class="search-types d-flex">
+							<a href="#">All</a>
+							<a href="#" class="active">Diagnostics</a>
+							<a href="#">Recommendation</a>
+							<a href="#">Video</a>
+							<a href="#">Parts</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="row fitment-search">
+						<div class="col-md col-6">
+							<div class="form-floating">
+								<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+								    <option value="new" selected>New</option>
+								    <option value="old">Old</option>
+								</select>
+						        <label for="part_condition">Type</label>
+						    </div>
+						</div>
+						<div class="col-md col-6">
+							<div class="form-floating">
+								<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+								    <option value="new" selected>New</option>
+								    <option value="old">Old</option>
+								</select>
+						        <label for="part_condition">Make</label>
+					        </div>
+						</div>
+						<div class="col-md col-6">
+							<div class="form-floating">
+								<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+								    <option value="new" selected>New</option>
+								    <option value="old">Old</option>
+								</select>
+						        <label for="part_condition">Year</label>
+					        </div>
+						</div>
+						<div class="col-md col-6">
+							<div class="form-floating">
+								<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+								    <option value="new" selected>New</option>
+								    <option value="old">Old</option>
+								</select>
+						        <label for="part_condition">Model</label>
+					        </div>
+						</div>
+						<div class="col-md-2 text-center">
+							<a href="#!" class="btn">Search</a>
+							<a href="#!"><img src="assets/icons/reload.svg" alt="reload"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- SEARCH PARTS -->
+	<div class="search-parts search-parts-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<h1 class="section-title">
+						Parts
+					</h1>
+				</div>
+				<div class="col-md-7">
+					<div class="showing-results">
+						<span>Showing Results for</span>
+						Noises
+					</div>
+				</div>
+			</div>
+			<div class="row parts-tabs">
+				<div class="col-12">
+					<ul class="nav nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Axel Parts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Bearings and Seals</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Chain</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Axel Parts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Bearings and Seals</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Chain</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Axel Parts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Chain</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-12">
+					<div class="clear-filters">
+						<a href="#!">Clear Filters</a>
+					</div>
+				</div>
+			</div>
+			<div class="row search-parts-cards g-3 mt-3">
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock in-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part2.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock in-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock end-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>Only 5 left in stock: Ship in 2-4 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="part-selected"><img src="assets/icons/tick-circle-green.svg" alt="tick"></div>
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part2.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock in-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock in-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part2.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock in-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock end-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>Only 5 left in stock: Ship in 2-4 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-2">
+					<div class="search-part-card card">
+						<div class="upper-half">
+							<div class="price-ribbon">
+								$250.00
+							</div>
+							<div class="searched-times">
+								Searched < 1000 times
+							</div>
+							<div class="search-part-img">
+								<img src="assets/img/parts/part2.png" class="w-100" alt="part">
+							</div>
+							<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+								Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+							</div>
+							<div class="stock in-stock">
+								<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+							</div>
+							<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+								<div class="row">
+									<div class="col-2">
+										<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+									</div>
+									<div class="col-10 ps-0">
+										<span>See part details, related parts, recommendations, and price comparison</span>
+									</div>
+								</div>
+							</a>
+							<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+						</div>
+						<div class="lower">
+							<a href="#!" class="btn">Complete filter to check fit</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Parts Sidebar -->
+	<div class="body-overlay"></div>
+	<div id="part-sidebar" class="part-sidebar">
+		<div class="part-sidebar-content">
+			<a href="#!" class="close"><img src="assets/icons/arrow-left-white.svg" onclick="closePartNav()" alt="left arrow"></a>
+			<a href="#!" class="btn w-100 cart-btn"> <img src="assets/icons/cart-white.svg" alt="cart"> <span>Add to Cart</span></a>
+			<h1 class="part-name">2021 Arctic Cat ATV ALTERRA 450 BLUE</h1>
+			<form class="input-group" action="#">
+			  	<span class="input-group-text"><img src="assets/icons/search-dark.svg" alt="search"></span>
+			  	<input type="text" class="form-control" placeholder="Search required work and related parts">
+			</form>
+			<div class="messages">
+
+				<div class="grouped-message">
+
+					<div class="message">
+						<a href="#!" class="cross"><img src="assets/icons/cross-circle-gray.svg" alt="cross"></a>
+						<div class="row">
+							<div class="col-2">
+								<div class="icon icon-r">
+									R
+								</div>
+							</div>
+							<div class="col-10 ps-0">
+								<div class="text">
+									Loud clicking noises when turning - one of the most common and most noticeable symptoms of a bad or failing cv axle shaft assembly is an audible clicking noise when turning <span><img src="assets/icons/label-green.svg" alt="label"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="message dark-message">
+						<a href="#!" class="cross"><img src="assets/icons/cross-circle-gray.svg" alt="cross"></a>
+						<div class="row">
+							<div class="col-12">
+								<div class="text">
+									Loud clicking noises when turning - one of the most common and most noticeable symptoms of a bad or failing cv axle shaft assembly is an audible clicking noise when turning
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="message">
+					<a href="#!" class="cross"><img src="assets/icons/cross-circle-gray.svg" alt="cross"></a>
+					<div class="row">
+						<div class="col-2">
+							<div class="icon icon-r">
+								R
+							</div>
+						</div>
+						<div class="col-10 ps-0">
+							<div class="text">
+								Loud clicking noises when turning - one of the most common and most noticeable symptoms of a bad or failing cv axle shaft assembly is an audible clicking noise when turning <span><img src="assets/icons/label-green.svg" alt="label"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="message-head">Parts, No related diagnostic </h2>
+
+				<div class="message dark-message">
+					<a href="#!" class="cross"><img src="assets/icons/cross-circle-gray.svg" alt="cross"></a>
+					<div class="row">
+						<div class="col-12">
+							<div class="text">
+								Loud clicking noises when turning - one of the most common and most noticeable symptoms of a bad or failing cv axle shaft assembly is an audible clicking noise when turning
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="message">
+					<a href="#!" class="cross"><img src="assets/icons/cross-circle-gray.svg" alt="cross"></a>
+					<div class="row">
+						<div class="col-2">
+							<div class="icon icon-m">
+								M
+							</div>
+						</div>
+						<div class="col-10 ps-0">
+							<div class="text">
+								Loud clicking noises when turning - one of the most common and most noticeable symptoms of a bad or failing cv axle shaft assembly is an audible clicking noise when turning <span><img src="assets/icons/label-green.svg" alt="label"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- Parts Detail Popup -->
+	<div class="popup part-details-popup" pd-popup="part-details-popup">
+	    <div class="popup-inner">
+	        <a class="popup-close" pd-popup-close="part-details-popup" href="#"><img src="assets/icons/cross-circle-gray.svg" alt="cross"></a>
+	    	<div class="popup-head row">
+	    		<div class="col-9">
+	        		<h1 class="popup-title">Predator 22 HP (670cc) V-Twin Horizontal Shaft Gas Engine, EPA 61614</h1>
+	    		</div>
+	    		<div class="col-3">
+	    			<div class="price">$899.00</div>
+	    		</div>
+	    	</div>
+	    	<hr>
+	      	<div class="popup-body">
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="pills-desc-tab" data-bs-toggle="pill" data-bs-target="#pills-desc" type="button" role="tab" aria-controls="pills-desc" aria-selected="true">Description</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-related-tab" data-bs-toggle="pill" data-bs-target="#pills-related" type="button" role="tab" aria-controls="pills-related" aria-selected="false">Related Parts</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-review-tab" data-bs-toggle="pill" data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review" aria-selected="false">Reviews</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-comparison-tab" data-bs-toggle="pill" data-bs-target="#pills-comparison" type="button" role="tab" aria-controls="pills-comparison" aria-selected="false">Price Comparison</button>
+					</li>
+				</ul>
+
+				<div class="tab-content" id="pills-tabContent">
+
+					<!-- Description -->
+					<div class="tab-pane fade show active description" id="pills-desc" role="tabpanel" aria-labelledby="pills-desc-tab">
+						<div class="row">
+							<div class="col-md-3 order-1">
+								<div class="img-box">
+									<img src="assets/img/parts/popup-part.png" class="w-100" alt="part">
+								</div>
+							</div>
+							<div class="col-md-9 order-md-2 order-3">
+								<p class="shipping mb-3"><img src="assets/icons/tick.svg" alt="tick"><span>In Stock & Ships in 1 - 2 days</span></p>
+								<p>
+									This Predator 670cc V-twin 4-stroke gasoline engine delivers more power in less space than similar displacement standard twins. The horizontal shaft makes this gas engine an ideal replacement for most standard engine configurations. The powerful v-twin gas engine features a durable cast iron cylinder making it the perfect replacement engine for: Mowers, water pumps, high pressure washers and dozens of other machines.
+								</p>
+							</div>
+							<div class="col-12 order-md-3 order-2">
+								<div class="img-boxes">
+									<a href="#!">
+										<img src="assets/img/parts/popup-part.png" class="img-thumbnail" alt="part">
+									</a>
+									<a href="#!">
+										<img src="assets/img/parts/part2.png" class="img-thumbnail" alt="part">
+									</a>
+									<a href="#!">
+										<img src="assets/img/parts/popup-part.png" class="img-thumbnail" alt="part">
+									</a>
+									<a href="#!">
+										<img src="assets/img/parts/part1.png" class="img-thumbnail" alt="part">
+									</a>
+									<a href="#!">
+										<img src="assets/img/parts/popup-part.png" class="img-thumbnail" alt="part">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 text-end">
+								<a href="#" class="btn btn-dark">Add to Cart</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Related Parts -->
+					<div class="tab-pane fade related-parts" id="pills-related" role="tabpanel" aria-labelledby="pills-related-tab">
+						<div class="related-parts-slider">
+							<div class="search-part-card card">
+								<div class="upper-half">
+									<div class="price-ribbon">
+										$250.00
+									</div>
+									<div class="searched-times">
+										Searched < 1000 times
+									</div>
+									<div class="search-part-img">
+										<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+									</div>
+									<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+										Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+									</div>
+									<div class="stock in-stock">
+										<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+									</div>
+									<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+										<div class="row">
+											<div class="col-2">
+												<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+											</div>
+											<div class="col-10 ps-0">
+												<span>See part details, related parts, recommendations, and price comparison</span>
+											</div>
+										</div>
+									</a>
+									<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+								</div>
+								<div class="lower">
+									<a href="#!" class="btn">Complete filter to check fit</a>
+								</div>
+							</div>
+							<div class="search-part-card card">
+								<div class="upper-half">
+									<div class="price-ribbon">
+										$250.00
+									</div>
+									<div class="searched-times">
+										Searched < 1000 times
+									</div>
+									<div class="search-part-img">
+										<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+									</div>
+									<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+										Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+									</div>
+									<div class="stock in-stock">
+										<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+									</div>
+									<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+										<div class="row">
+											<div class="col-2">
+												<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+											</div>
+											<div class="col-10 ps-0">
+												<span>See part details, related parts, recommendations, and price comparison</span>
+											</div>
+										</div>
+									</a>
+									<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+								</div>
+								<div class="lower">
+									<a href="#!" class="btn">Complete filter to check fit</a>
+								</div>
+							</div>
+							<div class="search-part-card card">
+								<div class="upper-half">
+									<div class="price-ribbon">
+										$250.00
+									</div>
+									<div class="searched-times">
+										Searched < 1000 times
+									</div>
+									<div class="search-part-img">
+										<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+									</div>
+									<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+										Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+									</div>
+									<div class="stock in-stock">
+										<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+									</div>
+									<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+										<div class="row">
+											<div class="col-2">
+												<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+											</div>
+											<div class="col-10 ps-0">
+												<span>See part details, related parts, recommendations, and price comparison</span>
+											</div>
+										</div>
+									</a>
+									<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+								</div>
+								<div class="lower">
+									<a href="#!" class="btn">Complete filter to check fit</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Reviews -->
+					<div class="tab-pane fade reviews" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">Reviews...</div>
+
+					<!-- Price Comparison -->
+					<div class="tab-pane fade comparison" id="pills-comparison" role="tabpanel" aria-labelledby="pills-comparison-tab">Price Comparison...</div>
+
+				</div>
+	      	</div>	
+	    </div>
+	</div>
+
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-md-3">
+					<div class="footer-col-1">
+						<a href="#" class="footer-logo">
+							<img src="assets/img/logo-white.svg" alt="braap logo">
+						</a>
+						<p>
+							A comprehensive, simple-to-use turnkey platform for service and repair businesses that
+							offers unique features that enhance customer
+							and technician collaboration.
+						</p>
+						<div class="social-links">
+							<a href="#"><img src="assets/icons/twitter-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/linkedin-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/facebook-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/instagram-footer.svg" alt="twitter icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="footer-col-2">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="footer-head">
+									Services
+								</h4>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Automated job quoting and estimating</a>
+									<a href="#">Consolidated direct parts sourcing</a>
+									<a href="#">Curated machine learning search engine</a>
+									<a href="#">Custom part kits</a>
+									<a href="#">End-to-end full-service workflow</a>
+									<a href="#">Fleet management shop</a>
+									<a href="#">Global technician workforce</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Intelligence auto pilot workflow engine</a>
+									<a href="#">Interactive visual workspace</a>
+									<a href="#">Point-to-point pickup and delivery</a>
+									<a href="#">Predictive maintenance</a>
+									<a href="#">Price comparison engine</a>
+									<a href="#">Sound diagnostics</a>
+									<a href="#">Visual search</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-col-3">
+						<h4 class="footer-head">
+							Braap
+						</h4>
+						<div class="footer-links mt-5">
+							<a href="#">About</a>
+							<a href="#">Contact</a>
+							<a href="https://jobs.braap.io/jobs/Careers" target="_blank">Careers</a>
+							<a href="#">Supplier partners</a>
+							<a href="#">Terms and Conditions</a>
+							<a href="#">Privacy Policy</a>
+							<a href="#">Return Policy</a>
+							<a href="#">Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row copyright text-center">
+				<div class="col-12">
+					Copyright © All Rights Reserved by Braap - Trademark Pending 97313870
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/slick.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
