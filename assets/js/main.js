@@ -360,16 +360,33 @@ $('.part-details-popup .description .img-boxes a img').click(function() {
 })
 
 $('#pills-related-tab').click(function() {
-    $('.related-parts-slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        speed: 500,
-        infinite: true,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 4000
-    });
+    if ($('#pills-related-tab').hasClass("active")) {
+        setTimeout(function(){
+            $('.related-parts .loading').fadeOut(200);
+            $('.related-parts-popup-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                speed: 500,
+                infinite: true,
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 4000
+            }).fadeIn(1000);
+            // $('.related-parts-popup-slider').fadeIn(1000);
+        },1000);  
+    }
+})
+$('.part-details-popup .popup-close').click(function() {
+    setTimeout(function(){
+        $('.related-parts .loading').fadeIn();
+        $('.related-parts-popup-slider').fadeOut();
+        $('.part-details-popup .popup-body .nav-link').removeClass('active');
+        $('.part-details-popup .popup-body .tab-pane').removeClass('active');
+        $('#pills-desc-tab').addClass('active');
+        $('.part-details-popup .popup-body .tab-pane.description').addClass('active show');
+        $('.related-parts-popup-slider').slick('unslick');
+    },500);
 })
 
 // ENDING OF SEARCH RESULTS PARTS PAGE JS

@@ -653,7 +653,7 @@
 						<button class="nav-link" id="pills-related-tab" data-bs-toggle="pill" data-bs-target="#pills-related" type="button" role="tab" aria-controls="pills-related" aria-selected="false">Related Parts</button>
 					</li>
 					<li class="nav-item" role="presentation">
-						<button class="nav-link" id="pills-review-tab" data-bs-toggle="pill" data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review" aria-selected="false">Reviews</button>
+						<button class="nav-link" id="pills-review-tab" data-bs-toggle="pill" data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review" aria-selected="false" >Reviews</button>
 					</li>
 					<li class="nav-item" role="presentation">
 						<button class="nav-link" id="pills-comparison-tab" data-bs-toggle="pill" data-bs-target="#pills-comparison" type="button" role="tab" aria-controls="pills-comparison" aria-selected="false">Price Comparison</button>
@@ -705,7 +705,41 @@
 
 					<!-- Related Parts -->
 					<div class="tab-pane fade related-parts" id="pills-related" role="tabpanel" aria-labelledby="pills-related-tab">
-						<div class="related-parts-slider">
+						<div class="loading text-center">Loading Parts...</div>
+						<div class="related-parts-popup-slider">
+							<div class="search-part-card card">
+								<div class="upper-half">
+									<div class="price-ribbon">
+										$250.00
+									</div>
+									<div class="searched-times">
+										Searched < 1000 times
+									</div>
+									<div class="search-part-img">
+										<img src="assets/img/parts/part1.png" class="w-100" alt="part">
+									</div>
+									<div class="search-part-name" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)">
+										Honda FENDER, R. Fr. *yra15L* (Close Range Camo 2) #61100-HR4-BP0Z (Close Range Camo 3)
+									</div>
+									<div class="stock in-stock">
+										<img src="assets/icons/tick.svg" alt="tick"> <span>In Stock & Ships in 1 - 2 days</span>
+									</div>
+									<a href="#!" class="search-part-details" pd-popup-open="part-details-popup">
+										<div class="row">
+											<div class="col-2">
+												<img src="assets/icons/parts-details.svg" alt="detail" class="w-100">
+											</div>
+											<div class="col-10 ps-0">
+												<span>See part details, related parts, recommendations, and price comparison</span>
+											</div>
+										</div>
+									</a>
+									<a href="#!" class="btn btn-dark w-100" onclick="openPartNav()">Get Part</a>
+								</div>
+								<div class="lower">
+									<a href="#!" class="btn">Complete filter to check fit</a>
+								</div>
+							</div>
 							<div class="search-part-card card">
 								<div class="upper-half">
 									<div class="price-ribbon">
