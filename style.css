@@ -3259,7 +3259,7 @@ RESULTS PAGE
   	position: relative;
   	vertical-align: middle;
   	max-width: 90%;
-  	width: 1000px;
+  	width: 1200px;
   	padding: 30px 40px;
   	border-radius: 10px;
   	background: var(--white);
@@ -3333,8 +3333,8 @@ RESULTS PAGE
 	margin-left: 10px;
 	margin-bottom: 20px;
 }
-.part-details-popup .tab-pane {
-	padding-top: 30px;
+.part-details-popup .tab-pane.description {
+	padding-top: 20px;
 }
 .part-details-popup .description .img-boxes {margin: 20px 0}
 .part-details-popup .description .img-boxes a {
@@ -3348,7 +3348,126 @@ RESULTS PAGE
 	object-position: center;
 	width: 100%;
 }
-.related-parts-popup-slider {display: none}
+.related-parts-popup-slider {display: none; max-width: 100%; padding-bottom: 50px}
+.related-parts-popup-slider .slick-slide{padding: 10px}
+.related-parts-popup-slider .price-ribbon {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-size: 12px;
+    color: var(--white);
+    background: var(--black);
+    padding: 2px 4px 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.related-parts-popup-slider .search-part-img img {height: 150px; width: auto; margin: 10px auto 0}
+.related-parts-popup-slider .search-part-card .search-part-details {
+    font-size: 11px;
+    line-height: 16px;
+}
+.related-parts-popup-slider .slick-prev {
+	position: absolute;
+    top: 97%;
+    left: 45%;
+    background-image: url(assets/icons/arrow-left-circle.svg);
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+.related-parts-popup-slider .slick-next {
+	position: absolute;
+    top: 97%;
+    right: 45%;
+    background-image: url(assets/icons/arrow-right-circle.svg);
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+.related-parts-popup-slider .slick-arrow:before {display: none}
+.part-details-popup .related-parts {padding-top: 10px}
+.part-details-popup .reviews .average-review {
+	text-align: center;
+	color: var(--black);
+}
+.part-details-popup .reviews .average-review h1 {font-size: 20px}
+.part-details-popup .reviews .average-review .rating {
+	font-size: 40px;
+	font-family: var(--ax-black);
+	margin: 10px 0;
+}
+.stars i {color: var(--light-gray)}
+i.checked {color: var(--yellow)}
+.part-details-popup .reviews .average-review .number-of-rating {
+	font-size: 16px;
+	margin: 10px 0 20px;
+	color: var(--dark-gray);
+}
+.part-details-popup .reviews {padding: 20px 0}
+.part-details-popup .reviews .all-ratings-box {
+	color: var(--dark-gray);
+    font-size: 16px;
+}
+.part-details-popup .reviews .all-ratings-box i {
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+    color: var(--dark-gray);
+}
+.part-details-popup .reviews .all-ratings-box .progress {
+    height: 12px;
+    border-radius: 12px;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.part-details-popup .reviews .all-ratings-box .progress-bar {background-color: var(--yellow)}
+.part-details-popup .reviews .review-details .review-head {color: var(--black)}
+.part-details-popup .reviews .review-details .review-rating,
+.part-details-popup .reviews .review-details .review-date {font-size: 12px}
+.part-details-popup .reviews .review-details .review-date img {height: 16px; filter: brightness(0)}
+.part-details-popup .reviews .review-details .review-date span {
+	position: relative;
+    top: 2px;
+    margin-left: 2px;
+}
+.part-details-popup .reviews .review-details .review-text {
+	font-size: 14px;
+	line-height: 24px;
+	margin: 10px 0;
+}
+.part-details-popup .reviews .review-details .review-by {
+	color: var(--black);
+	font-size: 14px;
+	font-family: var(--ax-semibold);
+}
+.part-details-popup .comparison {padding: 20px 0}
+.part-details-popup .comparison .table-responsive {
+	border-radius: 10px;
+	overflow: hidden;
+	border: 1px solid var(--light-gray);
+	text-align: center;
+}
+.part-details-popup .comparison .table thead {
+	color: var(--black);
+	background: var(--bg-gray);
+	border-bottom: 3px solid var(--orange);
+}
+.part-details-popup .comparison .table thead th:first-child,
+.part-details-popup .comparison .table tbody td:first-child {text-align: left}
+.part-details-popup .comparison .table tbody {
+	font-size: 16px;
+	color: var(--dark-gray);
+}
+.part-details-popup .comparison .table tbody tr {border-bottom: 1px solid var(--light-gray)}
+.part-details-popup .comparison .table tbody tr:last-child {border: none}
+.part-details-popup .comparison .table tbody tr td:last-child img {filter: invert(40%) sepia(20%) saturate(1878%) hue-rotate(72deg) brightness(103%) contrast(88%)}
+.part-details-popup .comparison .table .box-checkbox {
+    width: 16px;
+    height: 16px;
+}
 
 /*=============================================================
 PARTS UPLOAD PAGE
