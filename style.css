@@ -59,6 +59,7 @@ section, summary, time, mark, audio, video {
 	--med-gray: #c4c4c4;
 	--light-gray: #E6E6E6;
 	--bg-gray: #F7F7F7;
+	--input-gray: #ced4da;
 	--orange: #E58A00;
 	--yellow: #F6C91F;
 	--danger: #FF3232;
@@ -1869,6 +1870,7 @@ DATAHUB PAGE
 }
 .account-dropdown .dropdown-divider {
 	margin: 0.12rem 0;
+	border-color: var(--light-gray);
 }
 .datahub-header	{
 	background: var(--bg-gray);
@@ -3670,4 +3672,159 @@ PARTS UPLOAD PAGE
 }
 .completion-results .alert {
 	border-radius: 10px;
+}
+
+/*========================================================
+MY SHOP PAGE
+========================================================*/
+.shop-dashboard {
+	padding: 100px 0;
+	background-color: var(--bg-gray);
+}
+.dashboard-card {
+	padding: 24px 40px;
+	text-align: center;
+	height: 100%;
+	transition: 0.3s;
+}
+.dashboard-card:hover {
+	box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
+}
+.dashboard-card h1 {
+	color: var(--black);
+	font-size: 40px;
+}
+.dashboard-card p {}
+.dashboard-card .dashboard-card-img {width: 75%; margin: 10px auto 20px; position: relative;}
+.dashboard-card .dashboard-card-img.doughnut-img {width: 65%}
+.dashboard-card .dashboard-card-img .percent {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-family: var(--ax-black);
+    color: var(--black);
+}
+.dashboard-card .total-jobs {
+    font-size: 60px;
+    color: var(--black);
+    background-color: #EFF3FE;
+    border-radius: 10px;
+    padding: 32px 10px 20px;
+    margin: 10px 0;
+    display: block;
+    font-family: var(--ax-black);
+}
+.dashboard-card .progress-detail {
+	margin-top: 30px;
+	color: var(--black);
+	margin-bottom: 6px;
+}
+.dashboard-card .dashboard-card-info.part {
+	margin-top: 50px;
+}
+.dashboard-card .ordered-parts .progress {
+	border-radius: 20px;
+	height: 20px;
+}
+.dashboard-card .ordered-parts .progress .progress-bar {border-radius: 20px}
+.dashboard-card .ordered-parts .progress.ordered .progress-bar {
+	background-color: var(--orange);
+}
+.dashboard-card .ordered-parts .progress.shipped .progress-bar {
+	background-color: var(--success);
+}
+.dashboard-card .ordered-parts .progress.late .progress-bar {
+	background-color: var(--danger);
+}
+.dashboard-card .progress .progress-bar {
+    -moz-animation-name: animateBar;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 1s;
+
+    -webkit-animation-name: animateBar;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 1s;
+
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@-moz-keyframes animateBar {
+    0% {-moz-transform: translateX(-100%);}
+    100% {-moz-transform: translateX(0);}
+}
+@-webkit-keyframes animateBar {
+    0% {-webkit-transform: translateX(-100%);}
+    100% {-webkit-transform: translateX(0);}
+}
+@keyframes animateBar {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+
+/* ADD MACHINE OR ASSET */
+.machine-asset {
+	padding: 100px 0;
+	background-color: var(--white);
+}
+.machine-asset .input-group * {
+	background: var(--white);
+}
+.machine-asset .input-group .input-group-text {
+	border-radius: 10px;
+}
+.machine-asset .input-group .input-group-text:last-child {border-left: 0}
+.machine-asset .input-group input {
+	border-left: 0;
+	border-right: 0;
+	font-size: 16px;
+	padding: 12px 0;
+}
+.machine-asset .input-group input:focus {
+	border-color: var(--input-gray);
+}
+.machine-asset .input-group .dropdown-menu {
+	padding: 10px 12px;
+}
+.machine-asset .input-group .dropdown-menu input {
+  height: 18px;
+  width: 18px;
+  border: 2px solid var(--black);
+  padding: 0;
+  margin-right: 6px;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+.machine-asset .input-group .dropdown-menu input:checked {
+	border-color: var(--orange);
+	background-color: var(--orange);
+}
+.machine-asset .load-more {
+	margin-top: 50px;
+}
+.machine-asset hr {margin: 40px 0}
+.machine-assets .trending-card {
+	padding-top: 15px;
+	font-size: 14px;
+}
+.machine-assets .trending-card .asset-id {
+	color: var(--white);
+	background: var(--black);
+	border-radius: 6px;
+	padding: 2px 3px;
+	text-align: center;
+	width: 100%;
+}
+.machine-assets .trending-card .form-control {
+	padding: 2px 3px;
+}
+.machine-assets .trending-card .card-title {
+	font-size: 18px;
 }

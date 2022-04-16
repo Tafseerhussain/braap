@@ -186,6 +186,8 @@ sr.reveal('.fade-top',{origin: 'top', distance: '100px', duration: 800});
 sr.reveal('.fade-top-delay',{origin: 'top', distance: '100px', duration: 800, delay: 300});
 sr.reveal('.fade-top-delay-600',{origin: 'top', distance: '100px', duration: 800, delay: 600});
 
+sr.reveal('.slide-bottom',{origin: 'bottom', distance: '50px', duration: 800, delay: 300});
+
 $('.part-images-slider').slick({
     slidesToShow: 15,
     slidesToScroll: 1,
