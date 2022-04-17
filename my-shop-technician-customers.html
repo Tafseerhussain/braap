@@ -15,6 +15,11 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="responsive.css">
 	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
+
+	<!-- COUNTRIES INPUT (only required on this page or if used anywhere else) -->
+	<link rel="stylesheet" href="assets/css/intlTelInput.css">
+	<!-- --- -->
+
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
 </head>
@@ -135,7 +140,7 @@
 		<div class="container">
 			<div class="row add-parts">
 				<div class="col-md-6">
-					<a href="#" class="btn">
+					<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
 						+ Add Customers
 					</a>
 				</div>
@@ -193,7 +198,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="actions">
-									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit" data-bs-toggle="modal" data-bs-target="#updateCustomerModal"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Priority Customer. This means that the customer service work gets prioritized.To turn of priority, click on green check icon."><img src="assets/icons/tick-circle.svg" class="default selected" alt="tick"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
@@ -233,7 +238,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="actions">
-									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit" data-bs-toggle="modal" data-bs-target="#updateCustomerModal"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
@@ -273,7 +278,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="actions">
-									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit" data-bs-toggle="modal" data-bs-target="#updateCustomerModal"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
@@ -313,7 +318,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="actions">
-									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit" data-bs-toggle="modal" data-bs-target="#updateCustomerModal"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
@@ -353,7 +358,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="actions">
-									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit" data-bs-toggle="modal" data-bs-target="#updateCustomerModal"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
 									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
@@ -365,7 +370,7 @@
 							<div class="accordion-body">
 								<div class="row">
 									<div class="col-md-8">
-										<a href="#!" class="add-contact">
+										<a href="#!" class="add-contact" data-bs-toggle="modal" data-bs-target="#addContactModal">
 											<img src="assets/icons/plus-circle-black.svg" alt="add">
 											<span>Click to add a contact to customer.</span>
 										</a>
@@ -404,7 +409,7 @@
 														<img src="assets/icons/cross-circle-red.svg" alt="remove">
 														<span>Remove</span>
 													</div>
-													<div class="edit">
+													<div class="edit" data-bs-toggle="modal" data-bs-target="#updateContactModal">
 														<img src="assets/icons/edit-green.svg" alt="star">
 														<span>Edit</span>
 													</div>
@@ -441,7 +446,7 @@
 														<img src="assets/icons/cross-circle-red.svg" alt="remove">
 														<span>Remove</span>
 													</div>
-													<div class="edit">
+													<div class="edit" data-bs-toggle="modal" data-bs-target="#updateContactModal">
 														<img src="assets/icons/edit-green.svg" alt="star">
 														<span>Edit</span>
 													</div>
@@ -478,7 +483,7 @@
 														<img src="assets/icons/cross-circle-red.svg" alt="remove">
 														<span>Remove</span>
 													</div>
-													<div class="edit">
+													<div class="edit" data-bs-toggle="modal" data-bs-target="#updateContactModal">
 														<img src="assets/icons/edit-green.svg" alt="star">
 														<span>Edit</span>
 													</div>
@@ -508,13 +513,14 @@
 											<div class="customer-footer">
 												<div class="d-flex justify-content-around">
 													<div class="favorite">
-														<img src="assets/icons/star-white.svg" alt="star">														<span>Favorite</span>
+														<img src="assets/icons/star-white.svg" alt="star">												
+														<span>Favorite</span>
 													</div>
 													<div class="remove">
 														<img src="assets/icons/cross-circle-red.svg" alt="remove">
 														<span>Remove</span>
 													</div>
-													<div class="edit">
+													<div class="edit" data-bs-toggle="modal" data-bs-target="#updateContactModal">
 														<img src="assets/icons/edit-green.svg" alt="star">
 														<span>Edit</span>
 													</div>
@@ -544,13 +550,14 @@
 											<div class="customer-footer">
 												<div class="d-flex justify-content-around">
 													<div class="favorite added-to-favorite">
-														<img src="assets/icons/star-white.svg" alt="star">														<span>Favorite</span>
+														<img src="assets/icons/star-white.svg" alt="star">												
+														<span>Favorite</span>
 													</div>
 													<div class="remove">
 														<img src="assets/icons/cross-circle-red.svg" alt="remove">
 														<span>Remove</span>
 													</div>
-													<div class="edit">
+													<div class="edit" data-bs-toggle="modal" data-bs-target="#updateContactModal">
 														<img src="assets/icons/edit-green.svg" alt="star">
 														<span>Edit</span>
 													</div>
@@ -628,103 +635,11 @@
 												</div>
 											</div>
 										</div>
-										<div class="card-name">
-											Go to Timeline
+										<div class="card-name" onclick="openTimelineNav()">
+											<a href="#!">Go to Timeline</a>
 										</div>
-										<div class="card-help" onclick="openTimelineNav()">
-											<a href="#!">Interactive  Workspace</a>
-										</div>
-									</div>
-									<!-- Slide -->
-									<div class="trending-card card">
-										<div class="row mb-3">
-											<div class="col-5">
-												<div class="asset-id">VIN | Asset ID</div>
-											</div>
-											<div class="col-5 px-0">
-												<input type="text" name="asset_id" class="form-control">
-											</div>
-											<div class="col-2 text-center">
-												<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
-											</div>
-										</div>
-										<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
-											FAULTY OR BROKEN OXYGEN SENSOR
-										</div>
-										<div class="card-img">
-											<img src="assets/img/home/card-img.jpg" alt="card image">
-										</div>
-										<div class="card-meta">
-											<div class="row">
-												<div class="col-6 text-center">
-													<div class="card-meta-content">
-														<a href="#">
-															<img src="assets/icons/star.svg" alt="thumbs up">
-															<div>Favourite</div>
-														</a>
-													</div>
-												</div>
-												<div class="col-6 text-center">
-													<div class="card-meta-content">
-														<a href="#">
-															<img src="assets/icons/location.svg" alt="thumbs up">
-															<div>Click to set Location</div>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="card-name">
-											Go to Timeline
-										</div>
-										<div class="card-help" onclick="openTimelineNav()">
-											<a href="#!">Interactive  Workspace</a>
-										</div>
-									</div>
-									<!-- Slide -->
-									<div class="trending-card card">
-										<div class="row mb-3">
-											<div class="col-5">
-												<div class="asset-id">VIN | Asset ID</div>
-											</div>
-											<div class="col-5 px-0">
-												<input type="text" name="asset_id" class="form-control">
-											</div>
-											<div class="col-2 text-center">
-												<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
-											</div>
-										</div>
-										<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
-											FAULTY OR BROKEN OXYGEN SENSOR
-										</div>
-										<div class="card-img">
-											<img src="assets/img/home/card-img.jpg" alt="card image">
-										</div>
-										<div class="card-meta">
-											<div class="row">
-												<div class="col-6 text-center">
-													<div class="card-meta-content liked">
-														<a href="#">
-															<img src="assets/icons/star.svg" alt="thumbs up">
-															<div>Favourite</div>
-														</a>
-													</div>
-												</div>
-												<div class="col-6 text-center">
-													<div class="card-meta-content">
-														<a href="#">
-															<img src="assets/icons/location.svg" alt="thumbs up">
-															<div>Click to set Location</div>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="card-name">
-											Go to Timeline
-										</div>
-										<div class="card-help" onclick="openTimelineNav()">
-											<a href="#!">Interactive  Workspace</a>
+										<div class="card-help">
+											<a href="#!">Interactive Workspace</a>
 										</div>
 									</div>
 									<!-- Slide -->
@@ -766,11 +681,11 @@
 												</div>
 											</div>
 										</div>
-										<div class="card-name">
-											Go to Timeline
+										<div class="card-name" onclick="openTimelineNav()">
+											<a href="#!">Go to Timeline</a>
 										</div>
-										<div class="card-help" onclick="openTimelineNav()">
-											<a href="#!">Interactive  Workspace</a>
+										<div class="card-help">
+											<a href="#!">Interactive Workspace</a>
 										</div>
 									</div>
 									<!-- Slide -->
@@ -812,11 +727,103 @@
 												</div>
 											</div>
 										</div>
-										<div class="card-name">
-											Go to Timeline
+										<div class="card-name" onclick="openTimelineNav()">
+											<a href="#!">Go to Timeline</a>
 										</div>
-										<div class="card-help" onclick="openTimelineNav()">
-											<a href="#!">Interactive  Workspace</a>
+										<div class="card-help">
+											<a href="#!">Interactive Workspace</a>
+										</div>
+									</div>
+									<!-- Slide -->
+									<div class="trending-card card">
+										<div class="row mb-3">
+											<div class="col-5">
+												<div class="asset-id">VIN | Asset ID</div>
+											</div>
+											<div class="col-5 px-0">
+												<input type="text" name="asset_id" class="form-control">
+											</div>
+											<div class="col-2 text-center">
+												<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+											</div>
+										</div>
+										<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+											FAULTY OR BROKEN OXYGEN SENSOR
+										</div>
+										<div class="card-img">
+											<img src="assets/img/home/card-img.jpg" alt="card image">
+										</div>
+										<div class="card-meta">
+											<div class="row">
+												<div class="col-6 text-center">
+													<div class="card-meta-content">
+														<a href="#">
+															<img src="assets/icons/star.svg" alt="thumbs up">
+															<div>Favourite</div>
+														</a>
+													</div>
+												</div>
+												<div class="col-6 text-center">
+													<div class="card-meta-content">
+														<a href="#">
+															<img src="assets/icons/location.svg" alt="thumbs up">
+															<div>Click to set Location</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-name" onclick="openTimelineNav()">
+											<a href="#!">Go to Timeline</a>
+										</div>
+										<div class="card-help">
+											<a href="#!">Interactive Workspace</a>
+										</div>
+									</div>
+									<!-- Slide -->
+									<div class="trending-card card">
+										<div class="row mb-3">
+											<div class="col-5">
+												<div class="asset-id">VIN | Asset ID</div>
+											</div>
+											<div class="col-5 px-0">
+												<input type="text" name="asset_id" class="form-control">
+											</div>
+											<div class="col-2 text-center">
+												<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+											</div>
+										</div>
+										<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+											FAULTY OR BROKEN OXYGEN SENSOR
+										</div>
+										<div class="card-img">
+											<img src="assets/img/home/card-img.jpg" alt="card image">
+										</div>
+										<div class="card-meta">
+											<div class="row">
+												<div class="col-6 text-center">
+													<div class="card-meta-content liked">
+														<a href="#">
+															<img src="assets/icons/star.svg" alt="thumbs up">
+															<div>Favourite</div>
+														</a>
+													</div>
+												</div>
+												<div class="col-6 text-center">
+													<div class="card-meta-content">
+														<a href="#">
+															<img src="assets/icons/location.svg" alt="thumbs up">
+															<div>Click to set Location</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-name" onclick="openTimelineNav()">
+											<a href="#!">Go to Timeline</a>
+										</div>
+										<div class="card-help">
+											<a href="#!">Interactive Workspace</a>
 										</div>
 									</div>
 								</div>
@@ -825,49 +832,177 @@
 						</div>
 					</div>
 
+					<!-- ADD MACHINE SEARCH (Use this when users searches and this window will popup. Remove the button after Use) -->
+					<a href="#!" class="open-searched-window btn mt-5" onclick="openSearchedPopUp()">Open Searched Window</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Add Machine or Asset Modal/Popup -->
-	<div class="modal fade addMachineModal" id="addMachineModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+	<!-- Add Customer Modal/Popup -->
+	<div class="modal fade addMachineModal addCustomerModal" id="addCustomerModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header d-block">
-					<h1 class="modal-title text-center">Add <span class="text-orange">Machine | Asset</span> to Shop</h1>
+					<h1 class="modal-title text-center">Add <span class="text-orange">Customer</span></h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#" class="row">
+						<div class="col-md-12">
+							<div class="form-floating">
+							  	<input type="text" class="form-control" name="customer_name" placeholder="Customer Name">
+							  	<label for="customer_name">Customer Name</label>
+							</div>
+						</div>
+						<div class="col-md-12 position-relative customer-email-box">
+						  	<span class="at_the_rate">@ |</span>
+						  	<div class="form-floating">
+							  	<input type="text" class="form-control" name="company_email_domain" placeholder="Company Email Domain">
+							  	<label for="company_email_domain">Company Email Domain</label>
+							</div>
+						  	<span class="question" data-bs-toggle="tooltip" data-bs-placement="top" title="Company Email Details"><img src="assets/icons/question-circle-gray.svg" alt="question"></span>
+						</div>
+						<div class="col-12">
+							<div class="form-floating">
+							  	<input type="text" class="form-control" name="customer_location" placeholder="Location">
+							  	<label for="customer_location">Location</label>
+							</div>
+							<a href="#" class="location">
+								<img src="assets/icons/location.svg" alt="location">
+								<span>Click to set current GPS address</span>
+							</a>
+						</div>
+						<div class="col-12 switches">
+							<div class="form-check form-switch">
+							  	<input class="form-check-input" type="checkbox" name="not_a_company" id="not_a_company">
+							  	<label class="form-check-label" for="not_a_company">Not A Company</label>
+							</div>
+							<div class="form-check form-switch">
+							  	<input class="form-check-input" type="checkbox" name="priority_customer" id="priority_customer">
+							  	<label class="form-check-label" for="priority_customer">Priority Customer</label>
+							</div>
+						</div>
+						<div class="col-12 add-machine-btn text-center">
+							<button type="submit" class="btn btn-dark">
+								Add Customer
+							</button>
+							<a href="#" class="another d-block mt-3">
+								<div class="form-check d-inline-block">
+								  <input class="form-check-input" type="checkbox" value="" id="addAnother">
+								  <label for="addAnother">
+								    Add Another
+								  </label>
+								</div>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Update Customer Modal/Popup -->
+	<div class="modal fade addMachineModal addCustomerModal" id="updateCustomerModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header d-block">
+					<h1 class="modal-title text-center">Update <span class="text-orange">Customer</span></h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#" class="row">
+						<div class="col-md-12">
+							<div class="form-floating">
+							  	<input type="text" class="form-control" name="customer_name" placeholder="Customer Name" value="John Doe">
+							  	<label for="customer_name">Customer Name</label>
+							</div>
+						</div>
+						<div class="col-md-12 position-relative customer-email-box">
+						  	<span class="at_the_rate">@ |</span>
+						  	<div class="form-floating">
+							  	<input type="text" class="form-control" name="company_email_domain" placeholder="Company Email Domain" value="braap.com">
+							  	<label for="company_email_domain">Company Email Domain</label>
+							</div>
+						  	<span class="question" data-bs-toggle="tooltip" data-bs-placement="top" title="Company Email Details"><img src="assets/icons/question-circle-gray.svg" alt="question"></span>
+						</div>
+						<div class="col-12">
+							<div class="form-floating">
+							  	<input type="text" class="form-control" name="customer_location" placeholder="Location" value="123 Bakers Street, XYZ">
+							  	<label for="customer_location">Location</label>
+							</div>
+							<a href="#" class="location">
+								<img src="assets/icons/location.svg" alt="location">
+								<span>Click to set current GPS address</span>
+							</a>
+						</div>
+						<div class="col-12 switches">
+							<div class="form-check form-switch">
+							  	<input class="form-check-input" type="checkbox" name="not_a_company" id="not_a_company">
+							  	<label class="form-check-label" for="not_a_company">Not A Company</label>
+							</div>
+							<div class="form-check form-switch">
+							  	<input class="form-check-input" type="checkbox" name="priority_customer" id="priority_customer" checked>
+							  	<label class="form-check-label" for="priority_customer">Priority Customer</label>
+							</div>
+						</div>
+						<div class="col-12 add-machine-btn text-center">
+							<button type="submit" class="btn btn-dark">
+								Add Customer
+							</button>
+							<a href="#" class="another d-block mt-3">
+								<div class="form-check d-inline-block">
+								  <input class="form-check-input" type="checkbox" value="" id="addAnother">
+								  <label for="addAnother">
+								    Add Another
+								  </label>
+								</div>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Add Contact Modal/Popup -->
+	<div class="modal fade addMachineModal addContactModal" id="addContactModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header d-block">
+					<h1 class="modal-title text-center">Add <span class="text-orange">Contact</span></h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<form action="#" class="row">
 						<div class="col-md-6">
 							<div class="form-floating">
-							  	<input type="text" class="form-control" name="asset_type" placeholder="Type">
-							  	<label for="asset_type">Type</label>
+							  	<input type="text" class="form-control" name="first_name" placeholder="First name">
+							  	<label for="first_name">First name</label>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-floating">
-							  	<input type="text" class="form-control" name="asset_make" placeholder="Make">
-							  	<label for="asset_make">Make</label>
+							  	<input type="text" class="form-control" name="last_name" placeholder="Last Name">
+							  	<label for="last_name">Last Name</label>
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="form-floating">
-							  	<input type="text" class="form-control" name="asset_model" placeholder="Model">
-							  	<label for="asset_model">Model</label>
+						<div class="col-md-12 position-relative contact-phone-box">
+						  	<div class="form-group w-100">
+							  	<input type="tel" class="form-control w-100" placeholder="Phone" id="contact_phone">
+							  	<label for="contact_phone">Phone</label>
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="form-floating">
-							  	<input type="text" class="form-control" name="asset_yeare" placeholder="Year">
-							  	<label for="asset_year">Year</label>
+						<div class="col-md-12">
+						  	<div class="form-floating">
+							  	<input type="text" class="form-control" name="contact_email" placeholder="Company Email Domain">
+							  	<label for="contact_email">Email Address</label>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="form-floating">
-							  	<input type="text" class="form-control" name="asset_location" placeholder="Location">
-							  	<label for="asset_location">Location</label>
+							  	<input type="text" class="form-control" name="contact_location" placeholder="Location">
+							  	<label for="contact_location">Location</label>
 							</div>
 							<a href="#" class="location">
 								<img src="assets/icons/location.svg" alt="location">
@@ -876,7 +1011,70 @@
 						</div>
 						<div class="col-12 add-machine-btn text-center">
 							<button type="submit" class="btn btn-dark">
-								Add Machine | Asset
+								Add Contact
+							</button>
+							<a href="#" class="another d-block mt-3">
+								<div class="form-check d-inline-block">
+								  <input class="form-check-input" type="checkbox" value="" id="addAnother">
+								  <label for="addAnother">
+								    Add Another
+								  </label>
+								</div>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Update Contact Modal/Popup -->
+	<div class="modal fade addMachineModal addContactModal" id="updateContactModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header d-block">
+					<h1 class="modal-title text-center">Update <span class="text-orange">Contact</span></h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#" class="row">
+						<div class="col-md-6">
+							<div class="form-floating">
+							  	<input type="text" class="form-control" name="first_name" placeholder="First name" value="john">
+							  	<label for="first_name">First name</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+							  	<input type="text" class="form-control" name="last_name" placeholder="Last Name" value="doe">
+							  	<label for="last_name">Last Name</label>
+							</div>
+						</div>
+						<div class="col-md-12 position-relative contact-phone-box">
+						  	<div class="form-group w-100">
+							  	<input type="tel" class="form-control w-100" placeholder="Phone" id="update_contact_phone">
+							  	<label for="update_contact_phone">Phone</label>
+							</div>
+						</div>
+						<div class="col-md-12">
+						  	<div class="form-floating">
+							  	<input type="text" class="form-control" name="contact_email" placeholder="Company Email Domain" value="example@braap.com">
+							  	<label for="contact_email">Email Address</label>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-floating">
+							  	<input type="text" class="form-control" name="contact_location" placeholder="Location" value="123 Bakers Street, XYZ">
+							  	<label for="contact_location">Location</label>
+							</div>
+							<a href="#" class="location">
+								<img src="assets/icons/location.svg" alt="location">
+								<span>Click to set current GPS address</span>
+							</a>
+						</div>
+						<div class="col-12 add-machine-btn text-center">
+							<button type="submit" class="btn btn-dark">
+								Add Contact
 							</button>
 							<a href="#" class="another d-block mt-3">
 								<div class="form-check d-inline-block">
@@ -1071,6 +1269,334 @@
 		</div>
 	</div>
 
+	<div class="my-shop-searched-popup user-customers account-user-parts" id="my-shop-searched-popup">
+		<div class="container my-shop-searched-popup-content">
+			<div class="row add-parts">
+				<div class="col-md-6">
+					<a href="#" class="btn btn-dark" onclick="closeSearchedPopUp()">
+						<img src="assets/icons/arrow-left-white.svg" alt="left arrow">
+						<span>Back</span>
+					</a>
+				</div>
+				<div class="col-md-6">
+					<div class="input-group w-100">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" class="form-control" placeholder="Search shop by name, location, VIN, or asset ID...">
+						<button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/sort.svg" alt="sort">
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Separated link</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row searched-parts g-3">
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content liked">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content liked">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+				<!-- Single Part Card -->
+				<div class="col-md-3">
+					<div class="trending-card card">
+						<div class="row mb-3">
+							<div class="col-5">
+								<div class="asset-id">VIN | Asset ID</div>
+							</div>
+							<div class="col-5 px-0">
+								<input type="text" name="asset_id" class="form-control">
+							</div>
+							<div class="col-2 text-center">
+								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
+							</div>
+						</div>
+						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
+							FAULTY OR BROKEN OXYGEN SENSOR
+						</div>
+						<div class="card-img">
+							<img src="assets/img/home/card-img.jpg" alt="card image">
+						</div>
+						<div class="card-meta">
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="card-meta-content">
+										<a href="#">
+											<img src="assets/icons/star.svg" alt="thumbs up">
+											<div>Favourite</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-help">
+							<a href="#!">Select Machine | Asset</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- FOOTER -->
 	<footer>
@@ -1159,50 +1685,28 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
-	
-	<!-- CHART JS (Required on this page only or if there are any other pages with Graphs) -->
-	<script src="assets/js/chart.min.js"></script>
-	<!-- --- -->
+
 
 	<script src="assets/js/main.js"></script>
 
-	<!-- CHART JS SCRIPT (only required on this page) -->
+	<!-- COUNTRIES INPUT (only required on this page or if used anywhere else) -->
+	<script src="assets/js/intlTelInput.min.js"></script>
+	<script src="assets/js/intlTelInput-jquery.min.js"></script>
 	<script>
-
-	  	const data = {
-		  	labels: [
-		    	'Machines due for maintenance ',
-		    	'Machines in queue '
-		  	],
-		  	datasets: [{
-		    	label: 'Maintenance',
-		    	data: [67, 33],
-		    	backgroundColor: [
-		      		'#238f23',
-		      		'#e6e6e6'
-		    	],
-		    	hoverOffset: 4
-		  	}]
-		};
-
-	  	const myChart = new Chart(
-	      	document.getElementById('maintenanceChart'),
-		    config = {
-			    type: 'doughnut',
-			    data: data,
-			    options: {
-		    		cutout: 70,
-			    	plugins: {
-					    legend: {
-					    	display: false
-					    },
-					  	tooltip: {
-					  		enabled: false
-					    }
-					}
-				}
-			}
-	  	);
+		$("#contact_phone").intlTelInput({
+		  placeholderNumberType:"MOBILE",
+		  autoPlaceholder:"polite",
+		  formatOnDisplay:true,
+		  separateDialCode:true,
+		  formatOnDisplay:true,
+		});
+		$("#update_contact_phone").intlTelInput({
+		  placeholderNumberType:"MOBILE",
+		  autoPlaceholder:"polite",
+		  formatOnDisplay:true,
+		  separateDialCode:true,
+		  formatOnDisplay:true,
+		});
 	</script>
 	<!-- --- -->
 

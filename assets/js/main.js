@@ -490,6 +490,23 @@ $('.user-customers .ac-btn-border').click(function() {
     $('.associate-machine-slider').slick('refresh');
 })
 
+// MY SHOP CUSTOMERS
+function openSearchedPopUp() {
+    document.getElementById("my-shop-searched-popup").style.height = "100%";
+    $('html').css('overflow-y', 'hidden');
+    $(".my-shop-searched-popup-content").delay(300).fadeIn("slow");
+    $(".body-overlay").delay(0).fadeIn();
+}
+function closeSearchedPopUp() {
+    $(".my-shop-searched-popup-content").delay(0).fadeOut("slow");
+    setTimeout( function()  {
+        document.getElementById("my-shop-searched-popup").style.height = "0";
+        $('html').css('overflow-y', 'scroll');
+    }, 500);
+    $(".body-overlay").delay(500).fadeOut();
+    
+}
+
 // ========================================================
 // MY SHOP JS END
 // ========================================================

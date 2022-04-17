@@ -4159,3 +4159,90 @@ MY SHOP PAGE
 .user-customers .associate-machine-slider .trending-card .card-meta-content.liked div {
     color: #ffd740;
 }
+.trending-card .card-name a {color: var(--dark-gray)}
+.user-customers .associate-machine-slider .trending-card .recycle-bin img {display: inline-block}
+.addCustomerModal .customer-email-box input {
+	background: transparent;
+	padding-left: 40px;
+    padding-right: 40px;
+}
+.addCustomerModal .customer-email-box .at_the_rate {
+	position: absolute;
+    left: 20px;
+    top: 44%;
+}
+.addCustomerModal .customer-email-box .at_the_rate {
+	position: absolute;
+    left: 20px;
+    top: 44%;
+}
+.addCustomerModal .customer-email-box .question {
+	position: absolute;
+    right: 20px;
+    top: 40%;
+}
+.addCustomerModal .customer-email-box  label {left: 30px}
+.addCustomerModal .switches {margin-top: 20px}
+.addCustomerModal .switches .form-switch {margin: 5px 0}
+.addCustomerModal .switches label {color: var(--dark-gray)}
+.addContactModal .contact-phone-box .iti--allow-dropdown {
+	width: 100%;
+	margin-top: 15px;
+}
+.addContactModal .contact-phone-box .iti--allow-dropdown input {
+	border-color: #b1b1b1;
+	font-size: 16px;
+}
+.addContactModal .contact-phone-box .iti--allow-dropdown input::placeholder {color: var(--med-gray)}
+.addContactModal .contact-phone-box label {
+	transform: scale(.85) translateY(-0.6rem) translateX(-6px);
+    left: 3px;
+    opacity: 0;
+}
+.addContactModal .contact-phone-box .iti--separate-dial-code .iti__selected-flag {background-color: transparent}
+
+/* SEARCHED PARTS POPUP WINDOW */
+.my-shop-searched-popup .trending-card .asset-id {
+    color: var(--white);
+    background: var(--black);
+    border-radius: 6px;
+    padding: 2px 3px;
+    text-align: center;
+    width: 100%;
+}
+.my-shop-searched-popup .trending-card {
+    padding-top: 15px;
+    font-size: 14px;
+}
+.my-shop-searched-popup .trending-card .form-control {padding: 2px 3px}
+.my-shop-searched-popup .trending-card .card-meta {border-bottom: 0; margin-bottom: 0}
+.my-shop-searched-popup .searched-parts {margin-top: 40px}
+.my-shop-searched-popup {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1030;
+  bottom: 0;
+  right: 0;
+  background: var(--white);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding: 0;
+}
+.my-shop-searched-popup .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.my-shop-searched-popup-content {
+  display: none;
+  padding: 30px;
+}
+.my-shop-searched-popup-content .trending-card .card-meta-content.liked {
+    filter: sepia(99%) saturate(7500%) hue-rotate(326deg) brightness(95%) contrast(112%);
+}
+.my-shop-searched-popup-content .trending-card .card-meta-content.liked div {
+    color: #ffd740;
+}
