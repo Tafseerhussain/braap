@@ -465,6 +465,30 @@ function closeTimelineNav() {
     $(".body-overlay").delay(500).fadeOut();
     
 }
+$('.contact-customer-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    speed: 500,
+    infinite: true,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000
+});
+$('.associate-machine-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    speed: 500,
+    infinite: false,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000
+});
+$('.user-customers .ac-btn-border').click(function() {
+    $('.contact-customer-slider').slick('refresh');
+    $('.associate-machine-slider').slick('refresh');
+})
 
 // ========================================================
 // MY SHOP JS END
