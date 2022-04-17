@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braap | My Shop</title>
+	<title>Braap | My Shop Technician</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
 	<!-- External Link -->
@@ -111,77 +111,33 @@
 	<!-- NAVBAR SPACE FOR OTHER PAGES -->
 	<div class="navbar-spacer"></div>
 
-	<div class="shop-dashboard">
+	<!-- SHOP HEADER -->
+	<div class="account-header bg-dark">
 		<div class="container">
-			<div class="row g-3">
-				<div class="col-md-4">
-					<div class="dashboard-card card">
-						<h1>Maintenance</h1>
-						<p>Machines due for maintenance</p>
-						<div class="dashboard-card-img doughnut-img">
-							<div class="percent">67%</div>
-							<canvas id="maintenanceChart"></canvas>
-						</div>
-						<div class="dashboard-card-info">
-							68% of your machines are due for mainteance this month
-						</div>
-					</div>
+			<div class="row">
+				<div class="col-md">
+					<h1 class="section-title text-white">
+						Customers
+					</h1>
 				</div>
-				<div class="col-md-4">
-					<div class="dashboard-card card">
-						<h1>Jobs</h1>
-						<p>Machines getting worked on</p>
-						<div class="dashboard-card-img slide-bottom">
-							<img src="assets/img/account/bars.png" alt="bars">
-						</div>
-						<div class="total-jobs">587</div>
-						<div class="dashboard-card-info">
-							587 of your machines are getting work done now
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="dashboard-card card">
-						<h1>Parts</h1>
-						<p>Parts tracking details</p>
-						<div class="ordered-parts">
-							<div class="progress-detail d-flex justify-content-between">
-								<div>Ordered</div>
-								<div>70%</div>
-							</div>
-							<div class="progress ordered">
-								<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-							<div class="progress-detail d-flex justify-content-between">
-								<div>Shipped</div>
-								<div>40%</div>
-							</div>
-							<div class="progress shipped">
-								<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-							<div class="progress-detail d-flex justify-content-between">
-								<div>Late</div>
-								<div>15%</div>
-							</div>
-							<div class="progress late">
-								<div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="dashboard-card-info part">
-							70% parts are being shipped and tracked
-						</div>
+				<div class="col-md text-end">
+					<div class="account-user-tabs d-flex justify-content-end">
+						<a href="my-shop-technician.html" class="">Machine Assets</a>
+						<a href="#" class="active">Customers</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- ADD MACHINE OR ASSET -->
-	<div class="machine-asset">
+	<!-- USER CUSTOMERS PARTS -->
+	<div class="account-user-parts user-customers">
 		<div class="container">
-			<div class="row">
+			<div class="row add-parts">
 				<div class="col-md-6">
-					<a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#addMachineModal">+ Add Machine | Asset</a>
+					<a href="#" class="btn">
+						+ Add Customers
+					</a>
 				</div>
 				<div class="col-md-6">
 					<div class="input-group w-100">
@@ -193,259 +149,237 @@
 							<img src="assets/icons/sort.svg" alt="sort">
 						</button>
 						<ul class="dropdown-menu dropdown-menu-end">
-							<li>
-								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="" checked>
-								  <label class="form-check-label">
-								    Recently Added
-								  </label>
-								</div>
-							</li>
-							<li>
-								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="">
-								  <label class="form-check-label">
-								    Recent Diagnosrics
-								  </label>
-								</div>
-							</li>
-							<li>
-								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="">
-								  <label class="form-check-label">
-								    Require Response
-								  </label>
-								</div>
-							</li>
-							<li>
-								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="">
-								  <label class="form-check-label">
-								    Favorites
-								  </label>
-								</div>
-							</li>
-							<li>
-								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="">
-								  <label class="form-check-label">
-								    Scheduled Job
-								  </label>
-								</div>
-							</li>
-							<li>
-								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="">
-								  <label class="form-check-label">
-								    Recycling Bin
-								  </label>
-								</div>
-							</li>
-							<li>
-								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="">
-								  <label class="form-check-label">
-								    Show All
-								  </label>
-								</div>
-							</li>
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Separated link</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<hr>
+					<div class="number-of-results">
+						Viewing 7 of 7 Customers
+					</div>
 				</div>
 			</div>
-			<div class="row machine-assets g-3">
-				<div class="col-md-3">
-					<div class="trending-card card">
-						<div class="row mb-3">
-							<div class="col-5">
-								<div class="asset-id">VIN | Asset ID</div>
-							</div>
-							<div class="col-5 px-0">
-								<input type="text" name="asset_id" class="form-control">
-							</div>
-							<div class="col-2 text-center">
-								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
-							</div>
-						</div>
-						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
-							FAULTY OR BROKEN OXYGEN SENSOR
-						</div>
-						<div class="card-img">
-							<img src="assets/img/home/card-img.jpg" alt="card image">
-						</div>
-						<div class="card-meta">
-							<div class="row">
-								<div class="col-6 text-center">
-									<div class="card-meta-content">
-										<a href="#">
-											<img src="assets/icons/star.svg" alt="thumbs up">
-											<div>Favourite</div>
-										</a>
-									</div>
-								</div>
-								<div class="col-6 text-center">
-									<div class="card-meta-content">
-										<a href="#">
-											<img src="assets/icons/location.svg" alt="thumbs up">
-											<div>Click to set Location</div>
-										</a>
-									</div>
+			<div class="parts-rows">
+				<div class="accordion" id="accordionExample">
+
+					<!-- FIRST ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="Superior Part Supplier">Superior Part Supplier</span>
 								</div>
 							</div>
-						</div>
-						<div class="card-name">
-							Go to Timeline
-						</div>
-						<div class="card-help" onclick="openTimelineNav()">
-							<a href="#!">Interactive  Workspace</a>
+							<div class="col-md-4">
+								<div class="customer-location">
+									<img src="assets/icons/exact-location.svg" alt="location">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="777 Third Ave, 3rd Avenue, New York, NY, USA">
+										777 Third Ave, 3rd Avenue, New York, NY, USA
+									</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="supplier-name">
+									<img src="assets/icons/link.svg" alt="link">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="outlook.com">outlook.com</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Priority Customer. This means that the customer service work gets prioritized.To turn of priority, click on green check icon."><img src="assets/icons/tick-circle.svg" class="default selected" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="trending-card card">
-						<div class="row mb-3">
-							<div class="col-5">
-								<div class="asset-id">VIN | Asset ID</div>
-							</div>
-							<div class="col-5 px-0">
-								<input type="text" name="asset_id" class="form-control">
-							</div>
-							<div class="col-2 text-center">
-								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
-							</div>
-						</div>
-						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
-							FAULTY OR BROKEN OXYGEN SENSOR
-						</div>
-						<div class="card-img">
-							<img src="assets/img/home/card-img.jpg" alt="card image">
-						</div>
-						<div class="card-meta">
-							<div class="row">
-								<div class="col-6 text-center">
-									<div class="card-meta-content liked">
-										<a href="#">
-											<img src="assets/icons/star.svg" alt="thumbs up">
-											<div>Favourite</div>
-										</a>
-									</div>
-								</div>
-								<div class="col-6 text-center">
-									<div class="card-meta-content">
-										<a href="#">
-											<img src="assets/icons/location.svg" alt="thumbs up">
-											<div>Click to set Location</div>
-										</a>
-									</div>
+
+					<!-- SECOND ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="Superior Part Supplier">Superior Part Supplier</span>
 								</div>
 							</div>
-						</div>
-						<div class="card-name">
-							Go to Timeline
-						</div>
-						<div class="card-help">
-							<a href="#!">Interactive  Workspace</a>
+							<div class="col-md-4">
+								<div class="customer-location">
+									<img src="assets/icons/exact-location.svg" alt="location">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="333 Lounge, Flatbush Avenue, Brooklyn, NY, USA">
+										333 Lounge, Flatbush Avenue, Brooklyn, NY, USA
+									</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="supplier-name">
+									<img src="assets/icons/link.svg" alt="link">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="outlook.com">outlook.com</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>	
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"></button>
+						</h2>
+						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="trending-card card">
-						<div class="row mb-3">
-							<div class="col-5">
-								<div class="asset-id">VIN | Asset ID</div>
-							</div>
-							<div class="col-5 px-0">
-								<input type="text" name="asset_id" class="form-control">
-							</div>
-							<div class="col-2 text-center">
-								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
-							</div>
-						</div>
-						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
-							FAULTY OR BROKEN OXYGEN SENSOR
-						</div>
-						<div class="card-img">
-							<img src="assets/img/home/card-img.jpg" alt="card image">
-						</div>
-						<div class="card-meta">
-							<div class="row">
-								<div class="col-6 text-center">
-									<div class="card-meta-content liked">
-										<a href="#">
-											<img src="assets/icons/star.svg" alt="thumbs up">
-											<div>Favourite</div>
-										</a>
-									</div>
-								</div>
-								<div class="col-6 text-center">
-									<div class="card-meta-content">
-										<a href="#">
-											<img src="assets/icons/location.svg" alt="thumbs up">
-											<div>Click to set Location</div>
-										</a>
-									</div>
+
+					<!-- THIRD ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="Superior Part Supplier">Superior Part Supplier</span>
 								</div>
 							</div>
-						</div>
-						<div class="card-name">
-							Go to Timeline
-						</div>
-						<div class="card-help">
-							<a href="#!">Interactive  Workspace</a>
+							<div class="col-md-4">
+								<div class="customer-location">
+									<img src="assets/icons/exact-location.svg" alt="location">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="333 Lounge, Flatbush Avenue, Brooklyn, NY, USA">
+										333 Lounge, Flatbush Avenue, Brooklyn, NY, USA
+									</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="supplier-name">
+									<img src="assets/icons/link.svg" alt="link">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="outlook.com">outlook.com</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>	
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"></button>
+						</h2>
+						<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="trending-card card">
-						<div class="row mb-3">
-							<div class="col-5">
-								<div class="asset-id">VIN | Asset ID</div>
-							</div>
-							<div class="col-5 px-0">
-								<input type="text" name="asset_id" class="form-control">
-							</div>
-							<div class="col-2 text-center">
-								<a href="#!" class="recycle-bin"><img src="assets/icons/trash.svg" alt="remove"></a>
-							</div>
-						</div>
-						<div class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="FAULTY OR BROKEN OXYGEN SENSOR">
-							FAULTY OR BROKEN OXYGEN SENSOR
-						</div>
-						<div class="card-img">
-							<img src="assets/img/home/card-img.jpg" alt="card image">
-						</div>
-						<div class="card-meta">
-							<div class="row">
-								<div class="col-6 text-center">
-									<div class="card-meta-content liked">
-										<a href="#">
-											<img src="assets/icons/star.svg" alt="thumbs up">
-											<div>Favourite</div>
-										</a>
-									</div>
-								</div>
-								<div class="col-6 text-center">
-									<div class="card-meta-content">
-										<a href="#">
-											<img src="assets/icons/location.svg" alt="thumbs up">
-											<div>Click to set Location</div>
-										</a>
-									</div>
+
+					<!-- FOURTH ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="Superior Part Supplier">Superior Part Supplier</span>
 								</div>
 							</div>
-						</div>
-						<div class="card-name">
-							Go to Timeline
-						</div>
-						<div class="card-help">
-							<a href="#!">Interactive  Workspace</a>
+							<div class="col-md-4">
+								<div class="customer-location">
+									<img src="assets/icons/exact-location.svg" alt="location">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="333 Lounge, Flatbush Avenue, Brooklyn, NY, USA">
+										333 Lounge, Flatbush Avenue, Brooklyn, NY, USA
+									</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="supplier-name">
+									<img src="assets/icons/link.svg" alt="link">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="outlook.com">outlook.com</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>	
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"></button>
+						</h2>
+						<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p>See Last Element.</p>
+							</div>
 						</div>
 					</div>
+
+					<!-- FIFTH ROW -->
+					<div class="accordion-item">
+						<h2 class="accordion-header row" id="headingOne">
+							<div class="col-md-3">
+								<div class="supplier-name">
+									<img src="assets/icons/user-square.svg" alt="user">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="Superior Part Supplier">Superior Part Supplier</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="customer-location">
+									<img src="assets/icons/exact-location.svg" alt="location">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="333 Lounge, Flatbush Avenue, Brooklyn, NY, USA">
+										333 Lounge, Flatbush Avenue, Brooklyn, NY, USA
+									</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="supplier-name">
+									<img src="assets/icons/link.svg" alt="link">
+									<span data-bs-toggle="tooltip" data-bs-placement="top" title="outlook.com">outlook.com</span>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="actions">
+									<a href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><img src="assets/icons/edit-blue.svg" alt="edit"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Favorite"><img src="assets/icons/star-white.svg" class="default starred" alt="star"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Click to turn on priority for the customer. This means that the customer service work gets prioritized."><img src="assets/icons/tick-circle.svg" class="default" alt="tick"></a>
+									<a href="#!"  data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><img src="assets/icons/red-cross.svg" alt="cross"></a>
+								</div>
+							</div>	
+							<button class="ac-btn-border accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"></button>
+						</h2>
+						<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div class="row">
+									<div class="col-md-8">
+										<a href="#!" class="add-contact">
+											<img src="assets/icons/plus-circle-black.svg" alt="add">
+											<span>Click to add a contact to customer.</span>
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="contact-customer-slider">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>

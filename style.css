@@ -75,6 +75,7 @@ section, summary, time, mark, audio, video {
 a {text-decoration: none}
 .text-orange {color: var(--orange)}
 .dropdown-item.active, .dropdown-item:active {background: var(--light-gray); color: var(--dark-gray)}
+body.modal-open {overflow: visible}
 hr {
 	color: var(--light-gray);
 	opacity: 1;
@@ -933,7 +934,6 @@ footer .social-links a img {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -1872,15 +1872,15 @@ DATAHUB PAGE
 	margin: 0.12rem 0;
 	border-color: var(--light-gray);
 }
-.datahub-header	{
+.account-header	{
 	background: var(--bg-gray);
 	padding: 60px 0 50px;
 }
-.datahub-header .section-title:after	{display: none}
-.datahub-header .section-title	{
+.account-header .section-title:after	{display: none}
+.account-header .section-title	{
 	font-size: 34px;
 }
-.datahub-tabs a {
+.account-user-tabs a {
 	padding: 14px 24px;
 	background: var(--light-gray);
 	text-decoration: none;
@@ -1889,42 +1889,42 @@ DATAHUB PAGE
 	display: inline-block;
 	margin-right: 1px;
 }
-.datahub-tabs a:first-child {
+.account-user-tabs a:first-child {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
-.datahub-tabs a:last-child {
+.account-user-tabs a:last-child {
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
-.datahub-tabs a.active {
+.account-user-tabs a.active {
 	background: var(--orange);
 	color: var(--white);
 }
-.datahub-parts {
+.account-user-parts {
 	background: var(--white);
 	padding: 50px 0;
 }
-.datahub-parts .btn {
+.account-user-parts .btn {
     padding: 10px 24px;
     font-size: 16px;
 }
-.datahub-parts .add-parts .input-group-text img {
+.account-user-parts .add-parts .input-group-text img {
 	filter: brightness(0);
 }
-.datahub-parts .add-parts .input-group-text {
+.account-user-parts .add-parts .input-group-text {
 	background: transparent;
 	border-radius: 10px;
 }
-.datahub-parts .add-parts input {
+.account-user-parts .add-parts input {
 	border-left: 0;
 	border-right: 0;
 	padding: 10px 0;
 }
-.datahub-parts .add-parts input:focus {
+.account-user-parts .add-parts input:focus {
 	border-color: #ced4da;
 }
-.datahub-parts .add-parts input::placeholder {
+.account-user-parts .add-parts input::placeholder {
 	color: #ced4da;
 	position: relative;
 	top: 1px;
@@ -1932,7 +1932,7 @@ DATAHUB PAGE
 .excel-download {
 	margin-right: 10px;
 }
-.datahub-parts .add-parts .upload-btn {
+.account-user-parts .add-parts .upload-btn {
 	margin-right: 10px;
 }
 .number-of-results {
@@ -1986,7 +1986,8 @@ DATAHUB PAGE
 }
 .parts-rows .part-number,
 .parts-rows .part-name,
-.parts-rows .supplier-name {
+.parts-rows .supplier-name,
+.parts-rows .customer-location {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3828,3 +3829,247 @@ MY SHOP PAGE
 .machine-assets .trending-card .card-title {
 	font-size: 18px;
 }
+.machine-assets .trending-card .card-meta-content.liked {
+	filter: invert(32%) sepia(25%) saturate(3222%) hue-rotate(7deg) brightness(97%) contrast(101%);
+}
+.machine-asset .input-group label {
+	position: relative;
+	top: 2px;
+}
+.machine-assets.empty img {
+	width: 300px;
+	margin-bottom: 20px;
+}
+.addMachineModal {backdrop-filter: blur(6px)}
+.addMachineModal .modal-dialog {
+	max-width: 90%;
+	width: 694px;
+}
+.addMachineModal .modal-dialog .modal-content {
+	border-radius: 10px;
+	box-shadow: var(--theme-shadow);
+	padding: 20px;
+}
+.addMachineModal .modal-header {border: 0; padding-bottom: 0}
+.addMachineModal .modal-title {
+	font-size: 24px;
+	color: var(--black);
+}
+.addMachineModal .btn-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 1;
+  height: 10px;
+  width: 10px;
+  color: var(--white);
+  background-size: 50%;
+}
+.addMachineModal .btn-close:focus {box-shadow: none}
+.addMachineModal form label {
+	color: var(--med-gray);
+	font-weight: 300;
+	font-size: 16px;
+}
+.addMachineModal form .form-floating {
+	margin-bottom: 8px;
+}
+.addMachineModal form .form-floating  input {font-size: 16px}
+.addMachineModal form .location img {
+	filter: invert(52%) sepia(25%) saturate(4123%) hue-rotate(12deg) brightness(103%) contrast(101%);
+}
+.addMachineModal form .location span {
+	font-size: 14px;
+	text-decoration: underline;
+	color: var(--dark-gray);
+}
+.add-machine-btn {margin-top: 30px}
+.addMachineModal .another {
+	color: var(--black);
+}
+.addMachineModal .another input {
+	border-width: 2px;
+	border-color: var(--black);
+}
+.addMachineModal .another label {
+	color: var(--black);
+}
+.addMachineModal .another input:checked {border-color: var(--orange)}
+.timeline-sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: 0;
+  background: var(--white);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.timeline-sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.timeline-sidebar-content {
+  display: none;
+  padding: 30px;
+}
+.timeline-sidebar .menu-links .active {
+	color: var(--orange);
+}
+.timeline-sidebar .close img {
+  filter: brightness(0);
+  width: 30px;
+}
+.timeline-sidebar .top-bar .btn-outline {
+	font-size: 16px;
+	padding: 10px 20px;
+}
+.timeline-sidebar-content .close {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.timeline-sidebar .heading {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.timeline-sidebar .heading .section-title {
+	font-size: 27px;
+}
+.timeline-sidebar .heading .section-title.section-title:after {
+    content: url(assets/icons/title-bar.svg);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    line-height: 10px;
+}
+.timeline-sidebar .heading img {width: 100%}
+.timeline-sidebar .heading .left {width: 7%}
+.timeline-sidebar .heading .right {width: 93%}
+.timeline-sidebar .search .left {width: 85%}
+.timeline-sidebar .search .right {width: 15%}
+.timeline-sidebar .search .dropdown {border-radius: 10px}
+.timeline-sidebar .search .dropdown-divider {
+  border-color: var(--light-gray);
+  margin: 4px 0;
+}
+.timeline-sidebar .search {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.timeline-sidebar .search .left .input-group {height: 100%}
+.timeline-sidebar .search .left .input-group-text {
+	border-top-left-radius: 10px;
+  background: var(--white);
+  border-right: 0;
+  border-bottom-left-radius: 10px;
+}
+.timeline-sidebar .search .left input {
+	border-radius: 10px;
+	border-left: 0;
+	padding-left: 0;
+	font-size: 16px;
+}
+.timeline-sidebar .search .left input:focus {
+	border-color: var(--input-gray);
+}
+.timeline-sidebar .messages {padding: 10px 0 40px}
+.timeline-sidebar .messages .right-aligned-messages {text-align: right}
+.timeline-sidebar .messages .left-aligned-messages {text-align: left}
+.timeline-sidebar .messages .message {
+	text-align: left;
+	font-size: 14px;
+	padding: 14px;
+	border-radius: 10px;
+	border: 1px solid var(--light-gray);
+	margin-bottom: 20px;
+	max-width: 60%;
+	width: fit-content;
+	background: var(--bg-gray);
+	position: relative;
+	line-height: 24px;
+}
+.timeline-sidebar .messages .right-aligned-messages .message {margin-left: auto}
+.timeline-sidebar .messages .left-aligned-messages .message {margin-right: auto}
+.timeline-sidebar .message-date {
+	font-size: 12px;
+	opacity: 0.7;
+	margin-bottom: 4px;
+	margin-top: 20px;
+}
+.timeline-sidebar .message-date img {
+	filter: brightness(0);
+	margin-right: 3px;
+	position: relative;
+	top: -1px;
+	height: 16px;
+}
+.timeline-sidebar .message-link {
+	color: var(--dark-gray);
+	text-decoration: underline;
+}
+.timeline-sidebar .settings-message {position: relative; width: fit-content}
+.timeline-sidebar .left-aligned-messages .setting-btn {
+	position: absolute;
+	right: -44px;
+	top: 10px;
+	border: 0;
+	background: transparent;
+	transform: rotate(0deg);
+  animation: whileKeepRotate 3s infinite linear;
+}
+.timeline-sidebar .right-aligned-messages .setting-btn {
+	position: absolute;
+	left: -44px;
+	top: 13px;
+	border: 0;
+	background: transparent;
+	transform: rotate(0deg);
+  animation: whileKeepRotate 3s infinite linear;
+}
+@keyframes whileKeepRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.timeline-sidebar .message .dropdown-menu,
+.timeline-sidebar .message-btns .dropdown-menu {border-radius: 10px}
+.timeline-sidebar .message-btns {
+	position: relative;
+	width: fit-content;
+	margin-left: auto;
+	margin-bottom: 10px;
+}
+.timeline-sidebar .message-btns .btn {
+	border-radius: 6px;
+	font-size: 14px;
+	padding: 6px 14px;
+	box-shadow: none;
+}
+.timeline-sidebar .message-btns .setting-btn {
+	top: 2px;
+}
+.timeline-sidebar .message-btns .green-btn {
+	background: var(--success);
+	border-radius: 6px;
+	padding: 6px 14px;
+	font-size: 14px;
+	color: var(--white);
+}
+/* TECHNICIAN MY SHOP CUSTOMERS */
+.user-customers .add-contact span {
+	color: var(--dark-gray);
+	text-decoration: none;
+	margin-left: 6px;
+}
+.user-customers .add-contact img {height: 44px}
