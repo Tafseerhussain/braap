@@ -4246,3 +4246,73 @@ MY SHOP PAGE
 .my-shop-searched-popup-content .trending-card .card-meta-content.liked div {
     color: #ffd740;
 }
+
+/* PURCHASE MACHINE PAGE */
+.purchase-machine-access {
+	padding: 140px 0;
+	background: url('assets/img/body-bg.jpg') no-repeat;
+	background-size: cover;
+	background-position: bottom right;
+}
+.purchase-machine-access .purchase-box {
+	padding: 40px 50px;
+	position: relative;
+	width: 550px;
+	max-width: 100%;
+}
+.purchase-box .purchase-box-header .title {
+	color: var(--orange);
+	font-size: 32px;
+}
+.purchase-box .purchase-box-header {width: 90%}
+.purchase-box .purchase-box-header p {line-height: 27px; margin-top: 10px}
+.purchase-box .purchase-box-icon {
+	position: absolute;
+    right: -30px;
+    background: var(--orange);
+    padding: 30px;
+    border-radius: 10px;
+    top: 30px;
+}
+.purchase-box .purchase-box-body .form-range {height: 3px}
+.purchase-box .purchase-box-body .form-range::-webkit-slider-thumb {
+  background-color: var(--orange);
+}
+.purchase-box .purchase-box-body .form-range:focus .form-range::-webkit-slider-thumb {box-shadow: none}
+.purchase-box .purchase-box-body {
+	font-size: 16px;
+	color: var(--black);
+	margin: 15px 0 30px;
+}
+.purchase-box .purchase-box-body .price-slider {margin-bottom: 10px}
+.purchase-box .purchase-box-footer a.add-more {
+	color: var(--black);
+	font-size: 12px;
+	margin-top: 10px;
+	display: block;
+}
+.purchase-quote {
+	margin-top: 20px;
+	padding: 20px;
+	width: 550px;
+	max-width: 100%;
+	position: relative;
+	line-height: 36px;
+}
+.purchase-quote img {
+	height: 20px; 
+	display: inline-block;
+	width: fit-content;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.purchase-confirm .purchase-box-icon {
+	background: var(--success);
+	padding: 30px 24px;
+}
+.purchase-confirm .purchase-box-body {
+	margin-top: 50px;
+	display: block;
+	color: var(--dark-gray);
+}
