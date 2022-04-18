@@ -18,8 +18,9 @@
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
 
-	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<!-- JQuery UI for Dragging and Datepicker for Dates (Only Required for this page) -->
 	<link rel="stylesheet" href="assets/css/jquery-ui.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 	<!-- --- -->
 </head>
 <body>
@@ -203,13 +204,231 @@
 							</div>
 						</div>
 						<!-- Details Tab -->
-						<div class="tab-pane fade" id="pills-details" role="tabpanel" aria-labelledby="pills-details-tab">Details</div>
+						<div class="tab-pane fade details" id="pills-details" role="tabpanel" aria-labelledby="pills-details-tab">
+							<form action="#" class="details-form row">
+								<div class="col-12">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="vin_id" placeholder="Vin">
+									  	<label for="vin_id">Vin</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating date-input-group">
+									  	<input type="text" class="form-control workspace-date-input" name="purchase_date" placeholder="Purchase Date">
+									  	<label for="purchase_date">Purchase Date</label>
+									  	<span><img src="assets/icons/calender.svg" alt="calender"></span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating date-input-group">
+									  	<input type="text" class="form-control workspace-date-input" name="last_inspection_date" placeholder="Last Inspection Date">
+									  	<label for="last_inspection_date">Last Inspection Date</label>
+									  	<span><img src="assets/icons/calender.svg" alt="calender"></span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="registration_number" placeholder="Registration Number">
+									  	<label for="registration_number">Registration Number</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating date-input-group">
+									  	<input type="text" class="form-control workspace-date-input" name="last_registration_date" placeholder="Last Registration Date">
+									  	<label for="last_registration_date">Last Registration Date</label>
+									  	<span><img src="assets/icons/calender.svg" alt="calender"></span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="hours" placeholder="Hours">
+									  	<label for="hours">Hours</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="distance" placeholder="Distance">
+									  	<label for="distance" id="km-miles">Kilometers</label>
+									</div>
+									<div class="form-check form-switch d-flex ">
+									  	<span>Kilometers</span>
+									  	<span><input class="form-check-input distance-changer" type="checkbox" name="distance_type"></span>
+									  	<span>Miles</span>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="asset_location" placeholder="Location">
+									  	<label for="asset_location">Location</label>
+									</div>
+									<a href="#" class="location location-box">
+										<img src="assets/icons/location.svg" alt="location">
+										<span>Click to set current GPS address</span>
+									</a>
+								</div>
+								<div class="col-12 text-end mt-3">
+									<button type="submit" class="btn btn-dark d-inline-block ms-auto">Update</button>
+								</div>
+							</form>
+						</div>
 						<!-- Interactive Builds Tab -->
-						<div class="tab-pane fade" id="pills-build" role="tabpanel" aria-labelledby="pills-build-tab">Interactive Builds</div>
+						<div class="tab-pane fade interactive-builds" id="pills-build" role="tabpanel" aria-labelledby="pills-build-tab">
+							<div class="row search-bar">
+								<div class="search-left">
+									<input type="text" class="form-control" placeholder="March 24, 2022 at 10:00 am...">
+								</div>
+								<div class="search-right">
+									<button class="btn btn-dark">Add</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="interactive-date card mt-4">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<!-- Job in Progress Tab -->
-						<div class="tab-pane fade" id="pills-job" role="tabpanel" aria-labelledby="pills-job-tab">Job in Progress</div>
+						<div class="tab-pane fade jobs" id="pills-job" role="tabpanel" aria-labelledby="pills-job-tab">
+							<div class="row g-3">
+								<div class="col-md-4">
+									<h1>Date and time</h1>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<h1>Diagnostic</h1>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+								</div>
+								<div class="col-md-4">
+									<h1>job Status</h1>
+									<div class="interactive-date card">
+										Technician Review
+									</div>
+									<div class="interactive-date card">
+										Technician Review
+									</div>
+									<div class="interactive-date card">
+										Technician Review
+									</div>
+									<div class="interactive-date card">
+										Technician Review
+									</div>
+									<div class="interactive-date card">
+										Technician Review
+									</div>
+									<div class="interactive-date card">
+										Technician Review
+									</div>
+								</div>
+							</div>
+						</div>
 						<!-- History Tab -->
-						<div class="tab-pane fade" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">History</div>
+						<div class="tab-pane fade history jobs" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">
+							<div class="row g-3">
+								<div class="col-md-6">
+									<h1>Date and time</h1>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+									<div class="interactive-date card">
+										<div class="interactive-left">March 24, 2022 at 10:00 am</div>
+										<div class="interactive-right"><img src="assets/icons/calender.svg" alt="calender"></div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<h1>Diagnostic</h1>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+									<div class="interactive-date card">
+										Oil change and maintenance
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -367,16 +586,18 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
 
-	<script src="assets/js/main.js"></script>
-
-	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<!-- JQuery UI for Dragging and Datepicker input -->
 	<script src="assets/js/jquery-ui.js"></script>
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
 	<script>
 	  $(function() {
 	  	  $( ".drag-pointer" ).draggable({ cursor: "move", containment: ".workspace-img-main", scroll: false });
 	  });
 	</script>
 	<!-- --- -->
+
+	<script src="assets/js/main.js"></script>
+
 
 </body>
 </html>

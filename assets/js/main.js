@@ -541,6 +541,22 @@ $('.workspace-img-slider').slick({
 $('.workspace-img-slider .workspace-img-slide .workspace-img img').click(function() {
     $('.workspace-img-main img.main').attr('src', $(this).attr("src"));
 })
+if ($(".workspace-date-input")[0]) {
+    $('.workspace-date-input').datepicker({
+        format: 'MM dd, yyyy',
+        leftArrow: '<i class="fa-solid fa-chevron-left"></i>',
+        rightArrow: '<i class="fa-solid fa-chevron-right"></i>',
+        todayBtn: true,
+        todayHighlight: true
+    });
+}
+$('.distance-changer').on('change', function() {
+    if ($(this).is(':checked')) {
+        $('#km-miles').html('Miles');
+    } else {
+        $('#km-miles').html('Kilometers');
+    }
+})
 // ========================================================
 // INTERATIVE WORKSPACE PAGE END --------------------------
 // ========================================================

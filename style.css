@@ -2485,17 +2485,17 @@ DATAHUB PAGE
   padding: 10px 20px;
 }
 .datepicker th {
-	font-family: var(--ax-semibold);
+	font-family: var(--ax-semibold) !important;
 }
 .datepicker td, .datepicker th {
-	width: 36px;
-	height: 36px;
+	width: 36px !important;
+	height: 36px !important;
 }
 .datepicker table tr td.active.active,
 .datepicker table tr td:focus,
 .datepicker table tr td:hover {
-	background: var(--orange);
-  color: var(--white);
+	background: var(--orange) !important;
+  	color: var(--white) !important;
 }
 .parts-form-submission {
 	margin: 20px 0;
@@ -4619,3 +4619,64 @@ INTERACTIVE WORKSPACE PAGES
     right: -5%;
     position: absolute;
 }
+.workspace-left .details .details-form label,
+.workspace-left .details .details-form .form-control {
+	background: transparent;
+	font-size: 16px;
+}
+.workspace-left .details .details-form input {
+	margin-bottom: 20px;
+}
+.workspace-left .details .details-form .form-switch input {
+    margin: 0 10px;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    top: 44%;
+    transform: translateY(-50%);
+}
+.workspace-left .details .details-form .form-switch {
+	font-size: 12px;
+	padding: 0;
+	margin-top: -10px;
+}
+.workspace-left .details .details-form .location-box {
+	margin-top: -10px;
+	display: block;
+}
+.workspace-left .details .details-form .location img {
+	filter: invert(52%) sepia(25%) saturate(4123%) hue-rotate(12deg) brightness(103%) contrast(101%);
+}
+.workspace-left .interactive-builds {padding: 20px 0 20px}
+.workspace-left .details .details-form .location span {
+	font-size: 14px;
+	text-decoration: underline;
+	color: var(--dark-gray);
+}
+.workspace-left .interactive-builds .search-bar .search-left {
+	width: 84.999%;
+}
+.workspace-left .interactive-builds .search-bar .search-right {
+	width: 14.999%;
+	padding-left: 0;
+}
+.workspace-left .interactive-builds .search-bar .search-left .form-control {height: 100%; border-radius: 10px}
+.workspace-left .interactive-builds .search-bar .search-right .btn {padding: 10px; width: 100%}
+.workspace-left .interactive-builds .interactive-date {
+	font-size: 14px;
+	padding: 10px 20px;
+	display: block;
+	margin-bottom: 15px;
+}
+.workspace-left .interactive-builds .interactive-date .interactive-left {width: 93.999%; display: inline-block}
+.workspace-left .interactive-builds .interactive-date .interactive-right {width: 4.999%; display: inline-block; text-align: right}
+.workspace-left .jobs {padding: 20px 0}
+.workspace-left .jobs .interactive-date {
+	font-size: 14px;
+	padding: 10px 20px;
+	display: block;
+	margin-bottom: 15px;
+}
+.workspace-left .jobs .interactive-date .interactive-left {width: 92.999%; display: inline-block}
+.workspace-left .jobs .interactive-date .interactive-right {width: 4.999%; display: inline-block; text-align: right}
+.workspace-left .jobs h1 {font-size: 14px;color: var(--black); font-family: var(--ax-bold); margin-bottom: 10px}
