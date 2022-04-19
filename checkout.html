@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braap | Cart</title>
+	<title>Braap | Checkout</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
 	<!-- External Link -->
@@ -17,6 +17,11 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
+
+	<!-- JQuery UI for Dragging and Datepicker for Dates (Only Required for this page) -->
+	<link rel="stylesheet" href="assets/css/jquery-ui.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+	<!-- --- -->
 </head>
 <body>
 
@@ -111,74 +116,158 @@
 	<!-- NAVBAR SPACE FOR OTHER PAGES -->
 	<div class="navbar-spacer"></div>
 
-	<!-- CART HEADER -->
-	<div class="cart-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<h1>
-						<img src="assets/icons/cart-white.svg" alt="cart">
-						<span>Cart</span>
-					</h1>
-				</div>
+	<div class="secure-checkout">
+		<div class="row">
+			<div class="col-md-6 left">
+				<h1 class="checkout-title">
+					Payment Details
+				</h1>
+				<form action="#" class="checkout-form row">
+					<div class="col-12">
+						<div class="form-floating icon-input-group">
+						  	<input type="text" class="form-control" name="card_name" placeholder="Name On Card">
+						  	<label for="card_name">Name On Card</label>
+						  	<span><img src="assets/icons/card.svg" alt="card"></span>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="form-floating icon-input-group credit-card">
+						  	<input type="text" class="form-control" name="card_number" placeholder="Name On Card">
+						  	<label for="card_number">Credit Card Number</label>
+						  	<span><img src="assets/img/account/banks.png" alt="card"></span>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-floating icon-input-group">
+						  	<input type="text" class="form-control" name="card_exp" placeholder="Expiration Date">
+						  	<label for="card_exp">Expiration Date</label>
+						  	<span><img src="assets/icons/calender-lines.svg" alt="calender"></span>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-floating icon-input-group">
+						  	<input type="text" class="form-control" name="card_cvv" placeholder="CVV">
+						  	<label for="card_cvv">CVV</label>
+						  	<span><img src="assets/icons/lock.svg" alt="lock"></span>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="form-floating">
+					        <select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+                                <option value="USA" selected>USA</option>
+                                <option value="UK">UK</option>
+                                <option value="PK">Pakistan</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+							</select>
+					        <label for="part_condition">Country</label>
+					    </div>
+					</div>
+                    <div class="col-12">
+                        <div class="checkout-message">
+                            By providing your card information, you allow Braap to charge your card for future payments in accordance with their terms.
+                        </div>
+                    </div>
+                    <div class="col-12 text-end mt-4">
+                        <button type="submit" class="btn">Confirm Payment</button>
+                    </div>
+				</form>
 			</div>
-		</div>
-	</div>
-	<!-- Cart Empty Box -->
-	<div class="cart-empty-box">
-		<div class="container">
-			<div class="row">
-				<div class="empty-box d-flex justify-content-between col-12">
-					<div class="empty-box-left">
-						<p>Your shopping cart is empty.</p>
-					</div>
-					<div class="empty-box-right text-end">
-						<a href="#!" class="btn btn-dark">Run a search from the home page</a>
-						<a href="#!" class="btn ms-2">Go to My Shop</a>
-					</div>
-				</div>
+			<div class="col-md-6 right">
+                <div class="checkout-order">
+                    <div class="amount-due">
+                        <label>Amount due</label>
+                        <p>$122.00</p>
+                    </div>
+                    <div class="cart-list">
+                        <!-- Item -->
+                        <div class="cart-item">
+                            <div class="row g-3">
+                                <div class="col-md-2 col-3">
+                                    <div class="cart-img"><img src="assets/img/home/card-img.jpg" class="w-100 img-thumbnail" alt="item image"></div>
+                                </div>
+                                <div class="col-md-7 col-9">
+                                    <h1 class="cart-title">2017 Honda Dirt Bike CRF 150F</h1>
+                                    <p class="cart-subtitle">ESTIMATING PRICE</p>
+                                    <div class="cart-meta">
+                                        <div class="quantity">× 1</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="prices mt-0">
+                                        <div class="price">$20.00</div>
+                                        <div class="subtotal">Subtotal <img src="assets/icons/chevron-right.svg" alt=""> $20.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="cart-item">
+                            <div class="row g-3">
+                                <div class="col-md-2 col-3">
+                                    <div class="cart-img"><img src="assets/img/home/card-img-2.jpg" class="w-100 img-thumbnail" alt="item image"></div>
+                                </div>
+                                <div class="col-md-7 col-9">
+                                    <h1 class="cart-title">2017 Honda Dirt Bike CRF 150F</h1>
+                                    <p class="cart-subtitle">ESTIMATING PRICE</p>
+                                    <div class="cart-meta">
+                                        <div class="quantity">× 1</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="prices mt-0">
+                                        <div class="price">$20.00</div>
+                                        <div class="subtotal">Subtotal <img src="assets/icons/chevron-right.svg" alt=""> $20.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="cart-item">
+                            <div class="row g-3">
+                                <div class="col-md-2 col-3">
+                                    <div class="cart-img"><img src="assets/img/home/card-img-4.jpg" class="w-100 img-thumbnail" alt="item image"></div>
+                                </div>
+                                <div class="col-md-7 col-9">
+                                    <h1 class="cart-title">2017 Honda Dirt Bike CRF 150F</h1>
+                                    <p class="cart-subtitle">ESTIMATING PRICE</p>
+                                    <div class="cart-meta">
+                                        <div class="quantity">× 1</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="prices mt-0">
+                                        <div class="price">$20.00</div>
+                                        <div class="subtotal">Subtotal <img src="assets/icons/chevron-right.svg" alt=""> $20.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Checkout Summary -->
+                    <div class="checkout-summary">
+                        <div class="summary d-flex justify-content-between">
+                            <span>Subtotal</span>
+                            <span>$122.00</span>
+                        </div>
+                        <div class="summary d-flex justify-content-between">
+                            <span>Shipping</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary d-flex justify-content-between">
+                            <span>Taxes</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary total d-flex justify-content-between">
+                            <span>Taxes</span>
+                            <span>$122.00</span>
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</div>
 
-	<!-- ORDER AND HISTORY -->
-	<div class="order-list-history">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<div class="order-list order-list-empty">
-						<h1>Order</h1>
-						<img src="assets/img/empty.png" class="empty mx-auto" alt="">
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="order-summary card">
-						<h1 class="summary-title">
-							Order Summary
-						</h1>
-						<div class="summary-box">
-							<div class="summary d-flex justify-content-between">
-								<span class="summary-text">Subtotal</span>
-								<span class="summary-value">---</span>
-							</div>
-							<div class="summary d-flex justify-content-between">
-								<span class="summary-text">Shipping Estimate</span>
-								<span class="summary-value">---</span>
-							</div>
-							<div class="summary d-flex justify-content-between">
-								<span class="summary-text">Tax Estimate</span>
-								<span class="summary-value">---</span>
-							</div>
-							<div class="summary d-flex justify-content-between total">
-								<span class="summary-text">Order Total</span>
-								<span class="summary-value">---</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- FOOTER -->
 	<footer>
@@ -267,6 +356,16 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
+
+	<!-- JQuery UI for Dragging and Datepicker input -->
+	<script src="assets/js/jquery-ui.js"></script>
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<script>
+	  $(function() {
+	  	  $( ".drag-pointer" ).draggable({ cursor: "move", containment: ".workspace-img-main", scroll: false });
+	  });
+	</script>
+	<!-- --- -->
 
 	<script src="assets/js/main.js"></script>
 
