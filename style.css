@@ -4778,6 +4778,7 @@ CART PAGE
 }
 .order-list-history .cart-list {
 	padding-top: 10px;
+	width: 98%;
 }
 .order-list-history .cart-list .cart-item {
 	border-top: 1px solid var(--light-gray);
@@ -4876,4 +4877,23 @@ CART PAGE
 	margin-top: 30px;
 	display: block;
 	color: var(--dark-gray);
+}
+.cart-empty-box {background-color: var(--white)}
+.cart-empty-box .empty-box {
+	margin-top: -44px;
+	padding: 18px 20px;
+	border-radius: 10px;
+	box-shadow: var(--theme-shadow);
+	background: var(--white);
+}
+.cart-empty-box .empty-box p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.order-list-empty {margin-top: 50px;font-size: 40px;color: var(--black)}
+.order-list-empty img.empty {
+	display: block;
+	width: 300px;
+	margin-top: 50px;
 }

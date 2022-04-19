@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braap | Interactive Workspace</title>
+	<title>Braap | Cart</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
 	<!-- External Link -->
@@ -17,11 +17,6 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
-
-	<!-- JQuery UI for Dragging and Datepicker for Dates (Only Required for this page) -->
-	<link rel="stylesheet" href="assets/css/jquery-ui.css">
-	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
-	<!-- --- -->
 </head>
 <body>
 
@@ -266,6 +261,7 @@
 							</li>
 						</ul>
 						<div class="tab-content" id="pills-tabContent">
+							<!-- Cart List -->
 						  	<div class="tab-pane fade show active cart-list" id="pills-order" role="tabpanel" aria-labelledby="pills-order-tab">
 						  		<div class="cart-item">
 						  			<div class="row g-3">
@@ -375,7 +371,69 @@
 						  			</div>
 						  		</div>
 						  	</div>
-						  	<div class="tab-pane fade" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">History</div>
+						  	<!-- Cart History -->
+						  	<div class="tab-pane fade cart-list cart-history" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">
+						  		<div class="cart-item">
+						  			<div class="row g-3">
+						  				<div class="col-md-2 col-3">
+						  					<div class="cart-img"><img src="assets/img/home/card-img.jpg" class="w-100 img-thumbnail" alt="item image"></div>
+						  				</div>
+						  				<div class="col-md-6 col-9">
+						  					<h1 class="cart-title">2017 Honda Dirt Bike CRF 150F</h1>
+						  					<p class="cart-subtitle">ESTIMATING PRICE</p>
+						  					<div class="cart-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu dolor faucibus, laoreet magna sed, porttitor nulla...</div>
+						  				</div>
+						  				<div class="col-md-2 col-5">
+						  					<div class="cart-quantity text-center">
+						  						1
+						  					</div>
+						  				</div>
+						  				<div class="col-md-2 col-7 text-end">
+						  					<div class="cart-actions">
+						  						<a href="#!" class="check-status" data-bs-toggle="tooltip" data-bs-placement="top" title="Check Status">
+						  							<img src="assets/icons/eye-gray.svg" alt="save">
+						  						</a>
+						  					</div>
+						  				</div>
+						  				<div class="col-md-10 offset-md-2 mt-0">
+						  					<div class="prices d-flex justify-content-between mt-0">
+						  						<div class="price">$20.00</div>
+						  						<div class="subtotal">Subtotal > $20.00</div>
+						  					</div>
+						  				</div>
+						  			</div>
+						  		</div>
+						  		<div class="cart-item">
+						  			<div class="row g-3">
+						  				<div class="col-md-2 col-3">
+						  					<div class="cart-img"><img src="assets/img/home/card-img-4.jpg" class="w-100 img-thumbnail" alt="item image"></div>
+						  				</div>
+						  				<div class="col-md-6 col-9">
+						  					<h1 class="cart-title">2017 Honda Dirt Bike CRF 150F</h1>
+						  					<p class="cart-subtitle">ESTIMATING PRICE</p>
+						  					<div class="cart-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu dolor faucibus, laoreet magna sed, porttitor nulla...</div>
+						  				</div>
+						  				<div class="col-md-2 col-5">
+						  					<div class="cart-quantity text-center">
+						  						1
+						  					</div>
+						  				</div>
+						  				<div class="col-md-2 col-7 text-end">
+						  					<div class="cart-actions">
+						  						<a href="#!" class="check-status" data-bs-toggle="tooltip" data-bs-placement="top" title="Check Status">
+						  							<img src="assets/icons/eye-gray.svg" alt="save">
+						  						</a>
+						  					</div>
+						  				</div>
+						  				<div class="col-md-10 offset-md-2 mt-0">
+						  					<div class="prices d-flex justify-content-between mt-0">
+						  						<div class="price">$20.00</div>
+						  						<div class="subtotal">Subtotal > $20.00</div>
+						  					</div>
+						  				</div>
+						  			</div>
+						  		</div>
+						  	</div>
 						</div>
 					</div>
 				</div>
@@ -500,16 +558,6 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
-
-	<!-- JQuery UI for Dragging and Datepicker input -->
-	<script src="assets/js/jquery-ui.js"></script>
-	<script src="assets/js/bootstrap-datepicker.min.js"></script>
-	<script>
-	  $(function() {
-	  	  $( ".drag-pointer" ).draggable({ cursor: "move", containment: ".workspace-img-main", scroll: false });
-	  });
-	</script>
-	<!-- --- -->
 
 	<script src="assets/js/main.js"></script>
 
