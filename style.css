@@ -3163,6 +3163,18 @@ RESULTS PAGE
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+.search-part-card .part-type {
+	position: absolute;
+	left: 0;
+	top: 58px;
+	font-size: 14px;
+	color: var(--black);
+	background: var(--light-gray);
+	padding: 4px 10px 3px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.search-part-card .part-type span {font-family: var(--ax-semibold)}
 .part-sidebar {
   height: 100%;
   width: 0;
