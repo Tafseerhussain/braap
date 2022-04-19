@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Braap | Account</title>
+	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
+	<meta content="" name="keywords">
+	<!-- External Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Internal files -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
+	<!-- scroll reveal -->
+	<script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body>
+
+	<!-- WEBSITE PRELOADER -->
+	<div class="preloaderBg" id="preloader">
+		<div class="preloader-cover">
+		    <div class="preloader"></div>
+		    <div class="preloader2"></div>
+	    </div>
+	</div>
+
+	<!-- HEADER FOR USER PAGES -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100 header-static">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="assets/img/logo-black.svg" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="header-search">
+				<form action="#">
+					<div class="input-group">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" id="typing-effect" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+						<div class="input-group-divider"></div>
+						<span class="input-group-text">
+							<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="left" title="Coming Soon"></a>
+							<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera" data-bs-toggle="tooltip" data-bs-placement="right" title="Coming Soon"></a>
+						</span>
+					</div>
+				</form>
+				<!-- Search Results (Enable When Required) -->
+				<ul class="search-results-static list-group" id="home-search-results">
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> dirt bike</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> hesitating<span> engine</span></a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine </span>overheats</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>whining </span>engine</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> overheating - the  <span>engine</span> oil is part of what keeps the <span>engine</span> cool</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">My Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Data Hub</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Reports</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Cart</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Account</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/img/account/thumbnail.png" alt="user account">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/account.svg" alt="account">Account</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/trending.svg" alt="trendline">Trending</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/cart.svg" alt="cart">Shopping Cart</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/logout.svg" alt="logout">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- NAVBAR SPACE FOR OTHER PAGES -->
+	<div class="navbar-spacer"></div>
+
+	<!-- USER ACCOUNT -->
+	<div class="user-account">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<!-- Profile Card -->
+					<div class="account-card card profile">
+						<div class="row">
+							<div class="col-md-9">
+								<div class="account-card-header d-flex">
+									<img src="assets/img/account/icons/profile.svg" alt="user">
+									<h1>Profile Picture</h1>
+								</div>
+								<div class="account-card-body">
+									<div class="form-group">
+										<input id="files" type="file" class="profile-img-input w-100">
+							   	 	</div>
+							   	 	<a href="#!" class="remove-profile-img">Remove</a>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="assets/img/account/profile.jpg" class="img-thumbnail w-100 profile-img" alt="profile">
+							</div>
+						</div>
+					</div>
+					<!-- Contact Info Card -->
+					<div class="account-card card contact-information">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="account-card-header d-flex">
+									<img src="assets/img/account/icons/contact.svg" alt="contact">
+									<h1>Contact Information</h1>
+								</div>
+								<div class="account-card-body contact-info">
+									<form action="#" class="row g-3">
+										<div class="col-md-6">
+											<div class="form-floating icon-input-group">
+											  	<input type="text" class="form-control" name="first_name" placeholder="First Name">
+											  	<label for="first_name">First Name</label>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-floating icon-input-group">
+											  	<input type="text" class="form-control" name="last_name" placeholder="Last Name">
+											  	<label for="last_name">Last Name</label>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-floating icon-input-group">
+											  	<input type="text" class="form-control" name="email" placeholder="Email Address">
+											  	<label for="email">Email Address</label>
+											  	<span><img src="assets/icons/tick-circle-green.svg" alt="card"></span>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-floating icon-input-group">
+											  	<input type="text" class="form-control" name="phone" placeholder="Phone">
+											  	<label for="phone">Phone</label>
+											  	<span><img src="assets/icons/tick-circle-green.svg" alt="card"></span>
+											</div>
+										</div>
+										<div class="col-12 text-end mt-4">
+											<a href="#!" class="btn">Update</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Timezone Card -->
+					<div class="account-card card timezone">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="account-card-header d-flex">
+									<img src="assets/img/account/icons/timezone.svg" alt="timezone">
+									<h1>Timezone</h1>
+								</div>
+								<div class="account-card-body contact-info">
+									<form action="#" class="row g-3">
+										<div class="col-12">
+											<div class="form-floating">
+										        <select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+					                                <option value="(GMT -08:00) US/Alaska" selected>(GMT -08:00) US/Alaska</option>
+					                                <option value="(PKT -08:00) PK/Pakistan">(PKT -08:00) PK/Pakistan</option>
+					                                <option value="(CST -08:00) US/Central Time">(CST -08:00) US/Central Time</option>
+												</select>
+										        <label for="part_condition">Country</label>
+										    </div>
+										</div>
+										<div class="col-12 text-end mt-4">
+											<a href="#!" class="btn">Update</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Reset Password Card -->
+					<div class="account-card card password-reset">
+						<div class="account-card-header row">
+							<div class="col-md">
+								<div class="d-flex">
+									<img src="assets/img/account/icons/lock.svg" alt="lock">
+									<h1>Reset Password</h1>
+								</div>
+							</div>
+							<div class="col-md text-end">
+								<form action="#">
+									<a href="#!" class="btn">Send Password Reset Link</a>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- Primary Shipping Address Card -->
+					<div class="account-card card primary-shipping">
+						<div class="row account-card-header">
+							<div class="col-md-10">
+								<div class="d-flex">
+									<img src="assets/img/account/icons/address.svg" alt="address">
+									<h1>Primary Address</h1>
+								</div>
+							</div>
+							<div class="col-md-2 text-end">
+								<a href="#"><img src="assets/icons/plus-circle-black.svg" alt="add" class="add-btn"></a>
+							</div>
+						</div>
+						<div class="row account-card-body">
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/location-gray.svg" alt="location">
+								<span>46307 Warm Springs Blvd, Fremont, CA 94539, USA</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<!-- Other Shipping Address Card -->
+					<div class="account-card card other-shipping">
+						<div class="row account-card-header">
+							<div class="col-md-10">
+								<div class="d-flex">
+									<img src="assets/img/account/icons/address.svg" alt="address">
+									<h1>Other Shipping Address</h1>
+								</div>
+							</div>
+							<div class="col-md-2 text-end">
+								<a href="#"><img src="assets/icons/plus-circle-black.svg" alt="add" class="add-btn"></a>
+							</div>
+						</div>
+						<div class="row account-card-body">
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/location-gray.svg" alt="location">
+								<span>46307 Warm Springs Blvd, Fremont, CA 94539, USA</span>
+							</a>
+						</div>
+					</div>
+					<!-- Recent Shop Activity Card -->
+					<div class="account-card card recent-activity">
+						<div class="row account-card-header">
+							<div class="col-12">
+								<div class="d-flex">
+									<img src="assets/img/account/icons/shop.svg" alt="shop">
+									<h1>Recent Shop Activity</h1>
+								</div>
+							</div>
+						</div>
+						<div class="row account-card-body">
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/chevron-right.svg" alt="right arrow">
+								<span>2017 Honda Dirt Bike CRF150F.</span>
+							</a>
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/chevron-right.svg" alt="right arrow">
+								<span>2017 Honda Dirt Bike CRF150F.</span>
+							</a>
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/chevron-right.svg" alt="right arrow">
+								<span>2017 Honda Dirt Bike CRF150F.</span>
+							</a>
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/chevron-right.svg" alt="right arrow">
+								<span>2017 Honda Dirt Bike CRF150F.</span>
+							</a>
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/chevron-right.svg" alt="right arrow">
+								<span>2017 Honda Dirt Bike CRF150F.</span>
+							</a>
+						</div>
+					</div>					
+					<!-- Hours Schedule Card -->
+					<div class="account-card card hours-schedule">
+						<div class="row account-card-header">
+							<div class="col-12">
+								<div class="d-flex">
+									<img src="assets/img/account/icons/hours.svg" alt="time">
+									<h1>Hours & Schedule</h1>
+								</div>
+							</div>
+						</div>
+						<div class="row account-card-body">
+							<div class="col-9">
+								<a href="#!" class="icon-text">
+									<img src="assets/icons/chevron-right.svg" alt="label">
+									<span>Number of hours you can work a week.</span>
+								</a>
+							</div>
+							<div class="col-3">
+								<input type="text" class="form-control w-100 text-center" value="20 hours">
+							</div>
+						</div>
+					</div>
+					<!-- Onging Schedule Card -->
+					<div class="account-card card ongoing-schedule">
+						<div class="row account-card-header">
+							<div class="col-md-10">
+								<div class="d-flex">
+									<img src="assets/img/account/icons/schedule.svg" alt="schedule">
+									<h1>Ongoing Schedule</h1>
+								</div>
+							</div>
+							<div class="col-md-2 text-end">
+								<a href="#"><img src="assets/icons/plus-circle-black.svg" alt="add" class="add-btn"></a>
+							</div>
+						</div>
+						<div class="row account-card-body">
+							<a href="#!" class="icon-text">
+								<img src="assets/icons/chevron-right.svg" alt="label">
+								<span>Select the weeks that you work more or less than 20 hours.</span>
+							</a>
+							<div class="col-9">
+								<a href="#!" class="icon-text">
+									<span>Week of Mar 27, 2022</span><br>
+									<span>Update number of hours you can work</span>
+								</a>
+							</div>
+							<div class="col-3">
+								<input type="text" class="form-control w-100 text-center" value="20 hours">
+							</div>
+							<div class="col-9">
+								<a href="#!" class="icon-text">
+									<span>Week of Mar 27, 2022</span><br>
+									<span>Update number of hours you can work</span>
+								</a>
+							</div>
+							<div class="col-3">
+								<input type="text" class="form-control w-100 text-center" value="20 hours">
+							</div>
+						</div>
+					</div>
+					<!-- Recent Services Card -->
+					<div class="account-card card recent-services">
+						<div class="row account-card-header">
+							<div class="col-md-10">
+								<div class="d-flex">
+									<img src="assets/img/account/icons/briefcase.svg" alt="briefcase">
+									<h1>Recent Service & Orders</h1>
+								</div>
+							</div>
+							<div class="col-md-2 text-end">
+								<a href="#"><img src="assets/icons/plus-circle-black.svg" alt="add" class="add-btn"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-md-3">
+					<div class="footer-col-1">
+						<a href="#" class="footer-logo">
+							<img src="assets/img/logo-white.svg" alt="braap logo">
+						</a>
+						<p>
+							A comprehensive, simple-to-use turnkey platform for service and repair businesses that
+							offers unique features that enhance customer
+							and technician collaboration.
+						</p>
+						<div class="social-links">
+							<a href="#"><img src="assets/icons/twitter-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/linkedin-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/facebook-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/instagram-footer.svg" alt="twitter icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="footer-col-2">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="footer-head">
+									Services
+								</h4>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Automated job quoting and estimating</a>
+									<a href="#">Consolidated direct parts sourcing</a>
+									<a href="#">Curated machine learning search engine</a>
+									<a href="#">Custom part kits</a>
+									<a href="#">End-to-end full-service workflow</a>
+									<a href="#">Fleet management shop</a>
+									<a href="#">Global technician workforce</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Intelligence auto pilot workflow engine</a>
+									<a href="#">Interactive visual workspace</a>
+									<a href="#">Point-to-point pickup and delivery</a>
+									<a href="#">Predictive maintenance</a>
+									<a href="#">Price comparison engine</a>
+									<a href="#">Sound diagnostics</a>
+									<a href="#">Visual search</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-col-3">
+						<h4 class="footer-head">
+							Braap
+						</h4>
+						<div class="footer-links mt-5">
+							<a href="#">About</a>
+							<a href="#">Contact</a>
+							<a href="https://jobs.braap.io/jobs/Careers" target="_blank">Careers</a>
+							<a href="#">Supplier partners</a>
+							<a href="#">Terms and Conditions</a>
+							<a href="#">Privacy Policy</a>
+							<a href="#">Return Policy</a>
+							<a href="#">Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row copyright text-center">
+				<div class="col-12">
+					Copyright © All Rights Reserved by Braap - Trademark Pending 97313870
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/slick.js"></script>
+
+	<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

@@ -76,6 +76,11 @@ a {text-decoration: none}
 .text-orange {color: var(--orange)}
 .dropdown-item.active, .dropdown-item:active {background: var(--light-gray); color: var(--dark-gray)}
 body.modal-open {overflow: visible}
+.form-select {
+  background: url(assets/icons/arrow-down-select.svg) no-repeat;
+  background-size: 10px;
+  background-position: 99% 75%;
+}
 hr {
 	color: var(--light-gray);
 	opacity: 1;
@@ -4991,4 +4996,198 @@ CHECKOUT PAGE
 	position: relative;
 	top: -2px;
 	margin-right: 3px;
+}
+
+/*===========================================================
+ACCOUNT PAGE
+===========================================================*/
+.user-account {
+	padding: 70px 0 100px;
+	background: #fbfbfb;
+}
+.user-account .account-card {
+	padding: 40px; 
+	margin-bottom: 22px; 
+	border: 2px solid transparent;
+	transition: 0.3s;
+}
+.user-account .account-card:hover {border-color: var(--orange);}
+.user-account .account-card .profile-img {border-radius: 10px}
+.user-account .account-card-header h1 {
+	color: var(--black);
+	font-size: 24px;
+	font-family: var(--ax-semibold);
+	margin-left: 10px;
+	position: relative;
+	line-height: 40px;
+	position: relative;
+	top: -2px;
+	letter-spacing: 0;
+}
+.user-account .account-card-header img {height: 30px}
+.profile-img-input {
+  color: transparent;
+  margin-top: 30px;
+}
+.profile-img-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.profile-img-input::before {
+  content: 'Upload New Image';
+  color: var(--white);
+  display: inline-block;
+  background: var(--orange);
+  border-radius: 10px;
+  padding: 12px 30px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+.profile-img-input:hover::before {
+  border-color: black;
+}
+.profile-img-input:active {
+  outline: 0;
+}
+.profile-img-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+.remove-profile-img {
+	font-size: 16px;
+	text-decoration: underline;
+	color: var(--dark-gray);
+	display: inline-block;
+	transition: 0.3s;
+}
+.remove-profile-img:hover {color: var(--danger)}
+.account-card-body {font-size: 16px;margin-top: 10px}
+.account-card-body.contact-info .form-floating {margin-bottom: 0}
+.account-card .btn {font-size: 16px; padding: 10px 20px}
+.user-account .account-card-header .add-btn {height: 50px}
+.user-account .account-card-body .icon-text {
+	font-size: 14px; 
+	margin-bottom: 10px;
+	color: var(--dark-gray);
+}
+.user-account .account-card-body .icon-text:hover {text-decoration: underline}
+.user-account .account-card-body .icon-text img {
+	height: 18px; 
+	position: relative;
+	top: -2px; 
+	margin-right: 6px;
+	width: auto;
+}
+.user-account .account-card-body .icon-text:last-child {margin-bottom: 0}
+.user-account .recent-activity .icon-text img {height: 14px}
+.user-account .hours-schedule .icon-text img {height: 14px}
+.user-account .click-checkout .add-billing-info {
+	margin-top: 10px;
+}
+.user-account .click-checkout .add-billing-info .accordion-item {border: 0}
+.user-account .click-checkout .add-billing-info .accordion-button {
+	background: var(--orange);
+	color: var(--white);
+	display: block;
+	width: fit-content;
+	margin-left: auto;
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 10px 20px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+.user-account .click-checkout .add-billing-info .accordion-body,
+.user-account .click-checkout .add-billing-info .accordion-body .form-control {font-size: 14px}
+.user-account .click-checkout .add-billing-info .accordion-body .form-floating {margin-bottom: 10px}
+.user-account .click-checkout .add-billing-info .accordion-body .checkout-message {
+	font-size: 12px;
+	line-height: 20px;
+	border: 1px solid var(--med-gray);
+	background: var(--bg-gray);
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.user-account .users-table .btn {
+	font-size: 12px;
+	padding: 8px 10px;
+	margin-right: 10px;
+}
+.users-table {
+	border: 1px solid var(--light-gray);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: 20px;
+	line-height: 20px;
+}
+.users-table thead {
+	border-bottom: 3px solid var(--orange);
+	font-size: 18px;
+	font-family: var(--ax-semibold);
+	white-space: nowrap;
+}
+.users-table thead th {
+	padding: 20px;
+}
+.users-table tr td {
+	font-size: 16px;
+	color: var(--dark-gray);
+	white-space: nowrap;
+	padding: 10px 20px;
+}
+.users-table tr:nth-child(even) {
+	background-color: var(--bg-gray);
+}
+.users-table::-webkit-scrollbar {
+  	width: 10px;
+  	margin-right: 6px;
+  	height: 10px;
+}
+.users-table::-webkit-scrollbar-track {
+    border-radius: 10px;
+    /* position: relative; */
+    /* top: 10px; */
+    margin: 0;
+}
+.users-table::-webkit-scrollbar-thumb {
+  	background: var(--dark-gray); 
+  	border-radius: 10px;
+}
+.users-table::-webkit-scrollbar-thumb:hover {
+  	background: var(--orange);
+}
+.users-table .error {
+	background: rgba(255,50,50,0.1) !important;
+}
+.user-account .hours-schedule .account-card-body .form-control {
+	font-size: 14px;
+	color: var(--dark-gray);
+	border-radius: 10px;
+	padding: 10px;
+}
+.user-account .hours-schedule .account-card-body .icon-text {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+}
+.user-account .ongoing-schedule .account-card-body .form-control {
+	font-size: 14px;
+	color: var(--dark-gray);
+	border-radius: 10px;
+	padding: 10px;
+}
+.user-account .ongoing-schedule .account-card-body .icon-text {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+}
+.user-account .ongoing-schedule .account-card-body .icon-text {
+	line-height: 20px;
+	margin-bottom: 30px;
 }
