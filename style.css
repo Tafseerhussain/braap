@@ -3191,7 +3191,8 @@ RESULTS PAGE
   background: rgba(0, 0, 0, 0.8);
   overflow-x: hidden;
   transition: 0.5s;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .related-part-sidebar .closebtn {
   position: absolute;
@@ -3217,6 +3218,66 @@ RESULTS PAGE
 	margin-bottom: 20px;
 	display: inline-block;
 }
+.sidebar-related-parts {
+	margin: 20px 0;
+}
+.sidebar-related-card {
+	padding: 15px;
+	border-radius: 10px;
+	background: var(--white);
+	margin-bottom: 20px;
+}
+.sidebar-related-card-header {margin-bottom: 20px}
+.sidebar-related-card-header {font-size: 14px}
+.sidebar-related-card-header label {
+	width: 100%;
+	padding: 4px;
+	border-radius: 6px;
+	color: var(--white);
+	background: var(--black);
+	text-align: center;
+}
+.sidebar-related-card-header .form-control {
+	height: 100%;
+	font-size: 14px;
+	padding: 4px 10px;
+	border-radius: 6px;
+}
+.sidebar-related-card-header img {padding: 6px 0;height: 100%}
+.sidebar-related-card-header img.starred {filter: sepia(99%) saturate(7500%) hue-rotate(326deg) brightness(95%) contrast(112%)}
+.sidebar-related-card-img img {border-radius: 10px}
+.sidebar-related-card-name a {
+	text-align: center;
+	color: var(--black);
+	text-decoration: none;
+	font-size: 16px;
+	margin-top: 12px;
+	display: block;
+}
+.related-part-sidebar .input-group {margin-top: 20px}
+.related-part-sidebar .input-group input {
+	font-size: 14px;
+	border-left: 0;
+	padding-left: 0;
+	border-radius: 10px;
+}
+.related-part-sidebar .input-group input:focus {
+	border-color: #ced4da;
+}
+.related-part-sidebar .input-group input::placeholder {
+	position: relative;
+	top: 1px;
+}
+.related-part-sidebar .input-group-text {
+	background: var(--white);
+	border-right: 0;
+	padding: 12px 10px;
+	border-radius: 10px;
+}
+.related-part-sidebar .input-group-text img {
+	height: 20px;
+}
+
 .part-sidebar {
   height: 100%;
   width: 0;
