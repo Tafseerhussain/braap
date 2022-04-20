@@ -1535,6 +1535,20 @@ PRICING PAGE
 	padding: 50px 0;
 	background: var(--white);
 }
+.pricing .large-customers {
+	padding: 20px 30px;
+	margin-top: 50px;
+	border-radius: 10px;
+	border: 1px solid var(--light-gray);
+	background: var(--bg-gray);
+}
+.pricing .large-customers p {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
 .pricing-cards {margin-top: 50px}
 .pricing-card {
 	padding: 40px;
@@ -1579,6 +1593,47 @@ PRICING PAGE
     margin-right: 4px;
     position: relative;
     top: 5px;
+}
+.pricing-footer {
+	padding: 20px 0 100px;
+	background: var(--white);
+}
+.pricing-footer h1 {
+	font-size: 24px;
+	font-family: var(--ax-semibold);
+	color: var(--black);
+}
+.pricing-footer .flexible-cards {margin-top: 0}
+.pricing-footer .flexible-card {
+	border-radius: 10px;
+	box-shadow: var(--theme-shadow);
+	padding: 30px;
+	border: 2px solid transparent;
+	transition: 0.2s;
+	height: 100%;
+	margin: 0;
+}
+.pricing-footer .flexible-cards {margin-top: 30px}
+.pricing-footer .flexible-card img {height: 100px}
+.pricing-footer .flexible-card:hover {border-color: var(--orange)}
+.pricing-footer .flexible-card p {
+	font-size: 16px;
+	line-height: 27px;
+	margin-top: 10px;
+}
+.pricing-footer .flexible-card .flexible-card-text h1 {
+	margin: 20px 0;
+	text-align: center;
+}
+.pricing-footer .flexible-card .flexible-card-text a,
+.pricing-footer .setup a {
+	color: var(--orange);
+	text-decoration: underline;
+}
+.pricing-footer .setup {
+	font-size: 20px;
+	margin-top: 30px;
+	line-height: 36px;
 }
 
 /*====================================================================
