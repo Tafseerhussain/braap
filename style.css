@@ -4891,17 +4891,41 @@ CART PAGE
 	padding: 0 0 100px;
 	background: var(--white);
 }
+.order-list-history .cart-item-heading {
+	color: var(--black);
+	font-size: 20px;
+	letter-spacing: 0;
+	margin: 30px 0 10px;
+	display: block;
+}
 .order-list-history .cart-list {
-	padding-top: 10px;
 	width: 98%;
 }
 .cart-list .cart-item {
-	border-top: 1px solid var(--light-gray);
-	padding: 27px 0 20px;
+	border: 1px solid var(--light-gray);
+	padding: 20px;
+	border-radius: 10px;
+	background: #fbfbfb;
+	margin-bottom: 20px;
+	transition: 0.3s;
 }
-.cart-list .cart-item:last-child {
+.cart-list .cart-subitem {
+    width: 90%;
+    margin-left: auto;
+    position: relative;
+}
+.cart-list .cart-subitem:before {
+	content: '';
+	width: 20px;
+	height: calc(50% + 22px);
+	position: absolute;
+	top: -21px;
+	border-left: 1px solid var(--light-gray);
 	border-bottom: 1px solid var(--light-gray);
+	border-bottom-left-radius: 10px;
+	left: -20px;
 }
+.cart-list .cart-item:hover {box-shadow: var(--theme-shadow)}
 .cart-list .cart-img img {border-radius: 10px}
 .cart-list .cart-title {
 	font-size: 18px;
@@ -4948,6 +4972,7 @@ CART PAGE
 	outline: 0 !important;
 	width: 70.999%;
 	margin-right: 10px;
+	background: transparent;
 }
 .cart-list .add-to-kit .btn {
 	font-size: 10px;
@@ -4964,6 +4989,7 @@ CART PAGE
 	display: inline-block;
 	color: var(--white);
 }
+.order-list-history .cart-history {padding-top: 10px}
 .cart-list .add-to-kit-box .kit-tags .tag img {height: 14px; margin-left: 3px}
 .order-list-history .order-summary {
 	padding: 40px;
