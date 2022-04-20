@@ -560,3 +560,10 @@ $('.distance-changer').on('change', function() {
 // ========================================================
 // INTERATIVE WORKSPACE PAGE END --------------------------
 // ========================================================
+
+// ========================================================
+// USER ACCOUNT PAGE JS
+// ========================================================
+$(".user-account .skills .skill-tags .skill-tag .dropdown-menu .dropdown-item").on('click', function() {
+    $(this).parents(".skill-tag").find('.tag-type').html($(this).data('tag'));
+});

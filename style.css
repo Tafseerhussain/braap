@@ -5083,11 +5083,15 @@ ACCOUNT PAGE
 	width: auto;
 }
 .user-account .account-card-body .icon-text:last-child {margin-bottom: 0}
-.user-account .recent-activity .icon-text img {height: 14px}
-.user-account .hours-schedule .icon-text img {height: 14px}
+.user-account .recent-activity .icon-text img,
+.user-account .hours-schedule .icon-text img,
+.user-account .ongoing-schedule .icon-text img,
+.user-account .skills .icon-text img {height: 14px}
 .user-account .click-checkout .add-billing-info {
 	margin-top: 10px;
 }
+.user-account .timezone .form-control,
+.user-account .skills .form-control {font-size: 16px}
 .user-account .click-checkout .add-billing-info .accordion-item {border: 0}
 .user-account .click-checkout .add-billing-info .accordion-button {
 	background: var(--orange);
@@ -5187,7 +5191,30 @@ ACCOUNT PAGE
 	transform: translateY(-50%);
 	display: block;
 }
-.user-account .ongoing-schedule .account-card-body .icon-text {
+.user-account .ongoing-schedule .ongoing-icons {
 	line-height: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+}
+.user-account .skills .skill-tags {margin-top: 20px}
+.user-account .skills .skill-tags .skill-tag {display: inline-block; margin-right: 6px; margin-bottom: 10px;}
+.user-account .skills .skill-tags .skill-tag .remove-tag {margin-left: 3px}
+.user-account .skills .skill-tags .skill-tag .remove-tag img {height: 14px}
+.user-account .skills .skill-tags .skill-tag .tag {
+	color: var(--white);
+	background: var(--black);
+	font-size: 12px;
+	padding: 6px 10px;
+	border-radius: 6px;
+	border: 0;
+	display: inline-block;
+}
+.user-account .skills .skill-tags .skill-tag .tag-type {
+	background: var(--orange);
+	border: 0;
+	display: inline-block;
+	color: var(--white);
+	border-radius: 6px;
+	font-size: 12px;
+	padding: 6px 10px;
+	width: 36px;
 }
