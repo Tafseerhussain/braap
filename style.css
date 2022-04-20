@@ -3180,6 +3180,43 @@ RESULTS PAGE
 	border-bottom-right-radius: 6px;
 }
 .search-part-card .part-type span {font-family: var(--ax-semibold)}
+.related-part-sidebar {
+  height: 100%;
+  width: 600px;
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: -5000px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.related-part-sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  filter: brightness(100);
+}
+.related-part-sidebar-content {
+  padding: 30px;
+}
+.related-part-sidebar .related-title {
+	font-size: 20px;
+	display: block;
+	color: var(--white);
+}
+.related-part-sidebar .related-title img {height: 20px;margin-right: 6px;}
+.related-part-sidebar .menu-links .active {
+	color: var(--orange);
+}
+.related-part-sidebar-content .close {
+	margin-bottom: 20px;
+	display: inline-block;
+}
 .part-sidebar {
   height: 100%;
   width: 0;

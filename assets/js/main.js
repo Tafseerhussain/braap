@@ -373,6 +373,18 @@ function closePartNav() {
     
 }
 
+function openRelatedPartNav() {
+    $('html').css('overflow-y', 'hidden');
+    $("#related-part-sidebar").css("right","0");
+    $(".body-overlay").delay(0).fadeIn();
+}
+
+function closeRelatedPartNav() {
+    $('html').css('overflow-y', 'scroll');
+    $("#related-part-sidebar").css("right","-1000px");
+    $(".body-overlay").delay(0).fadeOut();   
+}
+
 $(function() {
     //----- OPEN
     $('[pd-popup-open]').on('click', function(e)  {
