@@ -582,6 +582,7 @@ function hideExtendedWorkspaceView() {
     }, 400);
     setTimeout( function()  {
         $("#workspace-extended-view").removeClass('workspace-sided-view');
+        $('.workspace-sidebar-view').html('<img src="assets/icons/sidebar.svg" alt="sidebar"><span>Sidebar View</span>');
     },1000);
 }
 function extendedToSideView() {
