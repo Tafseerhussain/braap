@@ -569,6 +569,32 @@ $('.distance-changer').on('change', function() {
         $('#km-miles').html('Kilometers');
     }
 })
+function showExtendedWorkspaceView() {
+    $('html').css('overflow-y', 'hidden');
+    $("#workspace-extended-view").css('height', '100%');
+    $(".workspace-extended-view-content").delay(300).fadeIn("slow");
+}
+function hideExtendedWorkspaceView() {
+    $(".workspace-extended-view-content").delay(0).fadeOut("slow");
+    setTimeout( function()  {
+        $("#workspace-extended-view").css('height', '0');
+        $('html').css('overflow-y', 'scroll');
+    }, 400);
+    setTimeout( function()  {
+        $("#workspace-extended-view").removeClass('workspace-sided-view');
+    },1000);
+}
+function extendedToSideView() {
+    if ($(".workspace-extended-view").hasClass('workspace-sided-view')) {
+        $('html').css('overflow-y', 'hidden');
+        $("#workspace-extended-view").removeClass('workspace-sided-view');
+        $('.workspace-sidebar-view').html('<img src="assets/icons/sidebar.svg" alt="sidebar"><span>Sidebar View</span>');
+    } else {
+        $('html').css('overflow-y', 'scroll');
+        $("#workspace-extended-view").addClass('workspace-sided-view');
+        $('.workspace-sidebar-view').html('<img src="assets/icons/extended.svg" alt="extended"><span>Extended View</span>');
+    }
+}
 // ========================================================
 // INTERATIVE WORKSPACE PAGE END --------------------------
 // ========================================================
