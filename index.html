@@ -26,6 +26,75 @@
 	    <div class="preloader2"></div>
 	</div>
 
+	<!----------------------------------------------
+	 MOBILE HEADER START 
+	----------------------------------------------->
+	<div class="header-mob d-lg-none fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-2 header-mob-logo position-relative">
+					<a href="#"><img src="assets/img/logo-white.svg" class="braap-logo" alt="braao logo"></a>
+				</div>
+				<div class="col-8 px-0 header-mob-search">
+					<div class="hero-search position-relative">
+						<form action="#">
+							<div class="input-group mb-3">
+								<span class="input-group-text">
+									<img src="assets/icons/search-dark.svg" alt="magnifier">
+								</span>
+								<input type="text" class="form-control" placeholder="Search diagnostics, parts, and connect to a technician...">
+								<span class="input-group-text">
+									<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming Soon"></a>
+									<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera"data-bs-toggle="tooltip" data-bs-placement="top" title="Coming Soon"></a>
+								</span>
+							</div>
+						</form>
+						<!-- Search Results (Enable When Required) -->
+						<ul class="search-results list-group" id="home-search-results">
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Noises</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Neglecting oil and filter changes</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Poor compression</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Spark knock</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Oil deposits and debris</span></a>
+						  </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-2 text-end header-mob-menu position-relative">
+					<a href="#!" onclick="openMobMenu()">
+						<img src="assets/icons/hamburger.svg" alt="menu">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Mobile SideMenu -->
+	<div class="mob-sidemenu" id="mob-sidemenu">
+		<div class="mob-sidemenu-content">
+			<a href="#!" class="mob-sidemenu-close" onclick="closeMobMenu()"><img src="assets/icons/cross.svg" alt="close"></a>
+			<div class="mob-sidemenu-links">
+				<a href="#!" class="active">Home</a>
+				<a href="#!">About Us</a>
+				<a href="#!">Features</a>
+				<a href="#!">Pricing</a>
+				<hr class="dropdown-divider">
+				<a href="#!">Login</a>
+			</div>
+		</div>
+	</div>
+	<!----------------------------------------------
+	 MOBILE HEADER END 
+	----------------------------------------------->
+
 	<!-- STICKY SEARCH BAR -->
 	<div class="sticky-search-bar">
 		<div class="container">
@@ -137,7 +206,7 @@
 	<div class="hero-slider">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 offset-md-2 position-relative">
+				<div class="col-lg-8 offset-lg-2 position-relative">
 
 					<!-- Search Bar -->
 					<div class="hero-search position-relative">
@@ -181,7 +250,6 @@
 						<a href="#">Neglecting oil and filter changes</a>
 						<a href="#">Poor compression</a>
 						<a href="#">Spark knock</a>
-						<a href="#">Oil deposits and debris</a>
 					</div>
 						
 					<div class="hero-buttons d-flex justify-content-center">
@@ -211,10 +279,10 @@
 	<div class="trending-fixes" id="trending-fixes">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-7">
 					<h1 class="section-title"><span class="text-orange">Trending</span> Fixes</h1>
 				</div>
-				<div class="col-md-5 text-end">
+				<div class="col-5 text-end ps-0">
 					<button class="btn how-brap-works-btn" onclick="openNav()">
 						<span>How Braap Works</span>
 						<img src="assets/icons/eye.svg" alt="eye">
@@ -223,7 +291,7 @@
 			</div>
 			<div class="row trending-cards g-xl-4 g-lg-3 g-md-2 fade-in">
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#!">Tap to see Parts</a>
 						<div class="hidden-parts card trending-hidden-parts">
@@ -294,7 +362,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#!">Tap to see Parts</a>
 						<div class="hidden-parts card trending-hidden-parts">
@@ -365,7 +433,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#!">Tap to see Parts</a>
 						<div class="hidden-parts card trending-hidden-parts">
@@ -436,7 +504,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#!">Tap to see Parts</a>
 						<div class="hidden-parts card trending-hidden-parts">
@@ -507,7 +575,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#!">Tap to see Parts</a>
 						<div class="hidden-parts card trending-hidden-parts">
@@ -578,7 +646,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#">Tap to see Parts</a>
 						<div class="ribbon">TT</div>
@@ -632,7 +700,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#">Tap to see Parts</a>
 						<div class="ribbon">TT</div>
@@ -686,7 +754,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-lg-4 col-xl-3 col-md-6">
 					<div class="trending-card card">
 						<a class="card-overlay" href="#">Tap to see Parts</a>
 						<div class="ribbon">TT</div>
@@ -1302,7 +1370,7 @@
 			</div>
 			<div class="row blogs g-3">
 
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-3">
 					<div class="single-blog card">
 						<div class="blog-img">
 							<img src="assets/img/blog/1.jpg" class="w-100" alt="">
@@ -1328,7 +1396,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-3">
 					<div class="single-blog card">
 						<div class="blog-img">
 							<img src="assets/img/blog/2.jpg" class="w-100" alt="">
@@ -1354,7 +1422,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-3">
 					<div class="single-blog card">
 						<div class="blog-img">
 							<img src="assets/img/blog/3.jpg" class="w-100" alt="">
@@ -1380,7 +1448,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-3">
 					<div class="single-blog card">
 						<div class="blog-img">
 							<img src="assets/img/blog/4.jpg" class="w-100" alt="">
@@ -1431,9 +1499,9 @@
 			<div class="row mt-5 pt-5">
 				<div class="col-md-3 mx-auto offset-auto">
 					<div class="point-card card mb-0" id="pt-1">
-						<div class="process-text">
+						<p class="process-text">
 							Automated Quoting, Dispatch, Part Ordering.
-						</div>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -1487,9 +1555,9 @@
 			<div class="row bottom-point-card">
 				<div class="col-md-3 mx-auto offset-auto">
 					<div class="point-card card mb-0" id="pb-1">
-						<div class="process-text">
+						<p class="process-text">
 							Growing Global Augmented Workforce.
-						</div>
+						</p>
 					</div>
 				</div>
 			</div>

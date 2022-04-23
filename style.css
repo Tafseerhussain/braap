@@ -99,8 +99,9 @@ body {
 	background: url('assets/img/body-bg.jpg') no-repeat;
 	background-size: cover;
 	background-position: center center;
-	height: 100vh !important;
+	height: 100% !important;
 	background-attachment: fixed;
+	overflow-x: hidden;
 }
 ::selection {
   color: var(--white);
@@ -118,11 +119,16 @@ p {line-height: 36px}
 	position: relative;
 }
 .section-title:after {
-	content: url('assets/icons/title-bar.svg');
-	position: absolute;
-	left: 0;
-	top: 90%;
-	line-height: 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 94%;
+  line-height: 0;
+  background-image: url(assets/icons/title-bar.svg);
+  height: 6px;
+  width: 200px;
+  background-size: cover;
+  background-position: right;
 }
 .page-title {
 	font-size: 60px;
@@ -199,49 +205,48 @@ p {line-height: 36px}
 	background: var(--black);
 	color: var(--white);
 }
-
 /* PRELOADER */
 .preloaderBg {
-	position: fixed;
-	z-index: 99999; 
-	top: 0;
-	background: var(--black);
-	width: 100%;
-	height: 100%;
-	text-align: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 600ms;
+  opacity: 1;
 }
-
 .preloader {
-    margin: auto;
-    background: url(assets/img/logo-white.svg) no-repeat center;
-    background-size: 30px;
-    height: 50px;
-    background-position: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 50px;
-    transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: url(assets/img/logo-white.svg) no-repeat center;
+  background-size: 30px;
+  height: 50px;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  transform: translate(-45%, -50%);
 }
 .preloader2 {
-  border: 5px solid var(--light-gray);
-  border-top: 5px solid var(--orange);
+  border: 5px solid #E6E6E6;
+  border-top: 5px solid #E58A00;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   animation: spin 1s ease-in-out infinite;
   position: absolute;
-  top: 44.6%;
-  transform: translate(-50%, -50%);
-  left: 47.3%;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-
 @media (min-width: 1650px) {
 	.container {
 		max-width: 1600px !important;
@@ -250,7 +255,6 @@ p {line-height: 36px}
 @media (min-width: 1921px) {
 	.hero-slider-slides img {width: 100% !important}
 }
-
 /*.tooltip-inner {
     max-width: 100%;
     width: 100%; 
@@ -439,6 +443,33 @@ img {
 .search-results-static a .col-10 span {
 	font-family: var(--ax-semibold);
 }
+/* MOBILE SIDEBAR */
+.mob-sidemenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  right: 0;
+  background: var(--white);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.mob-sidemenu .mob-sidemenu-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.mob-sidemenu .mob-sidemenu-close img {height: 27px}
+.mob-sidemenu-content {
+  display: none;
+  padding: 70px 50px;
+}
+
 /* FOOTER */
 footer {
 	background: var(--black);
@@ -520,6 +551,7 @@ footer .social-links a img {
 	background: url(assets/img/home/hero-bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: bottom center;
+	min-height: 100vh;
 }
 .hero-slider-slides .slick-arrow:before {display: none}
 .hero-slider-slides .slick-arrow {
@@ -640,11 +672,15 @@ footer .social-links a img {
 	font-size: 14px;
 	margin-right: 20px;
 	text-decoration: underline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .trending-searches a:first-child {
 	opacity: 0.5;
 	text-decoration: none;
 	transform: scale(1.1);
+	overflow: visible;
 }
 .search-results {
 	border-radius: 8px;
@@ -1052,6 +1088,7 @@ footer .social-links a img {
 .feature-img {
 	height: 200px;
 }
+.feature-img img {max-width: 100%}
 .feature-head {
 	font-size: 24px;
 	font-family: var(--ax-semibold);
@@ -1269,6 +1306,7 @@ footer .social-links a img {
 	position: relative;
 }
 .blogs {margin-top: 30px}
+.single-blog {overflow: hidden}
 .single-blog .blog-meta {
 	padding: 10px 20px 30px;
 }

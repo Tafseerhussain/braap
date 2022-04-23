@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
 	$( ".hero-search input" ).focus(function() {
-	  	$("#home-search-results").delay(0).fadeIn();
+	  	$(".search-results").delay(0).fadeIn();
 	});
 	$( ".hero-search input" ).focusout(function() {
-	  	$("#home-search-results").delay(0).fadeOut();
+	  	$(".search-results").delay(0).fadeOut();
 	});
 
 	$('.hero-slider-slides').slick({
@@ -108,6 +108,32 @@ $(document).ready(function() {
 	  	arrows: true,
 	  	autoplay: true,
 	  	autoplaySpeed: 3000,
+	  	responsive: [
+			{
+	      		breakpoint: 1200,
+	      		settings: {
+			        slidesToShow: 5
+	      		}
+	    	},
+	    	{
+	      		breakpoint: 992,
+	      		settings: {
+			        slidesToShow: 4
+	      		}
+	    	},
+	    	{
+	      		breakpoint: 768,
+	      		settings: {
+			        slidesToShow: 3
+	      		}
+	    	},
+	    	{
+	      		breakpoint: 576,
+	      		settings: {
+			        slidesToShow: 2
+	      		}
+	    	}
+	  	]
 	});
 
 });

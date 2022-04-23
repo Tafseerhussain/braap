@@ -47,6 +47,30 @@ sr.reveal('.slide-bottom',{origin: 'bottom', distance: '50px', duration: 800, de
 //====================================================
 // HOMEPAGE START
 //====================================================
+function openMobMenu() {
+    if ($(window).width() < 1025 && $(window).width() > 767) {
+        document.getElementById("mob-sidemenu").style.width = "70%";
+    } else if ($(window).width() < 768) {
+        document.getElementById("mob-sidemenu").style.width = "100%";
+        $(".mob-sidemenu").css('border-radius', '0');
+    } else {
+        document.getElementById("mob-sidemenu").style.width = "70%";
+    }
+    $('html').css('overflow-y', 'hidden');
+    $(".mob-sidemenu-content").delay(300).fadeIn("slow");
+    $(".body-overlay").delay(0).fadeIn();
+    $(".body-overlay").css('z-index', '1030');
+}
+function closeMobMenu() {
+    $(".mob-sidemenu-content").delay(0).fadeOut("slow");
+    setTimeout( function()  {
+        document.getElementById("mob-sidemenu").style.width = "0";
+        $('html').css('overflow-y', 'scroll');
+    }, 500);
+    $(".body-overlay").delay(500).fadeOut();
+    
+}
+
 function openNav() {
     if ($(window).width() < 1025 && $(window).width() > 767) {
         document.getElementById("how-braap-works").style.width = "70%";
@@ -185,34 +209,39 @@ $( window ).resize(function() {
 
 var resultsHeader = $('.results-header').height()+100;
 
-//====================================================
-// HOMEPAGE END --------------------------------------
-//====================================================
-
-//====================================================
-// SEARCH PAGE START
-//====================================================
 jQuery(window).scroll(function () {
-    if (jQuery(this).scrollTop() > heroSliderHeight) {
-        jQuery('.sticky-search-bar').fadeIn()
-        jQuery('.sticky-search-bar').addClass('top-0')
-    } else {
-        jQuery('.sticky-search-bar').fadeOut()
-        jQuery('.sticky-search-bar').removeClass('top-0')
-    }
-    if ($(".results-header")[0]) {
-        if (jQuery(this).scrollTop() > resultsHeader) {
-            jQuery('.navbar .header-search').fadeIn();
+    if ($( window ).width() > 991) { 
+        if (jQuery(this).scrollTop() > heroSliderHeight) {
+            jQuery('.sticky-search-bar').fadeIn()
+            jQuery('.sticky-search-bar').addClass('top-0')
         } else {
-            jQuery('.navbar .header-search').fadeOut();
+            jQuery('.sticky-search-bar').fadeOut()
+            jQuery('.sticky-search-bar').removeClass('top-0')
+        }
+        if ($(".results-header")[0]) {
+            if (jQuery(this).scrollTop() > resultsHeader) {
+                jQuery('.navbar .header-search').fadeIn();
+            } else {
+                jQuery('.navbar .header-search').fadeOut();
+            }
+        }
+    } else {
+        jQuery('.sticky-search-bar').fadeOut();
+        if (jQuery(this).scrollTop() > 300) {
+            $('.header-mob').css('background', 'rgba(0,0,0,0.8)');
+            $('.header-mob .header-mob-search').css('opacity', '1');
+            $('.header-mob .header-mob-search').css('pointer-events', 'all');
+        } else {
+            $('.header-mob').css('background', 'transparent');
+            $('.header-mob .header-mob-search').css('opacity', '0');
+            $('.header-mob .header-mob-search').css('pointer-events', 'none');
         }
     }
 });
-//====================================================
-// SEARCH PAGE END -----------------------------------
-//====================================================
 
-
+//====================================================
+// HOMEPAGE END --------------------------------------
+//====================================================
 
 //====================================================
 // DATAHUB PAGE START
