@@ -26,6 +26,76 @@
 	    <div class="preloader2"></div>
 	</div>
 
+	<!----------------------------------------------
+	 MOBILE HEADER START 
+	----------------------------------------------->
+	<div class="body-overlay"></div>
+	<div class="header-mob header-mob-static d-lg-none fixed-top bg-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-2 header-mob-logo position-relative">
+					<a href="#"><img src="assets/img/logo-black.svg" class="braap-logo" alt="braao logo"></a>
+				</div>
+				<div class="col-8 px-0 header-mob-search">
+					<div class="hero-search position-relative">
+						<form action="#">
+							<div class="input-group mb-3">
+								<span class="input-group-text">
+									<img src="assets/icons/search-dark.svg" alt="magnifier">
+								</span>
+								<input type="text" class="form-control" placeholder="Search diagnostics, parts, and connect to a technician...">
+								<span class="input-group-text">
+									<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming Soon"></a>
+									<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera"data-bs-toggle="tooltip" data-bs-placement="top" title="Coming Soon"></a>
+								</span>
+							</div>
+						</form>
+						<!-- Search Results (Enable When Required) -->
+						<ul class="search-results list-group" id="home-search-results">
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Noises</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Neglecting oil and filter changes</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Poor compression</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Spark knock</span></a>
+						  </li>
+						  <li class="list-group-item">
+						  	<a href="#"><img src="assets/icons/trending.svg" alt="trending"> <span>Oil deposits and debris</span></a>
+						  </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-2 text-end header-mob-menu position-relative">
+					<a href="#!" onclick="openMobMenu()">
+						<img src="assets/icons/hamburger-black.svg" alt="menu">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Mobile SideMenu -->
+	<div class="mob-sidemenu" id="mob-sidemenu">
+		<div class="mob-sidemenu-content">
+			<a href="#!" class="mob-sidemenu-close" onclick="closeMobMenu()"><img src="assets/icons/cross.svg" alt="close"></a>
+			<div class="mob-sidemenu-links">
+				<a href="#!" class="active">Home</a>
+				<a href="#!">About Us</a>
+				<a href="#!">Features</a>
+				<a href="#!">Pricing</a>
+				<hr class="dropdown-divider">
+				<a href="#!">Login</a>
+			</div>
+		</div>
+	</div>
+	<!----------------------------------------------
+	 MOBILE HEADER END 
+	----------------------------------------------->
+
 	<!-- HEADER FOR OTHER PAGES -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100 header-static">
 		<div class="container">

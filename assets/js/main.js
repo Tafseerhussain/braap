@@ -59,7 +59,7 @@ function openMobMenu() {
     $('html').css('overflow-y', 'hidden');
     $(".mob-sidemenu-content").delay(300).fadeIn("slow");
     $(".body-overlay").delay(0).fadeIn();
-    $(".body-overlay").css('z-index', '1030');
+    $(".body-overlay").css('z-index', '1031');
 }
 function closeMobMenu() {
     $(".mob-sidemenu-content").delay(0).fadeOut("slow");

@@ -138,11 +138,16 @@ p {line-height: 36px}
 	display: inline-block;
 }
 .page-title:after {
-	content: url('assets/icons/title-bar.svg');
-	position: absolute;
-	left: 0;
-	top: 80%;
-	line-height: 0;
+	content: '';
+  position: absolute;
+  left: 0;
+  top: 90%;
+  line-height: 0;
+  background-image: url(assets/icons/title-bar.svg);
+  height: 6px;
+  width: 200px;
+  background-size: cover;
+  background-position: right;
 }
 .sub-head {
 	font-size: 32px;
@@ -208,7 +213,7 @@ p {line-height: 36px}
 /* PRELOADER */
 .preloaderBg {
   position: fixed;
-  z-index: 999;
+  z-index: 1032;
   top: 0;
   background: #000;
   width: 100%;
