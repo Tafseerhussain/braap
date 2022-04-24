@@ -184,6 +184,55 @@
 	.sticky-search-bar input {padding-top: 8px}
 	.about {padding: 60px 0}
 	.story {padding: 120px 0 200px}
+	.pricing-card {padding: 30px}
+	.pricing-title {
+	    font-size: 27px;
+	    line-height: 34px;
+	}
+	.pricing-subtitle {
+	    font-size: 20px;
+	    margin: 10px 0 0px;
+	}
+	.pricing-subtitle .included {
+	    font-size: 16px;
+	    margin-top: 6px;
+	}
+	.pricing-card-body p {
+    	font-size: 14px;
+	    line-height: 22px;
+	    margin-bottom: 6px;
+	}
+	.pricing-card-head img {height: 100px}
+	.pricing-footer {padding: 10px 0 10px}
+	.pricing-footer h1 {font-size: 20px}
+	.pricing-footer .flexible-card img {height: 70px; line-height: 30px}
+	.pricing-footer .flexible-card {padding: 20px}
+	.pricing-footer .flexible-card p {
+	    font-size: 14px;
+	    line-height: 24px;
+	    margin-top: 0;
+	}
+	.pricing-footer .setup {
+	    font-size: 14px;
+	    margin-bottom: 70px;
+	    line-height: 27px;
+	}
+	.pricing-card-head img {height: 70px}
+	.pricing-card {padding: 20px}
+	.pricing-title {
+	    font-size: 23px;
+	    line-height: 30px;
+	}
+	.pricing-footer h1 {
+	    font-size: 16px;
+	    line-height: 24px;
+	}
+	.pricing-footer .flexible-card p {font-size: 12px}
+	.pricing-footer .flexible-card img {height: 50px}
+	.pricing-card-body p {
+	    font-size: 12px;
+	    margin-bottom: 4px;
+	}
 }
 
 /* 1199 PX */
@@ -327,6 +376,13 @@
 	.story .braap-faded {height: 290px}
 	.story-video-img img {width: 100%}
 	.story {padding: 80px 0 100px}
+	.pricing .large-customers {
+	    padding: 10px 20px;
+	    margin-top: 20px;
+	}
+	.pricing .btn {font-size: 12px}
+	.pricing-title br {display: none}
+	.pricing-footer .flexible-card {padding: 15px}
 }
 
 /* 767 PX */
@@ -477,6 +533,25 @@
 	.about-img {width: 100%}
 	.about-bottom-left {left: 0}
 	.about-top-right {right: 0}
+	.pricing-cards {margin-top: 35px}
+	.pricing-title {font-size: 18px}
+	.pricing-subtitle {font-size: 16px}
+	.pricing-subtitle .included {font-size: 14px}
+	.pricing-subtitle .included {margin-top: 0}
+	.pricing-subtitle {margin-top: 4px}
+	.pricing-card-body {margin-top: 10px}
+	.pricing-card-head img {height: 55px}
+	.pricing-footer {padding: 0}
+	.pricing .large-customers {
+	    text-align: center;
+	    margin-right: 0;
+	    margin-left: 0;
+	    padding: 20px;
+	}
+	.pricing .large-customers .text-end {
+		text-align: center !important;
+	    margin-top: 10px;
+	}
 }
 
 /* 499 PX */
@@ -502,4 +577,6 @@
 	    line-height: 50px;
 	}
 	.story .braap-faded {height: 140px}
+	.pricing-title {width: 80%}
+	.pricing-card {padding: 15px}
 }
