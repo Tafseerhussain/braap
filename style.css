@@ -1159,7 +1159,7 @@ footer .social-links a img {
 .market-place-slider .slick-slide {
 	margin: 10px;
 }
-.market-place-slider .slick-slide img {height: 50px; margin: 0 auto}
+.market-place-slider .slick-slide img {height: 70px; margin: 0 auto}
 .market-place-slider .slick-arrow:before {display: none}
 .market-place-slider .slick-prev {
   background: url(assets/icons/arrow-left-circle.svg) no-repeat;

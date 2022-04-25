@@ -47,7 +47,7 @@
 	.trending-searches a {margin-right: 15px}
 	.sticky-search-bar .nav-link.dropdown-toggle img {height: 100%}
 	.market-place-slider .market-slide .text {font-size: 16px; line-height: 24px}
-	.market-place-slider .slick-slide img {height: 45px}
+	.market-place-slider .slick-slide img {height: 60px}
 }
 
 /* 1399 PX */
@@ -121,7 +121,7 @@
 	    margin-left: 3px;
 	}
 	.market-place-slider .market-slide .text {font-size: 14px}
-	.market-place-slider .slick-slide img {height: 40px}
+	.market-place-slider .slick-slide img {height: 50px}
 	.market-place {padding-bottom: 150px}
 	.market-place-slider .slick-prev,
 	.market-place-slider .slick-next {
