@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braap | Parts Upload</title>
+	<title>Braap | Classification Mapping</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
 	<!-- External Link -->
@@ -18,9 +18,8 @@
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
 
-	<!-- DROPZONE required when Drag and Drop functionality needed -->
-	<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<link rel="stylesheet" href="assets/css/jquery-ui.css">
 	<!-- --- -->
 </head>
 <body>
@@ -92,7 +91,7 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/icons/user-account-empty.svg" alt="user account">
+							<img src="assets/img/account/thumbnail.png" alt="user account">
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
@@ -119,15 +118,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<h1 class="parts-title text-white">Add A Part</h1>
+					<h1 class="parts-title text-white">Map Your File</h1>
 				</div>
 				<div class="col-md-7">
 					<ul class="nav nav-pills justify-content-end">
 					  <li class="nav-item">
-					    <a class="nav-link active"  href="#"><img src="assets/icons/upload.svg" alt="upload"><span>Upload</span></a>
+					    <a class="nav-link complete"  href="#"><img src="assets/icons/upload.svg" alt="upload"><span>Upload</span></a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#"><img src="assets/icons/map.svg" alt="map"><span>Map</span></a>
+					    <a class="nav-link active" href="#"><img src="assets/icons/map.svg" alt="map"><span>Map</span></a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#"><img src="assets/icons/review.svg" alt="review"><span>Review</span></a>
@@ -141,54 +140,53 @@
 		</div>
 	</div>
 
-	<div class="parts-upload pt-5">
+	<!-- DRAG AND DROP PARTS -->
+	<div class="drag-drop-header">
 		<div class="container">
-			<div class="row pb-4">
-				<div class="col-md-6">
-					<a href="#!" class="contact-assistance me-3 text-decoration-underline">We can assist with the part upload. Contact us on the chat</a>
-				</div>
-				<div class="col-md-6 text-end">
-					<a href="#" class="btn parts-upload-btn video-btn" data-bs-toggle="modal" data-src="75ddecf578057aa77b8b070175c9cc29" data-bs-target="#myModal">
-						<span>How to Upload Parts to Braap</span> 
-						<img src="assets/icons/video-play.svg" alt="play">
-					</a>
+			<div class="row">
+				<div class="col-12">
+					<h1 class="parts-title"><span class="text-orange">Drag</span> And <span class="text-orange">Drop</span> Items to Braap Fields</h1>
 				</div>
 			</div>
-		</div>
-		<div class="container mt-4">
-			<div class="row">
-				<div class="col-md-7 mx-auto">
-					<div class="parts-upload-area">
-						<h1 class="parts-title">Upload Your Parts List</h1>
-						<p>CSV files are allowed</p>
-						<form class="dropzone" enctype="multipart/form-data" id="part-upload">
-						  <div class="fallback">
-						    <input name="file" type="file" />
-						  </div>
-						</form>
+			<div class="row drag-drop-fields">
+				<div class="col-md-6">
+					<h1 class="parts-title text-start mb-3">Uploaded Column Headers</h1>
+					<div id="sortable1" class="droptrue text-start">
+					  <span class="ui-state-default btn">Item 1</span>
+					  <span class="ui-state-default btn">Item 2</span>
+					  <span class="ui-state-default btn">Item 3</span>
+					  <span class="ui-state-default btn">Item 4</span>
+					  <span class="ui-state-default btn">Item 5</span>
+					  <span class="ui-state-default btn">Item 6</span>
+					  <span class="ui-state-default btn">Item 7</span>
+					  <span class="ui-state-default btn">Item 8</span>
+					  <span class="ui-state-default btn">Item 9</span>
+					  <span class="ui-state-default btn">Item 10</span>
+					  <span class="ui-state-default btn">Item 11</span>
+					  <span class="ui-state-default btn">Item 12</span>
+					  <span class="ui-state-default btn">Item 13</span>
+					  <span class="ui-state-default btn">Item 14</span>
+					  <span class="ui-state-default btn">Item 15</span>
+					  <span class="ui-state-default btn">Item 16</span>
+					  <span class="ui-state-default btn">Item 17</span>
+					  <span class="ui-state-default btn">Item 18</span>
 					</div>
-					<div class="left d-lg-flex justify-content-between mt-5">
-						<a href="#" class="btn btn-dark">Get Parts Template</a>
-						<a href="#" class="api-parts">My Parts Come from an API</a>
-						<a href="#" class="btn"><span>Next Step</span> <img src="assets/icons/arrow-right-white.svg" alt="arrow right"></a>
+				</div>
+				<div class="col-md-6 text-start">
+					<h1 class="parts-title text-start mb-3">Braap Fields</h1>
+					<p class="parts-subtitle">(Drag back the fields that are not needed)</p>
+					<p class="parts-subtitle"><span>4</span> Fields have matched so far...</p>
+					<div id="sortable2" class="droptrue w-100 h-75 border text-start p-3">
+						<span class="ui-state-default btn matched">Item 19</span>
+					  	<span class="ui-state-default btn">Item 20</span>
+					</div>
+					<div class="w-100 text-end">
+						<a href="#!"class="btn d-inline-block mt-3 mx-auto">Next Step <img src="assets/icons/arrow-right-white.svg" class="ms-1" alt="right arrow"></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="video-page-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-xl" role="document">
-	    	<div class="modal-content">      
-	      	<div class="modal-body overflow-hidden p-0">
-	       		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
-					<div class="ratio ratio-16x9">
-				  		<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay" allowfullscreen="true"></iframe>
-					</div>
-	      		</div>
-	    	</div>
-	  	</div>
-	</div> 
 
 	<!-- FOOTER -->
 	<footer>
@@ -279,27 +277,24 @@
 	<script src="assets/js/slick.js"></script>
 	<script src="assets/js/main.js"></script>
 
-	<!-- Only Needed for this Page (Drag and Drop Functionality) -->
+	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<script src="assets/js/jquery-ui.js"></script>
 	<script>
-		Dropzone.options.partUpload = {
-			// This is the URL you can use to accept file to be uploaded. Replace it with your backend route.
-			url: "https://braap-test.free.beeceptor.com",
-			acceptedFiles: ".csv",
-			addRemoveLinks: true,
-			maxFiles: 1,
-			uploadMultiple: false,
-			createImageThumbnails: true,
-			init: function() {
-			    this.on("addedfile", file => {
-			      console.log("A file has been added");
-			    });
-			}
-		}
-		$(document).ready(function() {
-			$(".dz-message").html('<img src="assets/icons/upload-part.svg" alt=""><br><button class="dz-button mt-3" type="button">Drag and drop or browse to choose a file</button>');
-		});
+	  $(function() {
+
+	    $( "div.droptrue" ).sortable({
+	      	connectWith: "div"
+	    });
+	 
+	    $( "div.dropfalse" ).sortable({
+	      	connectWith: "div",
+	      	dropOnEmpty: false
+	    });
+	 
+	    $( "#sortable1, #sortable2" ).disableSelection();
+
+	  });
 	</script>
 	<!-- --- -->
-
 </body>
 </html>

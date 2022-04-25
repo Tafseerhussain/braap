@@ -141,14 +141,41 @@
 	</div>
 
 	<!-- MAPPED REVIEW HEADER -->
-	<div class="mapped-review">
+	<div class="mapped-review account-user-parts">
 		<div class="container">
-			<div class="row">
+			<div class="row add-parts">
 				<div class="col-6">
-					<a href="#!"><img src="assets/icons/upload-btn.svg" alt="upload" data-bs-toggle="tooltip" data-bs-placement="right" title="Upload Fixes"></a>
+					<a href="#!"><img src="assets/icons/upload-btn.svg" alt="upload" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload Fixes"></a>
+					<a href="#!" class="ms-1"><img src="assets/icons/excel-btn.svg" alt="ms-excel" data-bs-toggle="tooltip" data-bs-placement="top" title="Download and Fix in Excel"></a>
 				</div>
 				<div class="col-6 text-end">
-					<a href="#!"><img src="assets/icons/excel-btn.svg" alt="ms-excel" data-bs-toggle="tooltip" data-bs-placement="left" title="Download and Fix in Excel"></a>
+					<div class="input-group w-100">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" class="form-control" placeholder="Search Parts by any field...">
+						<button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/sort.svg" alt="sort">
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end classify-dropdown">
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+								  <label class="form-check-label" for="flexCheckDefault">
+								    All
+								  </label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Rows with errors
+								  </label>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -204,10 +231,56 @@
 									<td>12345</td>
 									<td>USA</td>
 								</tr>
-								<tr class="error">
+								<tr>
+									<td>warehouse@example.com</td>
+									<td class="error">123-A, Bakers Street, XYZ</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>New York</td>
+									<td>Califronia</td>
+									<td>12345</td>
+									<td>USA</td>
 									<td>warehouse@example.com</td>
 									<td>123-A, Bakers Street, XYZ</td>
 									<td>123-A, Bakers Street, XYZ</td>
+									<td>New York</td>
+									<td>Califronia</td>
+									<td>12345</td>
+									<td>USA</td>
+									<td>warehouse@example.com</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>New York</td>
+									<td>Califronia</td>
+									<td>12345</td>
+									<td>USA</td>
+								</tr>
+								<tr>
+									<td>warehouse@example.com</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>New York</td>
+									<td>Califronia</td>
+									<td>12345</td>
+									<td>USA</td>
+									<td>warehouse@example.com</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td class="error">New York</td>
+									<td>Califronia</td>
+									<td>12345</td>
+									<td>USA</td>
+									<td>warehouse@example.com</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td>New York</td>
+									<td>Califronia</td>
+									<td>12345</td>
+									<td>USA</td>
+								</tr>
+								<tr>
+									<td>warehouse@example.com</td>
+									<td>123-A, Bakers Street, XYZ</td>
+									<td class="error">123-A, Bakers Street, XYZ</td>
 									<td>New York</td>
 									<td>Califronia</td>
 									<td>12345</td>
@@ -262,7 +335,7 @@
 									<td>123-A, Bakers Street, XYZ</td>
 									<td>123-A, Bakers Street, XYZ</td>
 									<td>New York</td>
-									<td>Califronia</td>
+									<td class="error">Califronia</td>
 									<td>12345</td>
 									<td>USA</td>
 									<td>warehouse@example.com</td>
@@ -274,53 +347,7 @@
 									<td>USA</td>
 								</tr>
 								<tr>
-									<td>warehouse@example.com</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>New York</td>
-									<td>Califronia</td>
-									<td>12345</td>
-									<td>USA</td>
-									<td>warehouse@example.com</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>New York</td>
-									<td>Califronia</td>
-									<td>12345</td>
-									<td>USA</td>
-									<td>warehouse@example.com</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>New York</td>
-									<td>Califronia</td>
-									<td>12345</td>
-									<td>USA</td>
-								</tr>
-								<tr>
-									<td>warehouse@example.com</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>New York</td>
-									<td>Califronia</td>
-									<td>12345</td>
-									<td>USA</td>
-									<td>warehouse@example.com</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>New York</td>
-									<td>Califronia</td>
-									<td>12345</td>
-									<td>USA</td>
-									<td>warehouse@example.com</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>123-A, Bakers Street, XYZ</td>
-									<td>New York</td>
-									<td>Califronia</td>
-									<td>12345</td>
-									<td>USA</td>
-								</tr>
-								<tr class="error">
-									<td>warehouse@example.com</td>
+									<td class="error">warehouse@example.com</td>
 									<td>123-A, Bakers Street, XYZ</td>
 									<td>123-A, Bakers Street, XYZ</td>
 									<td>New York</td>

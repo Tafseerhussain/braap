@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braap | Parts Upload</title>
+	<title>Braap | Classification Upload Review</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
 	<!-- External Link -->
@@ -18,9 +18,8 @@
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
 
-	<!-- DROPZONE required when Drag and Drop functionality needed -->
-	<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
+	<link rel="stylesheet" href="assets/css/jquery-ui.css">
 	<!-- --- -->
 </head>
 <body>
@@ -92,7 +91,7 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/icons/user-account-empty.svg" alt="user account">
+							<img src="assets/img/account/thumbnail.png" alt="user account">
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
@@ -119,18 +118,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<h1 class="parts-title text-white">Add A Part</h1>
+					<h1 class="parts-title text-white">Review your Mapped Fields</h1>
 				</div>
 				<div class="col-md-7">
 					<ul class="nav nav-pills justify-content-end">
 					  <li class="nav-item">
-					    <a class="nav-link active"  href="#"><img src="assets/icons/upload.svg" alt="upload"><span>Upload</span></a>
+					    <a class="nav-link complete"  href="#"><img src="assets/icons/upload.svg" alt="upload"><span>Upload</span></a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#"><img src="assets/icons/map.svg" alt="map"><span>Map</span></a>
+					    <a class="nav-link complete" href="#"><img src="assets/icons/map.svg" alt="map"><span>Map</span></a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#"><img src="assets/icons/review.svg" alt="review"><span>Review</span></a>
+					    <a class="nav-link active" href="#"><img src="assets/icons/review.svg" alt="review"><span>Review</span></a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#"><img src="assets/icons/tick-round.svg" alt="tick"><span>Complete</span></a>
@@ -141,54 +140,118 @@
 		</div>
 	</div>
 
-	<div class="parts-upload pt-5">
+	<!-- MAPPED REVIEW HEADER -->
+	<div class="mapped-review account-user-parts">
 		<div class="container">
-			<div class="row pb-4">
-				<div class="col-md-6">
-					<a href="#!" class="contact-assistance me-3 text-decoration-underline">We can assist with the part upload. Contact us on the chat</a>
+			<div class="row add-parts">
+				<div class="col-6">
+					<a href="#!"><img src="assets/icons/upload-btn.svg" alt="upload" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload Fixes"></a>
+					<a href="#!" class="ms-1"><img src="assets/icons/excel-btn.svg" alt="ms-excel" data-bs-toggle="tooltip" data-bs-placement="top" title="Download and Fix in Excel"></a>
 				</div>
-				<div class="col-md-6 text-end">
-					<a href="#" class="btn parts-upload-btn video-btn" data-bs-toggle="modal" data-src="75ddecf578057aa77b8b070175c9cc29" data-bs-target="#myModal">
-						<span>How to Upload Parts to Braap</span> 
-						<img src="assets/icons/video-play.svg" alt="play">
-					</a>
+				<div class="col-6 text-end">
+					<div class="input-group w-100">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" class="form-control" placeholder="Search Parts by any field...">
+						<button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/sort.svg" alt="sort">
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end classify-dropdown">
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+								  <label class="form-check-label" for="flexCheckDefault">
+								    All
+								  </label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Rows with errors
+								  </label>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container mt-4">
 			<div class="row">
-				<div class="col-md-7 mx-auto">
-					<div class="parts-upload-area">
-						<h1 class="parts-title">Upload Your Parts List</h1>
-						<p>CSV files are allowed</p>
-						<form class="dropzone" enctype="multipart/form-data" id="part-upload">
-						  <div class="fallback">
-						    <input name="file" type="file" />
-						  </div>
-						</form>
+				<div class="col-12">
+					<div class="mapped-table overflow-auto">
+						<table class="table table-bordered mb-0 table-responsive">
+							<thead>
+								<tr>
+									<th>Asset Class</th>
+									<th>Type</th>
+									<th>Braap Master System</th>
+									<th>Braap Sub system</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>123-ASD</td>
+									<td>ATV</td>
+									<td>Master System</td>
+									<td class="error">Subsystem</td>
+								</tr>
+								<tr>
+									<td>123-ASD</td>
+									<td class="error">ATV</td>
+									<td>Master System</td>
+									<td>Subsystem</td>
+								</tr>
+								<tr>
+									<td>123-ASD</td>
+									<td>ATV</td>
+									<td>Master System</td>
+									<td>Subsystem</td>
+								</tr>
+								<tr>
+									<td>123-ASD</td>
+									<td>ATV</td>
+									<td>Master System</td>
+									<td>Subsystem</td>
+								</tr>
+								<tr>
+									<td>123-ASD</td>
+									<td>ATV</td>
+									<td>Master System</td>
+									<td>Subsystem</td>
+								</tr>
+								<tr>
+									<td>123-ASD</td>
+									<td>ATV</td>
+									<td class="error">Master System</td>
+									<td>Subsystem</td>
+								</tr>
+								<tr>
+									<td>123-ASD</td>
+									<td>ATV</td>
+									<td>Master System</td>
+									<td>Subsystem</td>
+								</tr>
+								<tr>
+									<td class="error">123-ASD</td>
+									<td>ATV</td>
+									<td>Master System</td>
+									<td>Subsystem</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-					<div class="left d-lg-flex justify-content-between mt-5">
-						<a href="#" class="btn btn-dark">Get Parts Template</a>
-						<a href="#" class="api-parts">My Parts Come from an API</a>
-						<a href="#" class="btn"><span>Next Step</span> <img src="assets/icons/arrow-right-white.svg" alt="arrow right"></a>
-					</div>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-12 text-end">
+					<a href="#!" class="btn">Next Step <img src="assets/icons/arrow-right-white.svg" alt="right arrow"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="video-page-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-xl" role="document">
-	    	<div class="modal-content">      
-	      	<div class="modal-body overflow-hidden p-0">
-	       		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
-					<div class="ratio ratio-16x9">
-				  		<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay" allowfullscreen="true"></iframe>
-					</div>
-	      		</div>
-	    	</div>
-	  	</div>
-	</div> 
 
 	<!-- FOOTER -->
 	<footer>
@@ -278,28 +341,5 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
 	<script src="assets/js/main.js"></script>
-
-	<!-- Only Needed for this Page (Drag and Drop Functionality) -->
-	<script>
-		Dropzone.options.partUpload = {
-			// This is the URL you can use to accept file to be uploaded. Replace it with your backend route.
-			url: "https://braap-test.free.beeceptor.com",
-			acceptedFiles: ".csv",
-			addRemoveLinks: true,
-			maxFiles: 1,
-			uploadMultiple: false,
-			createImageThumbnails: true,
-			init: function() {
-			    this.on("addedfile", file => {
-			      console.log("A file has been added");
-			    });
-			}
-		}
-		$(document).ready(function() {
-			$(".dz-message").html('<img src="assets/icons/upload-part.svg" alt=""><br><button class="dz-button mt-3" type="button">Drag and drop or browse to choose a file</button>');
-		});
-	</script>
-	<!-- --- -->
-
 </body>
 </html>

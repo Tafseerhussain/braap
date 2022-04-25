@@ -3802,9 +3802,10 @@ PARTS UPLOAD PAGE
 .parts-upload .left hr {
 	margin: 40px 0;
 }
-.parts-upload .left a:last-child {
+.parts-upload  a.api-parts {
 	color: var(--dark-gray);
 	text-decoration: underline;
+	align-self: center;
 }
 .parts-upload .left .parts-title.or {
 	margin: 20px 0;
@@ -5514,3 +5515,22 @@ ACCOUNT PAGE
 	padding: 6px 10px;
 	width: 36px;
 }
+
+/*=======================================================
+CLASSIFICATION AREA
+=======================================================*/
+.classification-area .part-name img {height: 30px !important}
+.classification-area .form-tag-input label {
+	transform: scale(.80) translateX(-8px);
+}
+.classify-dropdown .form-check-input {
+	border: 2px solid var(--black) !important;
+  width: 16px;
+  height: 16px;
+  padding: 0 !important;
+  margin: 0 6px 0 -4px;
+  position: relative;
+  top: 5px;
+}
+.classify-dropdown .form-check-input:checked {border-color: var(--orange) !important}
+.classify-dropdown .form-check {padding-left: 15px}
