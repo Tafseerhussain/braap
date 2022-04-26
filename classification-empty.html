@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Braap | Classification Upload Review</title>
+	<title>Braap | Classification</title>
 	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
 	<meta content="" name="keywords">
 	<!-- External Link -->
@@ -12,22 +12,27 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/slick-theme.css">
+
+	<!-- Multiple Selection, Datepicker, Tags Input CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="assets/css/tagify.css">
+	<!--  -->
+
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="responsive.css">
 	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal@4"></script>
-
-	<!-- JQuery UI for Dragging, sorting, dropping Fields (only required on this page, use if needed anywhere else) -->
-	<link rel="stylesheet" href="assets/css/jquery-ui.css">
-	<!-- --- -->
 </head>
 <body>
 
 	<!-- WEBSITE PRELOADER -->
 	<div class="preloaderBg" id="preloader">
-	    <div class="preloader"></div>
-	    <div class="preloader2"></div>
+		<div class="preloader-cover">
+		    <div class="preloader"></div>
+		    <div class="preloader2"></div>
+	    </div>
 	</div>
 
 	<!-- HEADER FOR USER PAGES -->
@@ -91,7 +96,7 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/img/account/thumbnail.png" alt="user account">
+							<img src="assets/icons/user-account-empty.svg" alt="user account">
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
@@ -112,44 +117,45 @@
 
 	<!-- NAVBAR SPACE FOR OTHER PAGES -->
 	<div class="navbar-spacer"></div>
-	
-	<!-- ADD PARTS HEADER -->
-	<div class="parts-header">
+
+	<!-- CLASSIFICATION HEADER -->
+	<div class="account-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5">
-					<h1 class="parts-title text-white">Review your Mapped Fields</h1>
+				<div class="col-md">
+					<h1 class="section-title">
+						Classification
+					</h1>
 				</div>
-				<div class="col-md-7">
-					<ul class="nav nav-pills justify-content-end">
-					  <li class="nav-item">
-					    <a class="nav-link complete"  href="#"><img src="assets/icons/upload.svg" alt="upload"><span>Upload</span></a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link complete" href="#"><img src="assets/icons/map.svg" alt="map"><span>Map</span></a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link active" href="#"><img src="assets/icons/review.svg" alt="review"><span>Review</span></a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" href="#"><img src="assets/icons/tick-round.svg" alt="tick"><span>Complete</span></a>
-					  </li>
-					</ul>
+				<div class="col-md text-end">
+					<div class="account-user-tabs d-flex justify-content-end">
+						<a href="#">Parts</a>
+						<a href="#" class="active">Classification</a>
+						<a href="#">Diagnostics</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- MAPPED REVIEW HEADER -->
-	<div class="mapped-review account-user-parts">
+	<!-- CLASSIFICATION PARTS -->
+	<div class="account-user-parts classification-area">
 		<div class="container">
 			<div class="row add-parts">
-				<div class="col-6">
-					<a href="#!"><img src="assets/icons/upload-btn.svg" alt="upload" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload Fixes"></a>
-					<a href="#!" class="ms-1"><img src="assets/icons/excel-btn.svg" alt="ms-excel" data-bs-toggle="tooltip" data-bs-placement="top" title="Download and Fix in Excel"></a>
+				<div class="col-md-5">
+					<a href="#" class="btn">
+						+ Create Classification
+					</a>
 				</div>
-				<div class="col-6 text-end">
-					<div class="input-group w-100">
+				<div class="col-md-7 text-end">
+					<div class="d-flex justify-content-end">
+					<!-- <a href="#!" class="excel-download" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Excel">
+						<img src="assets/icons/excel-btn.svg" alt="ms-excel">
+					</a> -->
+					<a href="#!" class="upload-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload My Classification">
+						<img src="assets/icons/upload-btn.svg" alt="upload">
+					</a>
+					<div class="input-group w-75">
 						<span class="input-group-text">
 							<img src="assets/icons/search-dark.svg" alt="magnifier">
 						</span>
@@ -160,9 +166,9 @@
 						<ul class="dropdown-menu dropdown-menu-end classify-dropdown">
 							<li>
 								<div class="form-check">
-								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
 								  <label class="form-check-label" for="flexCheckDefault">
-								    All
+								    Created Recently
 								  </label>
 								</div>
 							</li>
@@ -170,97 +176,56 @@
 								<div class="form-check">
 								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
 								  <label class="form-check-label" for="flexCheckDefault">
-								    Rows with errors
+								    Favorite
+								  </label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Missing Data
+								  </label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Updated Recently
+								  </label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Viewed Recently
 								  </label>
 								</div>
 							</li>
 						</ul>
 					</div>
+					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<div class="mapped-table overflow-auto">
-						<table class="table table-bordered mb-0 table-responsive">
-							<thead>
-								<tr>
-									<th>Industry</th>
-									<th>Type</th>
-									<th>Estimated Technician Effort to Fix Machine or Asset Type</th>
-									<th>Estimated Technician Hours to Fix Master System</th>
-									<th>Estimated Technician Hours to Fix Subsystem</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Powersport</td>
-									<td>ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td class="error">Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-								<tr>
-									<td>Powersport</td>
-									<td>ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-								<tr>
-									<td>Powersport</td>
-									<td>ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-								<tr>
-									<td>Powersport</td>
-									<td class="error">ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-								<tr>
-									<td>Powersport</td>
-									<td>ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-								<tr>
-									<td>Powersport</td>
-									<td>ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td class="error">Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-								<tr>
-									<td>Powersport</td>
-									<td>ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-								<tr>
-									<td class="error">Powersport</td>
-									<td>ATV</td>
-									<td>Maximum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-									<td>Minimum Time/Effort</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="number-of-results">
+						Viewing 7 of 7 Results
 					</div>
 				</div>
 			</div>
-			<div class="row mt-3">
-				<div class="col-12 text-end">
-					<a href="#!" class="btn">Next Step <img src="assets/icons/arrow-right-white.svg" alt="right arrow"></a>
+			<div class="parts-rows empty-classification text-center mb-5">
+				<div class="row">
+					<div class="col-12">
+						<img src="assets/img/empty.png" alt="">
+						<p class="mt-4">No Classifications Added!</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!-- FOOTER -->
 	<footer>
@@ -349,6 +314,16 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.js"></script>
+	
+	<!-- Only Required Script Where Multiple Selection, Date Picker and Tags Input Fields are -->
+	<script src="assets/js/select2.min.js"></script>
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<script src="assets/js/tagify.min.js"></script>
+	<script src="assets/js/tagify.polyfills.min.js"></script>
+	<!--  -->
+
 	<script src="assets/js/main.js"></script>
+
+
 </body>
 </html>
