@@ -5253,13 +5253,21 @@ CHECKOUT PAGE
   background-size: 10px;
   background-position: 99% 75%;
 }
-.secure-checkout .checkout-message {
+.secure-checkout .checkout-message,
+.secure-checkout .custom-address-box {
 	border: 1px solid var(--light-gray);
 	border-radius: 10px;
 	background: var(--white);
 	padding: 12px 15px;
 	font-size: 14px;
 	line-height: 24px;
+}
+.secure-checkout .custom-address-box {position: relative;margin: 10px 0 30px; padding-bottom: 30px;display: none}
+.secure-checkout .custom-address-box .close-address-box {
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	z-index: 1;
 }
 .checkout-order .amount-due p {
 	font-size: 40px;
@@ -5534,3 +5542,14 @@ CLASSIFICATION AREA
 }
 .classify-dropdown .form-check-input:checked {border-color: var(--orange) !important}
 .classify-dropdown .form-check {padding-left: 15px}
+
+
+/*==================================================
+DATAHUB PRICING PAGE
+==================================================*/
+.datahub-pricing-area .parts-rows .accordion-item .accordion-header {font-size: 14px}
+.datahub-pricing-area .parts-rows .accordion-item .accordion-header img {height: 20px}
+.datahub-pricing-area .parts-rows .accordion-item .accordion-header span {
+	position: relative;
+	top: 2px;
+}

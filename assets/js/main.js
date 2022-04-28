@@ -329,15 +329,15 @@ if ($(".size-tags")[0]) {
     var sizeTags = document.querySelector('.size-tags');
     new Tagify(sizeTags)
 }
-if ($(".size-tags")[0]) {
+if ($(".color-tags")[0]) {
     var colorTags = document.querySelector('.color-tags');
     new Tagify(colorTags)
 }
-if ($(".size-tags")[0]) {
+if ($(".braap-master-tags")[0]) {
     var braapMasterTags = document.querySelector('.braap-master-tags');
     new Tagify(braapMasterTags)
 }
-if ($(".size-tags")[0]) {
+if ($(".braap-subsystem-tags")[0]) {
     var braapSubTags = document.querySelector('.braap-subsystem-tags');
     new Tagify(braapSubTags)
 }
@@ -629,9 +629,29 @@ function extendedToSideView() {
 // INTERATIVE WORKSPACE PAGE END --------------------------
 // ========================================================
 
+
 // ========================================================
 // USER ACCOUNT PAGE JS
 // ========================================================
 $(".user-account .skills .skill-tags .skill-tag .dropdown-menu .dropdown-item").on('click', function() {
     $(this).parents(".skill-tag").find('.tag-type').html($(this).data('tag'));
 });
+// ========================================================
+// USER ACCOUNT PAGE JS END -------------------------------
+// ========================================================
+
+
+// ========================================================
+// CHECKOUT PAGE JS
+// ========================================================
+$(".secure-checkout .custom-address-box .close-address-box").on('click', function () {
+    $(".secure-checkout .custom-address-box").slideUp();
+    $(".checkout_address_select_box").val($(".checkout_address_select_box option:first").val());
+})
+$(".checkout_address_select_box").on('change', function () {
+    if ($(this).val() == 'custom_address') {
+        $(".secure-checkout .custom-address-box").slideDown();
+    } else {
+        $(".secure-checkout .custom-address-box").slideUp();
+    }
+})

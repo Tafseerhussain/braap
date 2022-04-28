@@ -126,8 +126,63 @@
 				<form action="#" class="checkout-form row">
 					<div class="col-12">
 						<div class="form-floating">
-						  	<input type="text" class="form-control" name="ship_to" placeholder="Ship To">
-						  	<label for="ship_to">Ship To</label>
+					        <select class="form-select form-control checkout_address_select_box" name="ship_to"  placeholder="Ship To">
+                                <option disabled selected>Select Address</option>
+                                <option value="89855 Shorelane Drive Michigan 49065">89855 Shorelane Drive Michigan 49065</option>
+                                <option value="656 Stump Road Skaneateies New York 13152">656 Stump Road Skaneateies New York 13152</option>
+                                <option value="45 East Elizabeth Street Skaneateies New York 13152">45 East Elizabeth Street Skaneateies New York 13152</option>
+                                <option value="custom_address">+ Add Ship to Address</option>
+							</select>
+					        <label for="ship_to">Ship To</label>
+					    </div>
+					</div>
+					<div class="col-12">
+						<div class="custom-address-box">
+							<a href="#!"><img src="assets/icons/cross-circle-gray.svg" alt="close" class="close-address-box"></a>
+							<div class="row">
+								<div class="col-12">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="location" placeholder="Enter A Location">
+									  	<label for="location">Enter A Location</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="suite_no" placeholder="Suit. Apt#">
+									  	<label for="suite_no">Suit. Apt#</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="city" placeholder="City">
+									  	<label for="city">City</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="state" placeholder="State">
+									  	<label for="state">State</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+									  	<input type="text" class="form-control" name="state" placeholder="Zip Code">
+									  	<label for="state">Zip Code</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+								        <select class="form-select form-control" name="country"  placeholder="Country">
+			                                <option value="USA" selected>USA</option>
+			                                <option value="UK">UK</option>
+			                                <option value="PK">Pakistan</option>
+			                                <option value="AL">Albania</option>
+			                                <option value="DZ">Algeria</option>
+										</select>
+								        <label for="country">Country</label>
+								    </div>
+								</div>
+							</div>
 						</div>
 					</div>
                     <div class="col-12">
