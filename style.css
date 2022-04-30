@@ -216,6 +216,7 @@ p {line-height: 36px}
 	overflow: hidden;
 	margin-top: 20px;
 	line-height: 20px;
+	overflow-x: auto;
 }
 .theme-table thead {
 	border-bottom: 3px solid var(--orange);
@@ -5829,4 +5830,74 @@ REPORTS PAGE
 .report-detail-box-body .drag-drop-field-box #sortable2 .accordion-button {background: var(--bg-gray)}
 .report-detail-box-body label {
 	font-size: 16px;
+}
+.reports-head .reports-heading .report-name {
+	font-size: 32px;
+	color: var(--black);
+}
+.reports-head .reports-heading .report-meta {font-size: 16px}
+.reports-head .report-actions {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.reports-head .report-actions a img {
+	box-shadow: var(--theme-shadow);
+	transition: 0.3s;
+}
+.single-report-table {
+	padding: 10px 30px 30px;
+	margin: 40px;
+	border-radius: 10px;
+	box-shadow: var(--theme-shadow);
+	background: var(--white);
+}
+.single-report-table table thead tr:first-child th {
+	font-size: 16px;
+	padding: 10px 15px;
+}
+.single-report-table table thead tr:last-child th {
+	font-size: 12px;
+	padding: 10px 15px;
+}
+.single-report-table table tbody td {
+	font-size: 12px;
+	padding: 12px 15px;
+	white-space: initial;
+}
+.single-report-table table tbody td a {
+	color: var(--dark-gray);
+}
+.single-report-table table tbody td a:hover {text-decoration: underline}
+.single-report-table .table-bordered>:not(caption)>*>* {
+	border: 1px solid var(--light-gray);
+}
+.single-report-table .table-bordered tr td:first-child,
+.single-report-table .table-bordered tr th:first-child {
+	border-left: 0;
+}
+.single-report-table .table-bordered tr td:last-child,
+.single-report-table .table-bordered tr th:last-child {
+	border-right: 0;
+}
+.single-report-table .table-bordered thead tr:first-child th {
+	border-top: 0;
+}
+.single-report-table .table-bordered tbody tr:last-child td {
+	border-bottom: 0;
+}
+.table-column-resizer {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  bottom: 0;
+  left: auto;
+  width: 16px;    
+  cursor: col-resize;       
+}
+.single-report-table .theme-table::-webkit-scrollbar {
+    height: 8px;
+}
+.single-report-table .theme-table::-webkit-scrollbar-thumb {
+    border-radius: 10px;
 }
