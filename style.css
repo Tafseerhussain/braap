@@ -3092,8 +3092,8 @@ RESULTS PAGE
 	text-align: right;
 }
 .search-part-card .search-part-title {
-	color: var(--white);
-	background: var(--black);
+	color: var(--dark-gray);
+	background: var(--bg-gray);
 	border-radius: 6px;
 	font-size: 14px;
 	text-align: center;
@@ -3864,6 +3864,7 @@ PARTS UPLOAD PAGE
 	box-shadow: var(--theme-shadow);
 	border-radius: 10px;
 }
+.parts-upload-area p {font-family: var(--ax-semibold)}
 .parts-upload-area .parts-title {
 	font-size: 40px;
 	font-family: var(--ax-bold);
