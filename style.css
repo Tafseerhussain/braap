@@ -188,6 +188,10 @@ p {line-height: 36px}
 .btn-dark {
 	background: var(--black);
 }
+.btn-danger {
+	background: var(--danger);
+	border: 0;
+}
 .btn-outline {
 	color: var(--orange);
 	background: transparent;
@@ -5901,4 +5905,11 @@ REPORTS PAGE
 }
 .single-report-table .theme-table::-webkit-scrollbar-thumb {
     border-radius: 10px;
+}
+
+
+#partRemoveModal h1 {
+	    font-size: 24px;
+    color: var(--black);
+    margin-bottom: 15px;
 }
