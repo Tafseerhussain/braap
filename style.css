@@ -1786,7 +1786,7 @@ CONTACt PAGE
 	padding: 1.7rem 0.75rem 0;
 }
 .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
-    opacity: .65;
+    opacity: 1;
     transform: scale(.80) translateY(-1.3rem) translateX(-6px);
 }
 .form-floating .form-control {
@@ -5928,4 +5928,20 @@ TIME CARD PAGE
 }
 .timesheet-table tbody td a.selected img {
     filter: invert(35%) sepia(94%) saturate(474%) hue-rotate(71deg) brightness(65%) contrast(89%);
+}
+.timesheet-table tbody td.actions img {
+	height: 18px;
+}
+.timesheet {
+	padding-bottom: 100px;
+}
+.timeEntryModal .time-entry-form h4 {
+	font-size: 18px;
+	color: var(--black);
+	margin-top: 10px;
+	margin-bottom: 0;
+	font-family: var(--ax-semibold);
+	position: relative;
+	top: 10px;
+	z-index: 1;
 }
