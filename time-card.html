@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Braap | Time Card</title>
+	<meta name="description" content="Braap’s AI engine is used by Companies and powersport owners use to diagnose problems, automate maintenance, create interactive builds, compare part prices, and access turnkey service.">
+	<meta content="" name="keywords">
+	<!-- External Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Internal files -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
+
+	<!-- Multiple Selection, Datepicker, Tags Input CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="assets/css/tagify.css">
+	<!--  -->
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="icon" type="image/png" href="assets/img/favicon.svg"/>
+	<!-- scroll reveal -->
+	<script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body>
+
+	<!-- WEBSITE PRELOADER -->
+	<div class="preloaderBg" id="preloader">
+		<div class="preloader-cover">
+		    <div class="preloader"></div>
+		    <div class="preloader2"></div>
+	    </div>
+	</div>
+
+	<!-- HEADER FOR USER PAGES -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100 header-static">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="assets/img/logo-black.svg" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="header-search">
+				<form action="#">
+					<div class="input-group">
+						<span class="input-group-text">
+							<img src="assets/icons/search-dark.svg" alt="magnifier">
+						</span>
+						<input type="text" id="typing-effect" class="form-control text-white" placeholder="Enter any part, problem description, or maintenance">
+						<div class="input-group-divider"></div>
+						<span class="input-group-text">
+							<a href="#"><img src="assets/icons/mike-dark.svg" class="me-3 ms-1" alt="mike" data-bs-toggle="tooltip" data-bs-placement="left" title="Coming Soon"></a>
+							<a href="#"><img src="assets/icons/camera-dark.svg" alt="camera" data-bs-toggle="tooltip" data-bs-placement="right" title="Coming Soon"></a>
+						</span>
+					</div>
+				</form>
+				<!-- Search Results (Enable When Required) -->
+				<ul class="search-results-static list-group" id="home-search-results">
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> dirt bike</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> hesitating<span> engine</span></a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine </span>overheats</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>whining </span>engine</a>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="#"><img src="assets/icons/search-dark.svg" alt="trending"> <span>engine</span> overheating - the  <span>engine</span> oil is part of what keeps the <span>engine</span> cool</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#">My Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Data Hub</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Reports</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Cart</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Account</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/icons/user-account-empty.svg" alt="user account">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end account-dropdown" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/my-shop.svg" alt="shop">My Shop</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/account.svg" alt="account">Account</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/trending.svg" alt="trendline">Trending</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/cart.svg" alt="cart">Shopping Cart</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><img src="assets/icons/logout.svg" alt="logout">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- NAVBAR SPACE FOR OTHER PAGES -->
+	<div class="navbar-spacer"></div>
+
+	<!-- TIMESHEET HEADER HEADER -->
+	<div class="account-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md">
+					<h1 class="section-title">
+						Time Sheet
+					</h1>
+				</div>
+				<div class="col-md text-end">
+					<div class="account-user-tabs d-flex justify-content-end">
+						<a href="#" class="active">Current</a>
+						<a href="#">History</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- TIMESHEET -->
+	<div class="timesheet account-user-parts">
+		<div class="container">
+			<div class="row add-parts">
+				<div class="col-12">
+					<a href="#" class="btn">
+						+ Add Row
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-10">
+					<div class="number-of-results">
+						Viewing 20 of 20 Rows
+					</div>
+				</div>
+				<div class="col-2 text-end">
+					<button class="input-group-text dropdown-toggle ms-auto" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="assets/icons/sort.svg" alt="sort">
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end classify-dropdown">
+						<li>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+							  <label class="form-check-label" for="flexCheckDefault">
+							    Created Recently
+							  </label>
+							</div>
+						</li>
+						<li>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+							  <label class="form-check-label" for="flexCheckDefault">
+							    Favorite
+							  </label>
+							</div>
+						</li>
+						<li>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+							  <label class="form-check-label" for="flexCheckDefault">
+							    Missing Data
+							  </label>
+							</div>
+						</li>
+						<li>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+							  <label class="form-check-label" for="flexCheckDefault">
+							    Updated Recently
+							  </label>
+							</div>
+						</li>
+						<li>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+							  <label class="form-check-label" for="flexCheckDefault">
+							    Viewed Recently
+							  </label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row timesheet-table">
+				<div class="col-12">
+					<div class="theme-table recent-reports-table">
+						<table class="table table-bordered mb-0 table-responsive">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Customer</th>
+									<th>Type</th>
+									<th>Duration</th>
+									<th>Start</th>
+									<th>Finish</th>
+									<th class="text-center">Verified</th>
+									<th class="text-center">Show Date & Time Verified</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>24 April, 2022</td>
+									<td>Big Trucks, Inc</td>
+									<td>Onsite Assessment</td>
+									<td>1 Hour 30 Minutes</td>
+									<td>4:00 PM</td>
+									<td>8:00 PM</td>
+									<td class="text-center"><a href="#!" class="default"><img src="assets/icons/tick-circle.svg" alt=""></a></td>
+									<td class="text-center">8:00 PM</td>
+									<td>8:00 PM</td>
+								</tr>
+								<tr>
+									<td>24 April, 2022</td>
+									<td>Big Trucks, Inc</td>
+									<td>Onsite Assessment</td>
+									<td>1 Hour 30 Minutes</td>
+									<td>4:00 PM</td>
+									<td>8:00 PM</td>
+									<td class="text-center"><a href="#!" class="default selected"><img src="assets/icons/tick-circle.svg" alt=""></a></td>
+									<td class="text-center">8:00 PM</td>
+									<td>8:00 PM</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-md-3">
+					<div class="footer-col-1">
+						<a href="#" class="footer-logo">
+							<img src="assets/img/logo-white.svg" alt="braap logo">
+						</a>
+						<p>
+							A comprehensive, simple-to-use turnkey platform for service and repair businesses that
+							offers unique features that enhance customer
+							and technician collaboration.
+						</p>
+						<div class="social-links">
+							<a href="#"><img src="assets/icons/twitter-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/linkedin-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/facebook-footer.svg" alt="twitter icon"></a>
+							<a href="#"><img src="assets/icons/instagram-footer.svg" alt="twitter icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="footer-col-2">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="footer-head">
+									Services
+								</h4>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Automated job quoting and estimating</a>
+									<a href="#">Consolidated direct parts sourcing</a>
+									<a href="#">Curated machine learning search engine</a>
+									<a href="#">Custom part kits</a>
+									<a href="#">End-to-end full-service workflow</a>
+									<a href="#">Fleet management shop</a>
+									<a href="#">Global technician workforce</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="footer-links">
+									<a href="#">Intelligence auto pilot workflow engine</a>
+									<a href="#">Interactive visual workspace</a>
+									<a href="#">Point-to-point pickup and delivery</a>
+									<a href="#">Predictive maintenance</a>
+									<a href="#">Price comparison engine</a>
+									<a href="#">Sound diagnostics</a>
+									<a href="#">Visual search</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-col-3">
+						<h4 class="footer-head">
+							Braap
+						</h4>
+						<div class="footer-links mt-5">
+							<a href="#">About</a>
+							<a href="#">Contact</a>
+							<a href="https://jobs.braap.io/jobs/Careers" target="_blank">Careers</a>
+							<a href="#">Supplier partners</a>
+							<a href="#">Terms and Conditions</a>
+							<a href="#">Privacy Policy</a>
+							<a href="#">Return Policy</a>
+							<a href="#">Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row copyright text-center">
+				<div class="col-12">
+					Copyright © All Rights Reserved by Braap - Trademark Pending 97313870
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/slick.js"></script>
+	
+	<!-- Only Required Script Where Multiple Selection, Date Picker and Tags Input Fields are -->
+	<script src="assets/js/select2.min.js"></script>
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<script src="assets/js/tagify.min.js"></script>
+	<script src="assets/js/tagify.polyfills.min.js"></script>
+	<!--  -->
+
+	<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

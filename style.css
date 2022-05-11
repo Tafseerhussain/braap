@@ -2061,6 +2061,11 @@ JOB POST PAGE
 /*================================================================
 DATAHUB PAGE
 ================================================================*/
+#partRemoveModal h1 {
+  font-size: 24px;
+  color: var(--black);
+  margin-bottom: 15px;
+}
 .account-dropdown .dropdown-item img {
 	position: relative;
 	margin-right: 10px;
@@ -5908,8 +5913,19 @@ REPORTS PAGE
 }
 
 
-#partRemoveModal h1 {
-	    font-size: 24px;
-    color: var(--black);
-    margin-bottom: 15px;
+/*============================================================
+TIME CARD PAGE
+============================================================*/
+.timesheet-table thead th {
+	font-size: 16px;
+}
+.timesheet-table tbody td {
+	font-size: 12px;
+}
+.timesheet-table tbody td a.default img {
+    filter: brightness(89%) contrast(94%);
+    height: 18px;
+}
+.timesheet-table tbody td a.selected img {
+    filter: invert(35%) sepia(94%) saturate(474%) hue-rotate(71deg) brightness(65%) contrast(89%);
 }
