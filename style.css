@@ -4569,6 +4569,10 @@ MY SHOP PAGE
 .my-shop-searched-popup-content .trending-card .card-meta-content.liked div {
     color: #ffd740;
 }
+.my-shop-searched-popup-content .searched-parts h1 {
+	font-size: 40px;
+	color: var(--black);
+}
 
 /* PURCHASE MACHINE PAGE */
 .purchase-machine-access {
