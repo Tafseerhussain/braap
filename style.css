@@ -4579,11 +4579,21 @@ MY SHOP PAGE
   transform: translateY(-50%);
 
 }
-.searched-parts .custom-icon-added a{
+.searched-parts .custom-icon-added a {
 	font-size: 12px;
 	line-height: 1.5;
 	color: var(--dark-gray);
 }
+.searched-parts .card-meta .timeline-function {
+	border-top: 1px solid var(--light-gray);
+	margin-top: 5px;
+	padding-top: 10px;
+}
+.searched-parts .card-meta .timeline-function a {
+	padding-top: 10px;
+	color: var(--black);
+}
+
 
 /* PURCHASE MACHINE PAGE */
 .purchase-machine-access {
