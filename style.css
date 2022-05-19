@@ -4573,6 +4573,17 @@ MY SHOP PAGE
 	font-size: 40px;
 	color: var(--black);
 }
+.searched-parts .custom-icon-added {
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+.searched-parts .custom-icon-added a{
+	font-size: 12px;
+	line-height: 1.5;
+	color: var(--dark-gray);
+}
 
 /* PURCHASE MACHINE PAGE */
 .purchase-machine-access {
