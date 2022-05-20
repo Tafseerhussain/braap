@@ -4592,6 +4592,14 @@ MY SHOP PAGE
 .searched-parts .card-meta .timeline-function a {
 	padding-top: 10px;
 	color: var(--black);
+	font-size: 12px;
+}
+.searched-parts .card-img .created_by {
+	font-size: 10px;
+	text-align: center;
+	color: var(--dark-gray);
+	position: relative;
+	top: 10px;
 }
 
 
