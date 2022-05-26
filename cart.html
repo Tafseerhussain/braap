@@ -20,6 +20,11 @@
 </head>
 <body>
 
+	<!-- ERROR BOX -->
+	<div class="cart-error-box">
+		The maintenance item was removed from cart and will automatically occur on the next maintenance date.
+	</div>
+
 	<!-- WEBSITE PRELOADER -->
 	<div class="preloaderBg" id="preloader">
 		<div class="preloader-cover">
@@ -338,6 +343,26 @@
 						  					<div class="prices">
 						  						<div class="price">$20.00</div>
 						  						<div class="subtotal">Subtotal <img src="assets/icons/chevron-right.svg" alt=""> $20.00</div>
+						  					</div>
+						  				</div>
+						  				<div class="col-12">
+						  					<div class="d-flex maintenance-schedule-box alert alert-danger">
+						  						<div class="maintenance-schedule-text">
+						  							Maintenance is already setup. The next scheduled date is (INSERT FIRST MAINTENANCE DATE). Do you want to move that date to today?
+						  						</div>
+						  						<div class="maintenance-schedule-btns d-flex">
+						  							<a href="#" class="btn me-2">Set for Today</a>
+						  							<a href="#" class="btn btn-dark">Keep the Same</a>
+						  						</div>
+						  					</div>
+						  					<div class="update-maintenance-box">
+						  						<div class="maintenance-schedule-text">
+						  							Would you like to update all the upcoming maintenance dates to reflect this schedule or just add this one?
+						  						</div>
+						  						<div class="maintenance-schedule-btns">
+						  							<a href="#" class="btn me-2">Update All</a>
+						  							<a href="#" class="btn btn-dark">Add This One</a>
+						  						</div>
 						  					</div>
 						  				</div>
 						  			</div>

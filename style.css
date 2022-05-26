@@ -5978,3 +5978,35 @@ TIME CARD PAGE
 	top: 10px;
 	z-index: 1;
 }
+
+/* Maintenance schedule box */
+.maintenance-schedule-box,
+.update-maintenance-box {
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 15px 20px;
+}
+.update-maintenance-box .btn,
+.maintenance-schedule-box .btn {
+  font-size: 14px;
+  padding: 13px 20px 10px;
+  white-space: nowrap;
+  height: 50px;
+  display: inline-block;
+}
+.update-maintenance-box {
+	background: var(--white);
+	border: 1px solid var(--light-gray) !important;
+}
+.cart-error-box {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  border-radius: 8px;
+  background: var(--danger);
+  padding: 12px 20px;
+  z-index: 99;
+  color: var(--white);
+  font-size: 16px;
+  width: 400px;
+}
