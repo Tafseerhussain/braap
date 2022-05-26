@@ -193,6 +193,14 @@
 					</div>
 				</div>
 			</div>
+			<div class="row route-plan-btn mt-5">
+				<div class="col-12 text-center">
+					<a href="#!" class="btn" onclick="openRoutePlanNav()">
+						<img src="assets/icons/route-plan.svg" alt="route">
+						<span>Plan My Day & Optimize My Route</span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -711,6 +719,202 @@
 						<a href="#!" class="green-btn btn">Every 3 months</a>
 						<a href="#!" class="green-btn btn">Every 6 months</a>
 						<a href="#!" class="green-btn btn">Select custom schedule</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ----------------- -->
+
+	<div id="route-plan-sidebar" class="route-plan-sidebar">
+		<div class="route-plan-sidebar-content">
+			<div class="row top-bar">
+				<div class="col-12">
+					<a href="#!" class="close"><img src="assets/icons/arrow-left-white.svg" onclick="closeRoutePlanNav()" alt="left arrow"></a>
+				</div>
+			</div>
+			<h1 class="row heading">
+				<div class="left">
+					<img src="assets/icons/route-plan-black.svg" alt="route">
+				</div>
+				<div class="right ps-0">
+					<span class="section-title">Plan Your Day & <span class="text-orange">Optimize Your Route</span></span>
+				</div>
+			</h1>
+			<div class="messages">
+				<!-- RIGHT ALIGNED MESSAGES -->
+				<div class="right-aligned-messages">
+					<div class="message">
+						Is this urgent, does the assessment need to be done today?
+					</div>
+					<div class="message-btns">
+						<a href="#!" class="green-btn btn">Today</a>
+						<a href="#!" class="green-btn btn">Tomorrow</a>
+						<a href="#!" class="green-btn btn">Anytime</a>
+					</div>
+					<div class="message">
+						Right now, you have an estimated 18 hours of open
+						assessments and jobs to complete over the next 14 days
+						or about 7 hours of work a day. Do you want to complete
+						this assessment?
+					</div>
+					<div class="message-btns">
+						<a href="#!" class="green-btn btn">I will do the assessment</a>
+						<a href="#!" class="red-btn btn">Decline</a>
+					</div>
+					<div class="message">
+						Assessment is Ready to Start.
+					</div>
+					<div class="message-submessage">
+						<span>This assessment has been pending for 18 hours.</span>
+					</div>
+					<div class="message">
+						<a href="#!" class="message-link"><span>Start Route:</span> Get Directions</a>
+					</div>
+					<div class="message">
+						You have more than 1 pending onsite assessment and job.
+					</div>
+				</div>
+
+				<h1 class="messages-section-heading">
+					These are all your open assessments and jobs.
+				</h1>
+				<div class="assessment-jobs">
+					<!-- JOB -->
+					<div class="assessment-job">
+						<a href="#!" class="close"><img src="assets/icons/remove.svg" alt="remove" data-bs-toggle="tooltip" data-bs-placement="left" title="Remove from todays schedule"></a>
+						<div class="job-line d-flex">
+							<h4>Job: &nbsp;</h4>
+							<div>Dirt Bike | Honda CRX 2021</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Diagnostics: &nbsp;</h4>
+							<div>Engine will not fire</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Estimated Time: &nbsp;</h4>
+							<div>1 hour 30 minutes</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+					</div>
+					<!-- JOB -->
+					<div class="assessment-job">
+						<a href="#!" class="close"><img src="assets/icons/remove.svg" alt="remove" data-bs-toggle="tooltip" data-bs-placement="left" title="Remove from todays schedule"></a>
+						<div class="job-line d-flex">
+							<h4>Job: &nbsp;</h4>
+							<div>Dirt Bike | Honda CRX 2021</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Diagnostics: &nbsp;</h4>
+							<div>Engine will not fire</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Estimated Time: &nbsp;</h4>
+							<div>1 hour 30 minutes</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+					</div>
+					<!-- JOB -->
+					<div class="assessment-job">
+						<div class="job-line d-flex">
+							<h4>Job: &nbsp;</h4>
+							<div>Dirt Bike | Honda CRX 2021</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Diagnostics: &nbsp;</h4>
+							<div>Engine will not fire</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Estimated Time: &nbsp;</h4>
+							<div>1 hour 30 minutes</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+						<div class="message-submessage error alert alert-danger">
+							<span>This has been removed 4 times from optimizer already.</span>
+						</div>
+					</div>
+					<!-- JOB -->
+					<div class="assessment-job">
+						<a href="#!" class="close"><img src="assets/icons/remove.svg" alt="remove" data-bs-toggle="tooltip" data-bs-placement="left" title="Remove from todays schedule"></a>
+						<div class="job-line d-flex">
+							<h4>Job: &nbsp;</h4>
+							<div>Dirt Bike | Honda CRX 2021</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Diagnostics: &nbsp;</h4>
+							<div>Engine will not fire</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Estimated Time: &nbsp;</h4>
+							<div>1 hour 30 minutes</div>
+						</div>
+						<div class="job-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+					</div>
+				</div>
+				<div class="message-btns mt-3">
+					<a href="#!" class="green-btn btn">Get optimal schedule and route</a>
+				</div>
+
+				<h1 class="messages-section-heading">
+					Today’s Schedule
+				</h1>
+				<div class="today-schedule">
+					<!-- Location -->
+					<div class="today-box">
+						<div class="today-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+						<div class="btn btn-dark">
+							<span>Start Route:</span> Get Directions
+						</div>
+					</div>
+					<!-- Location -->
+					<div class="today-box">
+						<div class="today-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+						<div class="btn btn-dark">
+							<span>Start Route:</span> Get Directions
+						</div>
+					</div>
+					<!-- Location -->
+					<div class="today-box">
+						<div class="today-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+						<div class="btn btn-dark">
+							<span>Start Route:</span> Get Directions
+						</div>
+					</div>
+					<!-- Location -->
+					<div class="today-box">
+						<div class="today-line d-flex">
+							<h4>Location: &nbsp;</h4>
+							<div>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</div>
+						</div>
+						<div class="btn btn-dark">
+							<span>Start Route:</span> Get Directions
+						</div>
+					</div>
+				</div>
+				<div class="right-aligned-messages">
+					<div class="message">
+						You have more jobs for today
 					</div>
 				</div>
 			</div>

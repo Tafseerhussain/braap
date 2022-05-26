@@ -517,9 +517,31 @@ function closeTimelineNav() {
         document.getElementById("timeline-sidebar").style.width = "0";
         $('html').css('overflow-y', 'scroll');
     }, 500);
-    $(".body-overlay").delay(500).fadeOut();
-    
+    $(".body-overlay").delay(500).fadeOut();   
 }
+
+function openRoutePlanNav() {
+    if ($(window).width() < 1025 && $(window).width() > 767) {
+        document.getElementById("route-plan-sidebar").style.width = "80%";
+    } else if ($(window).width() < 768) {
+        document.getElementById("route-plan-sidebar").style.width = "90%";
+    } else {
+        document.getElementById("route-plan-sidebar").style.width = "55%";
+    }
+    $('html').css('overflow-y', 'hidden');
+    $(".route-plan-sidebar-content").delay(300).fadeIn("slow");
+    $(".body-overlay").delay(0).fadeIn();
+}
+
+function closeRoutePlanNav() {
+    $(".route-plan-sidebar-content").delay(0).fadeOut("slow");
+    setTimeout( function()  {
+        document.getElementById("route-plan-sidebar").style.width = "0";
+        $('html').css('overflow-y', 'scroll');
+    }, 500);
+    $(".body-overlay").delay(500).fadeOut();   
+}
+
 $('.contact-customer-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,

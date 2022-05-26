@@ -4275,6 +4275,7 @@ MY SHOP PAGE
     left: 0;
     top: 100%;
     line-height: 10px;
+    background: transparent;
 }
 .timeline-sidebar .heading img {width: 100%}
 .timeline-sidebar .heading .left {width: 7%}
@@ -5058,6 +5059,25 @@ INTERACTIVE WORKSPACE PAGES
 }
 .workspace-sided-view .col-xl-2 {width: 50%}
 .workspace-sided-view .workspace-extended-view-content {display: block}
+
+.workspace-open-view .workspace-open-view-search .input-group-text {
+	background: var(--white);
+	border-right: 0;
+	border-radius: 10px;
+}
+.workspace-open-view-search .input-group-text {
+	background: transparent;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+/*.workspace-open-view-search .input-group-text img {height: 16px}*/
+.workspace-open-view-search input {
+	font-size: 16px;
+	padding: 12px 0;
+	border-radius: 10px;
+	border-left: 0;
+}
+.workspace-open-view-search input:focus {border-color: var(--input-gray)}
 
 /*========================================================
 CART PAGE
@@ -6009,4 +6029,250 @@ TIME CARD PAGE
   color: var(--white);
   font-size: 16px;
   width: 400px;
+}
+
+/* Route Plan */
+.route-plan-btn .btn img {
+	height: 24px;
+}
+.route-plan-sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: 0;
+  background: var(--white);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.route-plan-sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.route-plan-sidebar .top-bar {
+	margin-bottom: 40px;
+}
+.route-plan-sidebar-content {
+  display: none;
+  padding: 30px;
+}
+.route-plan-sidebar .menu-links .active {
+	color: var(--orange);
+}
+.route-plan-sidebar .close img {
+  filter: brightness(0);
+  width: 30px;
+}
+.route-plan-sidebar .top-bar .btn-outline {
+	font-size: 16px;
+	padding: 10px 20px;
+}
+.route-plan-sidebar-content .close {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.route-plan-sidebar .heading {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.route-plan-sidebar .heading .section-title {
+	font-size: 27px;
+}
+.route-plan-sidebar .heading .section-title.section-title:after {
+    content: url(assets/icons/title-bar.svg);
+    position: absolute;
+    left: 0;
+    top: 120%;
+    line-height: 10px;
+    background: transparent;
+}
+.route-plan-sidebar .heading img {width: 100%}
+.route-plan-sidebar .heading .left {width: 7%}
+.route-plan-sidebar .heading .right {width: 93%}
+.route-plan-sidebar .search .left {width: 85%}
+.route-plan-sidebar .search .right {width: 15%}
+.route-plan-sidebar .search .dropdown {border-radius: 10px}
+.route-plan-sidebar .search .dropdown-divider {
+  border-color: var(--light-gray);
+  margin: 4px 0;
+}
+.route-plan-sidebar .search {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.route-plan-sidebar .search .left .input-group {height: 100%}
+.route-plan-sidebar .search .left .input-group-text {
+	border-top-left-radius: 10px;
+  background: var(--white);
+  border-right: 0;
+  border-bottom-left-radius: 10px;
+}
+.route-plan-sidebar .search .left input {
+	border-radius: 10px;
+	border-left: 0;
+	padding-left: 0;
+	font-size: 16px;
+}
+.route-plan-sidebar .search .left input:focus {
+	border-color: var(--input-gray);
+}
+.route-plan-sidebar .messages {padding: 10px 0 40px}
+.route-plan-sidebar .messages .right-aligned-messages {text-align: right}
+.route-plan-sidebar .messages .left-aligned-messages {text-align: left}
+.route-plan-sidebar .messages .message {
+	text-align: left;
+	font-size: 14px;
+	padding: 14px;
+	border-radius: 10px;
+	border: 1px solid var(--light-gray);
+	margin-top: 20px;
+	max-width: 60%;
+	width: fit-content;
+	background: var(--bg-gray);
+	position: relative;
+	line-height: 24px;
+}
+.route-plan-sidebar .messages .right-aligned-messages .message {margin-left: auto}
+.route-plan-sidebar .messages .left-aligned-messages .message {margin-right: auto}
+.route-plan-sidebar .message-submessage {
+	font-size: 12px;
+	opacity: 0.7;
+	margin-bottom: 4px;
+	margin-top: 0;
+}
+.route-plan-sidebar .message-link {
+	color: var(--dark-gray);
+	text-decoration: underline;
+}
+.route-plan-sidebar .message-link span {
+	font-family: var(--ax-black);
+}
+.route-plan-sidebar .settings-message {position: relative; width: fit-content}
+.route-plan-sidebar .left-aligned-messages .setting-btn {
+	position: absolute;
+	right: -44px;
+	top: 10px;
+	border: 0;
+	background: transparent;
+	transform: rotate(0deg);
+  animation: whileKeepRotate 3s infinite linear;
+}
+.route-plan-sidebar .right-aligned-messages .setting-btn {
+	position: absolute;
+	left: -44px;
+	top: 13px;
+	border: 0;
+	background: transparent;
+	transform: rotate(0deg);
+  animation: whileKeepRotate 3s infinite linear;
+}
+.route-plan-sidebar .message .dropdown-menu,
+.route-plan-sidebar .message-btns .dropdown-menu {border-radius: 10px}
+.route-plan-sidebar .message-btns {
+	margin-top: 10px;
+	position: relative;
+	width: fit-content;
+	margin-left: auto;
+}
+.route-plan-sidebar .message-btns .btn {
+	border-radius: 6px;
+	font-size: 14px;
+	padding: 6px 14px;
+	box-shadow: none;
+}
+.route-plan-sidebar .message-btns .setting-btn {
+	top: 2px;
+}
+.route-plan-sidebar .message-btns .green-btn {
+	background: var(--success);
+	border-radius: 6px;
+	padding: 6px 14px;
+	font-size: 14px;
+	color: var(--white);
+}
+.route-plan-sidebar .message-btns .red-btn {
+	background: var(--danger);
+}
+.route-plan-sidebar .messages-section-heading {
+	font-size: 18px;
+	font-family: var(--ax-semibold);
+	color: var(--black);
+	margin-top: 30px;
+	text-align: center;
+	margin-bottom: -10px;
+}
+.route-plan-sidebar .assessment-jobs .assessment-job {
+	border-radius: 10px;
+	box-shadow: var(--theme-shadow);
+	background: var(--white);
+	margin-top: 20px;
+	padding: 15px 20px;
+	position: relative;
+	font-size: 14px;
+	border: 2px solid transparent;
+	transition: 0.2s;
+}
+.route-plan-sidebar .assessment-jobs .assessment-job:hover {
+	border-color: var(--orange);
+}
+.route-plan-sidebar .assessment-jobs .assessment-job:nth-of-type(even) {
+	background: var(--bg-gray);
+}
+.route-plan-sidebar .assessment-jobs .assessment-job .close {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	transform: none;
+}
+.route-plan-sidebar .assessment-jobs .assessment-job .close img {
+	filter: none;
+}
+.route-plan-sidebar .assessment-jobs .assessment-job h4 {
+	font-family: var(--ax-semibold);
+	color: var(--black);
+}
+.route-plan-sidebar .message-submessage.error {
+	text-align: center;
+	margin-top: 6px;
+	margin-bottom: 0;
+	padding: 3px 0;
+}
+.route-plan-sidebar .today-schedule {
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	background: var(--bg-gray);
+	border: 1px solid var(--light-gray);
+}
+.route-plan-sidebar .today-schedule .today-box {
+	background: var(--white);
+	box-shadow: var(--theme-shadow);
+	border-radius: 8px;
+	font-size: 14px;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+}
+.route-plan-sidebar .today-schedule .today-box:last-child {
+	margin-bottom: 0;
+}
+.route-plan-sidebar .today-schedule .today-box h4 {
+	font-family: var(--ax-semibold);
+	color: var(--black);
+}
+.route-plan-sidebar .today-schedule .today-box .btn {
+	font-size: 14px;
+	border-radius: 6px;
+	padding: 6px 15px;
+	margin-top: 6px;
+}
+.route-plan-sidebar .today-schedule .today-box .btn span {
+	font-family: var(--ax-bold);
 }
