@@ -6276,3 +6276,16 @@ TIME CARD PAGE
 .route-plan-sidebar .today-schedule .today-box .btn span {
 	font-family: var(--ax-bold);
 }
+
+/* TRANSACTIONS SECTION */
+.transactions-section {
+	padding: 0 0 100px;
+	background: var(--white);
+}
+.transactions-section .transactions-table thead th {
+	font-size: 14px;
+	padding: 15px 20px;
+}
+.transactions-section .transactions-table tbody td {
+	font-size: 12px;
+}
