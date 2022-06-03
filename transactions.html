@@ -154,6 +154,9 @@
 				</div>
 				<div class="col-md-6 text-end">
 					<div class="d-flex justify-content-end">
+						<a href="#!" class="upload-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Download as Excel">
+							<img src="assets/icons/excel-btn.svg" alt="upload">
+						</a>
 					<div class="input-group">
 						<span class="input-group-text">
 							<img src="assets/icons/search-dark.svg" alt="magnifier">
@@ -187,6 +190,22 @@
 								  </label>
 								</div>
 							</li>
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Paid
+								  </label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Pending
+								  </label>
+								</div>
+							</li>
 						</ul>
 					</div>
 					</div>
@@ -208,94 +227,247 @@
 										<th data-sortable="true">Date Created</th>
 										<th data-sortable="true">Transaction Time</th>
 										<th data-sortable="true">Job Number</th>
+										<th data-sortable="true">Customer Name</th>
 										<th data-sortable="true">Machine or Asset</th>
 										<th data-sortable="true">Transaction Type</th>
 										<th data-sortable="true">Transaction Owner</th>
 										<th data-sortable="true">Status</th>
+										<th data-sortable="true">Prevailing Wage</th>
 										<th data-sortable="true">Routing Information</th>
+										<th data-sortable="true">PO or Invoice Number</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
+										<td class="align-middle">123456</td>
 									</tr>	
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
-									</tr>	
+										<td class="align-middle">123456</td>
+									</tr>
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
-									</tr>	
+										<td class="align-middle">123456</td>
+									</tr>
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
-									</tr>	
+										<td class="align-middle">123456</td>
+									</tr>
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
-									</tr>	
+										<td class="align-middle">123456</td>
+									</tr>
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
-									</tr>	
+										<td class="align-middle">123456</td>
+									</tr>
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
-									</tr>	
+										<td class="align-middle">123456</td>
+									</tr>
 									<tr>
 										<td class="align-middle">April 12, 2022</td>
-										<td class="align-middle">4 Hours</td>
+										<td class="align-middle">01:00 PM</td>
 										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
 										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
-										<td class="align-middle">Online</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
 										<td class="align-middle">Johndoe@example.com</td>
-										<td class="align-middle">Live</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
 										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
-									</tr>	
+										<td class="align-middle">123456</td>
+									</tr>
+									<tr>
+										<td class="align-middle">April 12, 2022</td>
+										<td class="align-middle">01:00 PM</td>
+										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
+										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
+										<td class="align-middle">Johndoe@example.com</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
+										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
+										<td class="align-middle">123456</td>
+									</tr>
+									<tr>
+										<td class="align-middle">April 12, 2022</td>
+										<td class="align-middle">01:00 PM</td>
+										<td class="align-middle">20-0015</td>
+										<td class="align-middle">John Doe</td>
+										<td class="align-middle">Arctic Cat ATV ALTERRA</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>New</option>
+											    <option value="old">Old</option>
+											</select>
+										</td>
+										<td class="align-middle">Johndoe@example.com</td>
+										<td class="align-middle">
+											<select class="form-select form-control" name="part_condition"  placeholder="Part Condition">
+											    <option value="new" selected>Live</option>
+											    <option value="old">None</option>
+											</select>
+										</td>
+										<td class="align-middle">20.00$</td>
+										<td class="align-middle">Lorem Ipsum Dolor Sit</td>
+										<td class="align-middle">123456</td>
+									</tr>
 								</tbody>
 							</table>
 						</div>

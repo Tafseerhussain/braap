@@ -6289,3 +6289,17 @@ TIME CARD PAGE
 .transactions-section .transactions-table tbody td {
 	font-size: 12px;
 }
+::-webkit-scrollbar {
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+.transactions-section .transactions-table select {
+	font-size: 12px;
+	border-radius: 8px;
+	box-shadow: var(--theme-shadow);
+	background-position: 94% 55%;
+  width: fit-content;
+  background-color: #fff;
+}
