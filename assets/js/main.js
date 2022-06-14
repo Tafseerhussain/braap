@@ -257,7 +257,7 @@ $('.part-images-slider').slick({
     autoplaySpeed: 4000,
 });
 $('.related-parts-slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     speed: 500,
     infinite: true,
