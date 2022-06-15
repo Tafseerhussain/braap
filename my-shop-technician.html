@@ -769,7 +769,7 @@
 						<span>This assessment has been pending for 18 hours.</span>
 					</div>
 					<div class="message">
-						<a href="#!" class="message-link"><span>Start Route:</span> Get Directions</a>
+						<a href="#!" class="message-link"  data-bs-toggle="modal" data-bs-target="#startRouteModal"><span>Start Route:</span> Get Directions</a>
 					</div>
 					<div class="message">
 						You have more than 1 pending onsite assessment and job.
@@ -1004,6 +1004,42 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- START ROUTE MODAL -->
+	<div class="modal fade" id="startRouteModal" tabindex="-1" aria-labelledby="startRouteModal" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+	        	<img src="assets/icons/cross-circle-gray.svg" alt="">
+	        </button>
+	      	<div class="modal-body">
+	        	<div class="map-img">
+	        		<img src="assets/img/map.jpg" alt="" class="w-100">
+	        	</div>
+	        	<div class="selected-location text-center">
+	        		<img src="assets/icons/location.svg" alt="">
+	        		<span>1255 Way Road Westfield New Jersey Coordinates - 89.232, 88.23000</span>
+	        	</div>
+	        	<form action="#" class="row">
+	        		<div class="col-12">
+						<div class="form-floating">
+						  	<input type="text" class="form-control" name="asset_location" placeholder="Location">
+						  	<label for="asset_location">Location</label>
+						</div>
+						<a href="#" class="location">
+							<img src="assets/icons/location.svg" alt="location">
+							<span>Click to set current GPS address</span>
+						</a>
+					</div>
+	        	</form>
+	      	</div>
+	      	<div class="modal-footer border-0">
+	        	<button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+	        	<button type="button" class="btn btn-orange">Continue</button>
+	      	</div>
+	    </div>
+	  </div>
+	</div>
 
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
