@@ -2217,6 +2217,64 @@ DATAHUB PAGE
 .parts-rows .error .form-control:focus~label {
 	color: var(--danger);
 }
+.parts-rows .accordion-item .accordion-body .settings .form-check {
+	margin-bottom: 10px;
+}
+.parts-rows .accordion-item .accordion-body .settings {
+	position: relative;
+}
+.parts-rows .accordion-item .accordion-body .settings label {
+	font-size: 16px;
+}
+.parts-rows .accordion-item .accordion-body .settings .form-check-input {
+	height: 20px;
+	width: 36px;
+	margin-right: 10px;
+	position: relative;
+	top: -2px;
+}
+.parts-rows .accordion-item .accordion-body .settings .all-customers {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: fit-content;
+}
+.parts-rows .accordion-item .accordion-body .settings .all-customers .form-check-input {
+	border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--dark-gray);
+  animation: pulse 1s infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(11,41,83, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(11,41,83, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(11,41,83, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(11,41,83, 0.4);
+    box-shadow: 0 0 0 0 rgba(11,41,83, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(11,41,83, 0);
+      box-shadow: 0 0 0 10px rgba(11,41,83, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(11,41,83, 0);
+      box-shadow: 0 0 0 0 rgba(11,41,83, 0);
+  }
+}
+.parts-rows .accordion-item .accordion-body .settings .all-customers .form-check-input:active,
+.parts-rows .accordion-item .accordion-body .settings .all-customers .form-check-input:focus {
+	border-color: var(--orange);
+}
 .custom-file-input {
   color: transparent;
 }
